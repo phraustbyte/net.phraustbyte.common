@@ -4,7 +4,7 @@ using net.phraustbyte.dal;
 
 namespace net.phraustbyte.bll
 {
-    public interface IBaseBLL
+    public interface IBaseBLL : IEquatable<IBaseBLL>
     {
         int Id { get; set; }
         DateTime CreatedDate { get; set; }

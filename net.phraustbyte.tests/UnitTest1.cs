@@ -29,29 +29,15 @@ namespace net.phraustbyte.tests
             DataLayer = new BaseDAL("ConnectionString");
         }
 
-        public int Create()
-        {
-            DataLayer.Parameters = DataLayer.GetParameters<DataLayer.ParameterType,TestClass>(this);
-        }
+        public int Create() => DataLayer.Create(this);
 
-        public void Delete()
-        {
-            throw new NotImplementedException();
-        }
+        public void Delete() => DataLayer.Delete(this);
 
-        public List<IBaseBLL> List()
-        {
-            throw new NotImplementedException();
-        }
 
-        public IBaseBLL Read(int Id)
-        {
-            throw new NotImplementedException();
-        }
+        public List<IBaseBLL> List() => DataLayer.List();
 
-        public void Update()
-        {
-            throw new NotImplementedException();
-        }
+        public IBaseBLL Read(int Id) => DataLayer.Read(Id);
+
+        public void Update() => DataLayer.Update(this);
     }
 }
