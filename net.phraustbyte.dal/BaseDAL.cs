@@ -68,7 +68,7 @@ namespace net.phraustbyte.dal
                 }
             }
 
-            public async Task<List<T>> List<T>() where T : new()
+            public async Task<List<T>> ReadAll<T>() where T : new()
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {

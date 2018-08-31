@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using net.phraustbyte.dal;
+using System.Threading.Tasks;
 
 namespace net.phraustbyte.bll
 {
@@ -10,10 +11,10 @@ namespace net.phraustbyte.bll
         DateTime CreatedDate { get; set; }
         string CreateUser { get; set; }
 
-        int Create();
-        void Update();
-        void Delete();
-        List<IBaseBLL> List();
-        IBaseBLL Read(int Id);
+        Task<int> Create();
+        Task Update();
+        Task Delete();
+        Task<List<IBaseBLL>> ReadAll();
+        Task<IBaseBLL> Read(int Id);
     }
 }
