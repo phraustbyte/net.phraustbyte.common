@@ -94,7 +94,7 @@ namespace net.phraustbyte.dal
                             var result = await command.ExecuteReaderAsync();
                             while (result.Read())
                             {
-                                dest.Add(TranslateResults<T>(result));
+                                dest.Add(SqlHelper.TranslateResults<T>(result));
                             }
 
                             return dest;
@@ -123,7 +123,7 @@ namespace net.phraustbyte.dal
                             await connection.OpenAsync();
                             command.Parameters.Add(new MySqlParameter("@Id", Id));
                             var result = await command.ExecuteReaderAsync();
-                            return TranslateResults<T>(result);
+                            return SqlHelper.TranslateResults<T>(result);
                         }
                         catch (Exception ex)
                         {
@@ -221,42 +221,42 @@ namespace net.phraustbyte.dal
                 }
             }
 
-            private T TranslateResults<T>(IDataReader source) where T : new()
-            {
+            //private T TranslateResults<T>(IDataReader source) where T : new()
+            //{
 
-                if (source == null)
-                {
-                    throw new ArgumentNullException();
-                }
+            //    if (source == null)
+            //    {
+            //        throw new ArgumentNullException();
+            //    }
 
-                try
-                {
-                    Type objectType = typeof(T);
-                    //MemberInfo[] memberinfo = objectType.GetMembers();
-                    var dest = (T)Activator.CreateInstance(typeof(T));
-                    PropertyInfo[] propertyInfo = objectType.GetProperties();
-                    foreach (var p in propertyInfo)
-                    {
-                        if (p.SetMethod != null)
-                        {
-                            var drValue = source[p.Name];
-                            Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
-                            var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
-                            p.SetValue(dest, drValueConverted, null);
-                        }
-                    }
-                    return dest;
-                }
-                catch (MissingMethodException ex)
-                {
-                    throw ex;
-                }
-                catch (Exception ex)
-                {
+            //    try
+            //    {
+            //        Type objectType = typeof(T);
+            //        //MemberInfo[] memberinfo = objectType.GetMembers();
+            //        var dest = (T)Activator.CreateInstance(typeof(T));
+            //        PropertyInfo[] propertyInfo = objectType.GetProperties();
+            //        foreach (var p in propertyInfo)
+            //        {
+            //            if (p.SetMethod != null)
+            //            {
+            //                var drValue = source[p.Name];
+            //                Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
+            //                var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
+            //                p.SetValue(dest, drValueConverted, null);
+            //            }
+            //        }
+            //        return dest;
+            //    }
+            //    catch (MissingMethodException ex)
+            //    {
+            //        throw ex;
+            //    }
+            //    catch (Exception ex)
+            //    {
 
-                    throw ex;
-                }
-            }
+            //        throw ex;
+            //    }
+            //}
 
             List<IDataParameter> IBaseDAL.GetParameters<T>(T Obj)
             {
