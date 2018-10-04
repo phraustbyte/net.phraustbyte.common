@@ -9,12 +9,15 @@ namespace net.phraustbyte.bll
     {
         int Id { get; set; }
         DateTime CreatedDate { get; set; }
-        string CreateUser { get; set; }
+        string Changer { get; set; }
+        bool Active { get; set; }
 
         Task<int> Create();
         Task Update();
         Task Delete();
         Task<List<IBaseBLL>> ReadAll();
         Task<IBaseBLL> Read(int Id);
+
+        IBaseDAL DataLayer { get; }
     }
 }

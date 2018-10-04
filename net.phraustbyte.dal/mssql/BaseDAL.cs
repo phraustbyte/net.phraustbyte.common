@@ -7,6 +7,8 @@ namespace net.phraustbyte.dal
     {
         using System.Data;
         using System.Data.SqlClient;
+        using System.Linq;
+        using System.Reflection;
         using System.Threading.Tasks;
 
         public class BaseDAL : IBaseDAL
@@ -32,10 +34,15 @@ namespace net.phraustbyte.dal
                     {
                         try
                         {
-                            await connection.OpenAsync();
-                            command.Parameters.AddRange(GetParameters(Obj).ToArray());
-                            var result = await command.ExecuteNonQueryAsync();
-                            return Convert.ToInt32(command.Parameters["@Id"]);
+                            var q = connection.OpenAsync();
+                            q.Wait();
+                            if (q.IsCompleted)
+                            {
+                                command.Parameters.AddRange(GetParameters(Obj).ToArray());
+                                var result = await command.ExecuteNonQueryAsync();
+                                return Convert.ToInt32(command.Parameters["@Id"]);
+                            }
+                            throw new Exception("Error connecting to data source");
                         }
                         catch (Exception ex) {
                             throw ex;
@@ -138,15 +145,100 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-            public List<IDataParameter> GetParameters<T>(T Obj) {
-                return new List<IDataParameter>();
+            public List<IDataParameter> GetParameters<T>(T Obj)
+            {
+                
+                try
+                {
+                    PropertyInfo[] propertyInfo = Obj.GetType().GetProperties();
+                    propertyInfo.DefaultIfEmpty(null);
+                    int? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as int?;
+                    string Changer = propertyInfo.FirstOrDefault(x => x.Name == "Changer").GetValue(Obj, null) as string;
+
+                    List<IDataParameter> Params = new List<IDataParameter>();
+                    if (Id == 0)
+                    {
+                        Params.Add(new SqlParameter("@Id", SqlDbType.Int)
+                        {
+                            Direction = System.Data.ParameterDirection.Output
+                        });
+                    }
+                    else if (Id > 0)
+                    {
+                        Params.Add(new SqlParameter("@Id", SqlDbType.Int)
+                        {
+                            Value = Id
+                        });
+                    }
+                    if (Obj != null)
+                    {
+                        Type objectType = Obj.GetType();
+                        MemberInfo[] memberinfo = objectType.GetMembers();
+                        foreach (MemberInfo m in memberinfo)
+                        {
+                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer")
+                            {
+                                Params.Add(new SqlParameter("@" + m.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(m.Name).PropertyType))
+                                {
+                                    Value = Obj.GetType().GetProperty(m.Name).GetValue(Obj, null)
+                                });
+                            }
+                        }
+
+                        //SqlParameter XmlParam = new SqlParameter("@Object", SqlDbType.Xml);
+                        //XmlParam.Value = ProcessXML.SerializeObject(obj);
+                        //Params.Add(XmlParam);
+                    }
+                    if (String.IsNullOrEmpty(Changer))
+                    {
+                        throw new Exception("Changer must contain a value");
+                    }
+                    else
+                    {
+                        Params.Add(new SqlParameter("@Changer", Changer));
+                    }
+                    return Params;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error creating SQL Parameters", ex);
+                }
             }
 
             private T TranslateResults<T>(IDataReader source) where T:new()
             {
-                
-                return default(T);
+
+                if (source == null)
+                    throw new ArgumentNullException();
+                try
+                {
+                    Type objectType = typeof(T);
+                    //MemberInfo[] memberinfo = objectType.GetMembers();
+                    var dest = (T)Activator.CreateInstance(typeof(T));
+                    PropertyInfo[] propertyInfo = objectType.GetProperties();
+                    foreach (var p in propertyInfo)
+                    {
+                        if (p.SetMethod != null)
+                        {
+                            var drValue = source[p.Name];
+                            Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
+                            var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
+                            p.SetValue(dest, drValueConverted, null);
+                        }
+                    }
+                    return dest;
+                }
+                catch (MissingMethodException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
             }
         }
+
     }
 }

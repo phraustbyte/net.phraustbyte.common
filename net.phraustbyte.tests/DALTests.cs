@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
+using Moq;
 using net.phraustbyte.bll;
 using net.phraustbyte.dal;
 using net.phraustbyte.dal.mssql;
-using Xunit;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 using System.Linq;
-using Moq;
+using System.Threading.Tasks;
+using Xunit;
 
 namespace net.phraustbyte.tests
 {
@@ -18,7 +18,7 @@ namespace net.phraustbyte.tests
             TestClass tc = new TestClass(GetMock().Object)
             {
                 Id = 5,
-                CreateUser = "User",
+                Changer = "User",
                 Name = "Name",
                 CreatedDate = DateTime.UtcNow
             };
@@ -31,7 +31,7 @@ namespace net.phraustbyte.tests
             TestClass tc = new TestClass(mock.Object)
             {
                 Id = 5,
-                CreateUser = "User",
+                Changer = "User",
                 Name = "Name",
                 CreatedDate = DateTime.UtcNow
             };
@@ -48,22 +48,22 @@ namespace net.phraustbyte.tests
         }
         private Mock<IBaseDAL> GetMock()
         {
-            var mock =  new Mock<IBaseDAL>();
+            var mock = new Mock<IBaseDAL>();
             mock.Setup(x => x.Create<TestClass>(It.IsAny<TestClass>()))
                 .ReturnsAsync(5);
             mock.Setup(x => x.Delete<TestClass>(It.IsAny<TestClass>())).Verifiable();
             mock.Setup(x => x.Update<TestClass>(It.IsAny<TestClass>())).Verifiable();
             mock.Setup(x => x.Read<TestClass>(5))
-                .ReturnsAsync(new TestClass { Id = 5, CreatedDate = DateTime.UtcNow, CreateUser = "User", Name = "Name" });
+                .ReturnsAsync(new TestClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "User", Name = "Name" });
             mock.Setup(x => x.ReadAll<TestClass>())
                 .ReturnsAsync(new List<TestClass>
                 {
-                    new TestClass { Id = 5, CreatedDate = DateTime.UtcNow, CreateUser = "UserFive", Name = "NameFive" },
-                    new TestClass { Id = 6, CreatedDate = DateTime.UtcNow, CreateUser = "UserSix", Name = "NameSix" },
-                    new TestClass { Id = 7, CreatedDate = DateTime.UtcNow, CreateUser = "UserSeven", Name = "NameSeven" }
+                    new TestClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameFive" },
+                    new TestClass { Id = 6, CreatedDate = DateTime.UtcNow, Changer = "UserSix", Name = "NameSix" },
+                    new TestClass { Id = 7, CreatedDate = DateTime.UtcNow, Changer = "UserSeven", Name = "NameSeven" }
                 });
             return mock;
-                
+
         }
     }
 
@@ -71,15 +71,16 @@ namespace net.phraustbyte.tests
     {
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
-        public string CreateUser { get; set; }
+        public string Changer { get; set; }
         public string Name { get; set; }
-        private IBaseDAL DataLayer { get; set; }
+        public bool Active { get; set; }
+        public IBaseDAL DataLayer { get; }
 
         public TestClass()
         {
             DataLayer = new BaseDAL("ConnectionString");
         }
-        public TestClass (IBaseDAL dal)
+        public TestClass(IBaseDAL dal)
         {
             DataLayer = dal;
         }
@@ -113,7 +114,11 @@ namespace net.phraustbyte.tests
 
         public bool Equals(IBaseBLL other)
         {
-            if (other is null) return false;
+            if (other is null)
+            {
+                return false;
+            }
+
             return (this.Id == other.Id);
         }
     }
