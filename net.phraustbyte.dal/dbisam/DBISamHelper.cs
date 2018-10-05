@@ -5,31 +5,40 @@ using System.Text;
 
 namespace net.phraustbyte.dal.dbisam
 {
+    /// <summary>
+    /// Helper class for DBISam
+    /// </summary>
     public static class  DBISamHelper
     {
+        /// <summary>
+        /// Generates an insert statement using reflection
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static string GenerateInsertStatment<T> (T obj)
         {
 
-            //DBISamTableAttribute attrib = obj.GetType().GetCustomAttributes(typeof(DBISamTableAttribute),false).First(x=>x.)
-            object[] attribs = obj.GetType().GetCustomAttributes(typeof(DBISamTableAttribute), true);
-            var attr = attribs.First() as DBISamTableAttribute;
+            //TableAttribute attrib = obj.GetType().GetCustomAttributes(typeof(TableAttribute),false).First(x=>x.)
+            object[] attribs = obj.GetType().GetCustomAttributes(typeof(TableAttribute), true);
+            var attr = attribs.First() as TableAttribute;
             string Table = attr.TableName;
-            bool InsertViaSelect = obj.GetType().CustomAttributes.Any(x => x.AttributeType == typeof(DBISamInsertViaSelectAttribute));
+            bool InsertViaSelect = obj.GetType().CustomAttributes.Any(x => x.AttributeType == typeof(InsertViaSelectAttribute));
             List<string> PropertyList = new List<string>();
             List<string> ValueList = new List<string>();
             var propertyList = obj.GetType().GetProperties();
             foreach (var prop in propertyList)
             {
-                if (!(prop.CustomAttributes.Any(x=>x.AttributeType == typeof(DBISamIgnoreAttribute))))
+                if (!(prop.CustomAttributes.Any(x=>x.AttributeType == typeof(IgnoreAttribute))))
                 {
                     PropertyList.Add(prop.Name);
-                    /*if (prop.CustomAttributes.Any(x=>x.AttributeType == typeof(DBISamAutoIncAttribute)))
+                    /*if (prop.CustomAttributes.Any(x=>x.AttributeType == typeof(AutoIncAttribute)))
                     {
                         ValueList.Add($"LastAutoInc('{Table}') + 1");
                     }
-                    else*/ if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(DBISamDateAttribute)))
+                    else*/ if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(DateAttribute)))
                         ValueList.Add($"CAST('{((DateTime)prop.GetValue(obj, null)).ToString("yyyy-MM-dd")}' AS DATE)");
-                    else if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(DBISamTimeAttribute)))
+                    else if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(TimeAttribute)))
                         ValueList.Add($"CAST('{((TimeSpan)prop.GetValue(obj, null)).ToString("c")}' AS TIME)");
                     else if (prop.PropertyType == typeof(string))
                     {
@@ -48,67 +57,20 @@ namespace net.phraustbyte.dal.dbisam
                         ValueList.Add($"CAST('{((DateTime)prop.GetValue(obj, null)).ToString("yyyy-MM-dd hh:mm:ss")}' AS TIMESTAMP)");
                 }
             }
-
+            string Query = "";
             if (InsertViaSelect)
-                return $"INSERT INTO {Table} ({String.Join(",",PropertyList)}) SELECT {string.Join(",",ValueList)} FROM {Table};";
+                Query =  $"INSERT INTO {Table} ({String.Join(",",PropertyList)}) SELECT {string.Join(",",ValueList)} FROM {Table};";
             else
-                return $"INSERT INTO {Table} ({String.Join(",", PropertyList)}) VALUES ({string.Join(",", ValueList)});";
+                Query = $"INSERT INTO {Table} ({String.Join(",", PropertyList)}) VALUES ({string.Join(",", ValueList)});";
+            Query = Query.Replace("\r\n", "'+#13+#10+'");
+            Query += $" SELECT LASTAUTOINC('{Table}') FROM {Table} TOP 1;";
+            return Query;
         }
         private static readonly DateTime Epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
         private static long ConvertToTimestamp (this DateTime value)
         {
             TimeSpan elapsedTime = value - Epoch;
             return (long)elapsedTime.TotalSeconds;
-        }
-    }
-    public class DBISamIgnoreAttribute : Attribute
-    {
-        public bool Ignore { get; }
-        public DBISamIgnoreAttribute ()
-        {
-            this.Ignore = true;
-        }
-    }
-    public class DBISamAutoIncAttribute:Attribute
-    {
-        public bool AutoInc { get; }
-        public DBISamAutoIncAttribute()
-        {
-            this.AutoInc = true;
-        }
-    }
-    public class DBISamInsertViaSelectAttribute:Attribute
-    {
-        public bool InsertViaSelect { get; }
-        public DBISamInsertViaSelectAttribute()
-        {
-            this.InsertViaSelect = true;
-        }
-    }
-    public class DBISamDateAttribute:Attribute
-    {
-        public bool Date { get; }
-
-        public DBISamDateAttribute()
-        {
-            Date = true;
-        }
-    }
-    public class DBISamTimeAttribute : Attribute
-    {
-        public bool Time { get; }
-
-        public DBISamTimeAttribute()
-        {
-            Time = true;
-        }
-    }
-    public class DBISamTableAttribute : Attribute
-    {
-        public string TableName { get; }
-        public DBISamTableAttribute(string TableName)
-        {
-            this.TableName = TableName;
         }
     }
 }

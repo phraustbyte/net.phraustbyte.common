@@ -6,11 +6,19 @@ using System.Text;
 
 namespace net.phraustbyte.dal
 {
+    /// <summary>
+    /// Helper Classes for the DAL
+    /// </summary>
     static class SqlHelper
     {
+        /// <summary>
+        /// Dictionary of SQL DB Types
+        /// </summary>
         private static Dictionary<Type, SqlDbType> typeMap;
 
-        // Create and populate the dictionary in the static constructor
+        /// <summary>
+        /// Create and populate the dictionary in the static constructor
+        /// </summary>
         static SqlHelper()
         {
             typeMap = new Dictionary<Type, SqlDbType>
@@ -59,6 +67,12 @@ namespace net.phraustbyte.dal
         {
             return GetDbType(typeof(T));
         }
+        /// <summary>
+        /// Translates an IDataReader objet into an object
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
         public static T TranslateResults<T>(IDataReader source) where T : new()
         {
 
@@ -75,9 +89,14 @@ namespace net.phraustbyte.dal
                     if (p.SetMethod != null)
                     {
                         var drValue = source[p.Name];
-                        Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
-                        var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
-                        p.SetValue(dest, drValueConverted, null);
+                        if (drValue.GetType() == typeof(DBNull))
+                            p.SetValue(dest, null, null);
+                        else
+                        {
+                            Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
+                            var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
+                            p.SetValue(dest, drValueConverted, null);
+                        }
                     }
                 }
                 return dest;

@@ -1,10 +1,27 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputPath>lib\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\net.phraustbyte.dal\net.phraustbyte.dal.csproj" />
+    <Compile Remove="lib\**" />
+    <EmbeddedResource Remove="lib\**" />
+    <None Remove="lib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="*.nupkg" />
+  </ItemGroup>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\bin\Repos\GC\net.phraustbyte.common\net.phraustbyte.bll\net.phraustbyte.bll.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<ProjectReference Include="..\net.phraustbyte.dal\net.phraustbyte.dal.csproj" />-->
+      <PackageReference Include="net.phraustbyte.dal" Version="2018.10.1" />
   </ItemGroup>
 </Project>

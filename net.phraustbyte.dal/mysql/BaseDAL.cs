@@ -11,18 +11,33 @@ namespace net.phraustbyte.dal
         using System.Linq;
         using System.Reflection;
         using System.Threading.Tasks;
-
+        /// <summary>
+        /// Represents a connection to connection to a MySQL database
+        /// </summary>
         public class BaseDAL : IBaseDAL
         {
+            /// <summary>
+            /// Constructor
+            /// </summary>
+            /// <param name="ConnectionString"></param>
             public BaseDAL(string ConnectionString)
             {
                 this.ConnectionString = ConnectionString ?? throw new ArgumentNullException();
             }
-
+            /// <summary>
+            /// represents a query command or the name of a stored procedure
+            /// </summary>
             public string Query { get; set; }
-
+            /// <summary>
+            /// represents a connection string to a datasource
+            /// </summary>
             public string ConnectionString { get; }
-
+            /// <summary>
+            /// Creates a record in a database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Obj"></param>
+            /// <returns></returns>
             public virtual async Task<int> Create<T>(T Obj)
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
@@ -50,7 +65,12 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-
+            /// <summary>
+            /// removes a record from a database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Obj"></param>
+            /// <returns></returns>
             public virtual async Task Delete<T>(T Obj)
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
@@ -75,7 +95,11 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-
+            /// <summary>
+            /// Reads all records in a database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <returns></returns>
             public virtual async Task<List<T>> ReadAll<T>() where T : new()
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
@@ -106,7 +130,12 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-
+            /// <summary>
+            /// Reads a record from a database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Id"></param>
+            /// <returns></returns>
             public virtual async Task<T> Read<T>(int Id) where T : new()
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
@@ -132,7 +161,12 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-
+            /// <summary>
+            /// updates a record in a database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Obj"></param>
+            /// <returns></returns>
             public virtual async Task Update<T>(T Obj)
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
@@ -157,6 +191,12 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
+            /// <summary>
+            /// Generates a list of parameters based on an object
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Obj"></param>
+            /// <returns></returns>
             public List<IDataParameter> GetParameters<T>(T Obj)
             {
 

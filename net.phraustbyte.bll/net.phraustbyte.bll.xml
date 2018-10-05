@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>net.phraustbyte.bll</name>
+    </assembly>
+    <members>
+        <member name="T:net.phraustbyte.bll.IBaseBLL">
+            <summary>
+            Represents the base of an object
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.IBaseBLL.Id">
+            <summary>
+            Represents the Id of an object
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.IBaseBLL.CreatedDate">
+            <summary>
+            Represents the date the record was created
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.IBaseBLL.Changer">
+            <summary>
+            Represents the person who changed the record
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.IBaseBLL.Active">
+            <summary>
+            Indicates whether the record is active (not deleted)
+            </summary>
+        </member>
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Create">
+            <summary>
+            Creates a record in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Update">
+            <summary>
+            Updates a record in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Delete">
+            <summary>
+            Removes a record in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.IBaseBLL.ReadAll">
+            <summary>
+            Reads all records in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Read(System.Int32)">
+            <summary>
+            Reads a single record in a database
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:net.phraustbyte.bll.IBaseBLL.DataLayer">
+            <summary>
+            Represents the datalayer
+            </summary>
+        </member>
+    </members>
+</doc>

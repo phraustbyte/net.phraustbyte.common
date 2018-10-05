@@ -8,8 +8,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.bll", "net.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.tests", "net.phraustbyte.tests\net.phraustbyte.tests.csproj", "{C461E8C3-670C-47DA-9337-AFB05E0AEEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net.phraustbyte.tst", "net.phraustbyte.tst\net.phraustbyte.tst.csproj", "{5D857313-9404-44CA-B4C4-00A77FB97DDB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +26,6 @@ Global
 		{C461E8C3-670C-47DA-9337-AFB05E0AEEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C461E8C3-670C-47DA-9337-AFB05E0AEEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C461E8C3-670C-47DA-9337-AFB05E0AEEBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D857313-9404-44CA-B4C4-00A77FB97DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D857313-9404-44CA-B4C4-00A77FB97DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D857313-9404-44CA-B4C4-00A77FB97DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D857313-9404-44CA-B4C4-00A77FB97DDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
