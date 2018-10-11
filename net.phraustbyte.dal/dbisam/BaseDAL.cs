@@ -53,7 +53,7 @@ namespace net.phraustbyte.dal
                 try
                 {
                 this.Query = DBISamHelper.GenerateInsertStatment(Obj);
-                return await ExecuteScalar();
+                return await ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -67,10 +67,18 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
-            public virtual Task Delete<T>(T Obj)
+            public virtual async Task Delete<T>(T Obj)
             {
-                throw new NotSupportedException();
-                //var result = Task.Run(async () => { return await ExecuteQuery(); }).Result;
+                try
+                {
+                    this.Query = DBISamHelper.GenerateDeleteStatement(Obj);
+                    await ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
             /// <summary>
             /// Updates a record in the database
@@ -78,10 +86,26 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
-            public virtual Task Update<T>(T Obj)
+            public virtual Task Update<T>(T Obj) => throw new NotSupportedException();
+            /// <summary>
+            /// Updates a record in the database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Source"></param>
+            /// <param name="Dest"></param>
+            /// <returns></returns>
+            public virtual async Task Update<T>(T Source,T Dest)
             {
-                throw new NotSupportedException();
-               // var result = Task.Run(async () => { return await ExecuteQuery(); }).Result;
+                try
+                {
+                    this.Query = DBISamHelper.GenerateUpdateStatment<T>(Source,Dest);
+                    await ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
             /// <summary>
             /// Reads all the records in a database
@@ -166,10 +190,10 @@ namespace net.phraustbyte.dal
                 }
             }
             /// <summary>
-            /// Executes a query
+            /// Executes a non-result query
             /// </summary>
             /// <returns></returns>
-            private async Task<dynamic> ExecuteQuery()
+            private async Task<dynamic> ExecuteNonQuery()
             {
                 try
                 {

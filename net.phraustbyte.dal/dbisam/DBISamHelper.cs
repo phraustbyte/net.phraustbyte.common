@@ -63,7 +63,142 @@ namespace net.phraustbyte.dal.dbisam
             else
                 Query = $"INSERT INTO {Table} ({String.Join(",", PropertyList)}) VALUES ({string.Join(",", ValueList)});";
             Query = Query.Replace("\r\n", "'+#13+#10+'");
-            Query += $" SELECT LASTAUTOINC('{Table}') FROM {Table} TOP 1;";
+            //Query += $" SELECT LASTAUTOINC('{Table}') FROM {Table} TOP 1;";
+            return Query;
+        }
+        /// <summary>
+        /// Generates an update statement using reflection
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="dest"></param>
+        /// <returns></returns>
+        public static string GenerateUpdateStatment<T>(T source, T dest)
+        {
+            string IdField = "";
+            object Id = null;
+            //TableAttribute attrib = source.GetType().GetCustomAttributes(typeof(TableAttribute),false).First(x=>x.)
+            object[] attribs = source.GetType().GetCustomAttributes(typeof(TableAttribute), true);
+            var attr = attribs.First() as TableAttribute;
+            string Table = attr.TableName;
+            //bool InsertViaSelect = source.GetType().CustomAttributes.Any(x => x.AttributeType == typeof(InsertViaSelectAttribute));
+            List<string> UpdateList = new List<string>();
+            var propertyList = source.GetType().GetProperties();
+            foreach (var prop in propertyList)
+            {
+                if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(IdentifierAttribute)))
+                {
+                    IdField = prop.Name;
+                    Id = prop.GetValue(source, null);
+                }
+                else if (!(prop.CustomAttributes.Any(x => x.AttributeType == typeof(IgnoreAttribute))))
+                {
+                    if (prop.GetValue(source, null) != prop.GetValue(dest, null))
+                    {
+                        if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(DateAttribute)))
+                            UpdateList.Add($"{prop.Name} = CAST('{((DateTime)prop.GetValue(dest, null)).ToString("yyyy-MM-dd")}' AS DATE)");
+                        else if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(TimeAttribute)))
+                            UpdateList.Add($"{prop.Name} = CAST('{((TimeSpan)prop.GetValue(dest, null)).ToString("c")}' AS TIME)");
+                        else if (prop.PropertyType == typeof(string))
+                        {
+                            var str = ((string)prop.GetValue(dest, null)) ?? "";
+                            str = str.Replace("'", "'+#39+'");
+                            UpdateList.Add($"{prop.Name} = '{str}'");
+                        }
+                        else if (prop.PropertyType == typeof(int))
+                            UpdateList.Add($"{prop.Name} = {prop.GetValue(dest, null).ToString()}");
+                        else if (prop.PropertyType == typeof(float))
+                            UpdateList.Add($"{prop.Name} = {((float)prop.GetValue(dest, null)).ToString()}");
+                        else if (prop.PropertyType == typeof(bool))
+                            UpdateList.Add($"{prop.Name} = {(((bool)prop.GetValue(dest, null)) ? "True" : "False")}");
+                        else if (prop.PropertyType == typeof(DateTime))
+                            UpdateList.Add($"{prop.Name} = CAST('{((DateTime)prop.GetValue(dest, null)).ToString("yyyy-MM-dd hh:mm:ss")}' AS TIMESTAMP)");
+                    }
+                }
+            }
+            string Query = "";
+            Query = $"UPDATE {Table} SET {String.Join(",", UpdateList)} WHERE {IdField} = {Id};";
+            Query = Query.Replace("\r\n", "'+#13+#10+'");
+            return Query;
+        }
+        /// <summary>
+        /// Generates a delete statement using reflection if the object contains no Active flag. 
+        /// Existance of an Active flag will change that value to false using an update statement
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string GenerateDeleteStatement<T>(T source)
+        {
+            string IdField = "";
+            object Id = null;
+            string ActiveField = "";
+            //TableAttribute attrib = source.GetType().GetCustomAttributes(typeof(TableAttribute),false).First(x=>x.)
+            object[] attribs = source.GetType().GetCustomAttributes(typeof(TableAttribute), true);
+            var attr = attribs.First() as TableAttribute;
+            string Table = attr.TableName;
+            //bool InsertViaSelect = source.GetType().CustomAttributes.Any(x => x.AttributeType == typeof(InsertViaSelectAttribute));
+            List<string> UpdateList = new List<string>();
+            var propertyList = source.GetType().GetProperties();
+            foreach (var prop in propertyList)
+            {
+                if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(IdentifierAttribute)))
+                {
+                    IdField = prop.Name;
+                    Id = prop.GetValue(source, null);
+                }
+                else if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(ActiveAttribute)))
+                {
+                    ActiveField = prop.Name;
+                }
+            }
+            string Query = "";
+            if (String.IsNullOrEmpty(ActiveField))
+                Query = $"DELETE FROM {Table} WHERE {IdField} = {Id}";
+            else
+                Query = $"UPDATE {Table} SET {ActiveField} = False WHERE {IdField} = {Id};";
+            Query = Query.Replace("\r\n", "'+#13+#10+'");
+            return Query;
+        }
+        /// <summary>
+        /// Generates a read statement using an Id. Source object must have a property containing the Identifier attribute
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public static string GenerateReadStatement<T>(object Id)
+        {
+            string IdField = "";
+            object[] attribs = typeof(T).GetCustomAttributes(typeof(TableAttribute), true);
+            var attr = attribs.First() as TableAttribute;
+            string Table = attr.TableName;
+            List<string> UpdateList = new List<string>();
+            var propertyList = typeof(T).GetProperties();
+            foreach (var prop in propertyList)
+            {
+                if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(IdentifierAttribute)))
+                {
+                    IdField = prop.Name;
+                }
+            }
+            string Query = "";
+            Query = $"SELECT * FROM {Table} WHERE {IdField} = {Id};";
+            Query = Query.Replace("\r\n", "'+#13+#10+'");
+            return Query;
+        }
+        /// <summary>
+        /// Generates a read all statement using reflection
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static string GenerateReadAllStatement<T>()
+        {
+            object[] attribs = typeof(T).GetCustomAttributes(typeof(TableAttribute), true);
+            var attr = attribs.First() as TableAttribute;
+            string Table = attr.TableName;
+            string Query = "";
+            Query = $"SELECT * FROM {Table};";
+            Query = Query.Replace("\r\n", "'+#13+#10+'");
             return Query;
         }
         private static readonly DateTime Epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);

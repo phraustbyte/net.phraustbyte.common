@@ -4,6 +4,21 @@
         <name>net.phraustbyte.dal</name>
     </assembly>
     <members>
+        <member name="T:net.phraustbyte.dal.dbisam.ActiveAttribute">
+            <summary>
+            Attribute - indicates to the generator that the value is not to be utilized
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.dal.dbisam.ActiveAttribute.Active">
+            <summary>
+            indicates to the generator that the value is not to be utilized
+            </summary>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.ActiveAttribute.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
         <member name="T:net.phraustbyte.dal.dbisam.AutoIncAttribute">
             <summary>
             Attribute - indicates the value of the property is an AutoIncremental
@@ -18,86 +33,6 @@
             <summary>
             default constructor
             </summary>
-        </member>
-        <member name="T:net.phraustbyte.dal.dbisam.BaseDAL">
-            <summary>
-            Represents a connection to a data source
-            </summary>
-        </member>
-        <member name="P:net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString">
-            <summary>
-            represents the connection string
-            </summary>
-        </member>
-        <member name="P:net.phraustbyte.dal.dbisam.BaseDAL.Query">
-            <summary>
-            represents the query to be executed
-            </summary>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.#ctor(System.String)">
-            <summary>
-            constructor
-            </summary>
-            <param name="connectionString"></param>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.GetParameters``1(``0)">
-            <summary>
-            Gets parameters for use with stored procedures
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Create``1(``0)">
-            <summary>
-            Creates a record in the database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Delete``1(``0)">
-            <summary>
-            removes a record from the database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)">
-            <summary>
-            Updates a record in the database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ReadAll``1">
-            <summary>
-            Reads all the records in a database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Read``1(System.Int32)">
-            <summary>
-            Reads a single record from the database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ExecuteScalar">
-            <summary>
-            Executes a scalar query
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ExecuteQuery">
-            <summary>
-            Executes a query
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:net.phraustbyte.dal.dbisam.DateAttribute">
             <summary>
@@ -114,18 +49,20 @@
             default constructor
             </summary>
         </member>
-        <member name="T:net.phraustbyte.dal.dbisam.DBISamHelper">
+        <member name="T:net.phraustbyte.dal.dbisam.IdentifierAttribute">
             <summary>
-            Helper class for DBISam
+            Attribute - indicates to the generator that the value is not to be utilized
             </summary>
         </member>
-        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)">
+        <member name="P:net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier">
             <summary>
-            Generates an insert statement using reflection
+            indicates to the generator that the value is not to be utilized
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="obj"></param>
-            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.IdentifierAttribute.#ctor">
+            <summary>
+            default constructor
+            </summary>
         </member>
         <member name="T:net.phraustbyte.dal.dbisam.IgnoreAttribute">
             <summary>
@@ -187,6 +124,141 @@
             <summary>
             default constructor
             </summary>
+        </member>
+        <member name="T:net.phraustbyte.dal.dbisam.BaseDAL">
+            <summary>
+            Represents a connection to a data source
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString">
+            <summary>
+            represents the connection string
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.dal.dbisam.BaseDAL.Query">
+            <summary>
+            represents the query to be executed
+            </summary>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.#ctor(System.String)">
+            <summary>
+            constructor
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.GetParameters``1(``0)">
+            <summary>
+            Gets parameters for use with stored procedures
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Create``1(``0)">
+            <summary>
+            Creates a record in the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Delete``1(``0)">
+            <summary>
+            removes a record from the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)">
+            <summary>
+            Updates a record in the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0,``0)">
+            <summary>
+            Updates a record in the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Source"></param>
+            <param name="Dest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ReadAll``1">
+            <summary>
+            Reads all the records in a database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Read``1(System.Int32)">
+            <summary>
+            Reads a single record from the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ExecuteScalar">
+            <summary>
+            Executes a scalar query
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ExecuteNonQuery">
+            <summary>
+            Executes a non-result query
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:net.phraustbyte.dal.dbisam.DBISamHelper">
+            <summary>
+            Helper class for DBISam
+            </summary>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)">
+            <summary>
+            Generates an insert statement using reflection
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0,``0)">
+            <summary>
+            Generates an update statement using reflection
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="dest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)">
+            <summary>
+            Generates a delete statement using reflection if the object contains no Active flag. 
+            Existance of an Active flag will change that value to false using an update statement
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement``1(System.Object)">
+            <summary>
+            Generates a read statement using an Id. Source object must have a property containing the Identifier attribute
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement``1">
+            <summary>
+            Generates a read all statement using reflection
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
         </member>
         <member name="T:net.phraustbyte.dal.IBaseDAL">
             <summary>
