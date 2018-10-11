@@ -86,19 +86,13 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
-            public virtual Task Update<T>(T Obj) => throw new NotSupportedException();
             /// <summary>
-            /// Updates a record in the database
-            /// </summary>
-            /// <typeparam name="T"></typeparam>
-            /// <param name="Source"></param>
-            /// <param name="Dest"></param>
-            /// <returns></returns>
-            public virtual async Task Update<T>(T Source,T Dest)
+            
+            public virtual async Task Update<T>(T obj)
             {
                 try
                 {
-                    this.Query = DBISamHelper.GenerateUpdateStatment<T>(Source,Dest);
+                    this.Query = DBISamHelper.GenerateUpdateStatment<T>(obj);
                     await ExecuteNonQuery();
 
                 }

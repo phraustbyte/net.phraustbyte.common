@@ -170,23 +170,7 @@
             <param name="Obj"></param>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)">
-            <summary>
-            Updates a record in the database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Obj"></param>
-            <returns></returns>
-        </member>
-        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0,``0)">
-            <summary>
-            Updates a record in the database
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Source"></param>
-            <param name="Dest"></param>
-            <returns></returns>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)" -->
         <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ReadAll``1">
             <summary>
             Reads all the records in a database
@@ -227,7 +211,7 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0,``0)">
+        <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0)">
             <summary>
             Generates an update statement using reflection
             </summary>

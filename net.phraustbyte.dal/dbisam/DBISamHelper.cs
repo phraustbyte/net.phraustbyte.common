@@ -73,7 +73,7 @@ namespace net.phraustbyte.dal.dbisam
         /// <param name="source"></param>
         /// <param name="dest"></param>
         /// <returns></returns>
-        public static string GenerateUpdateStatment<T>(T source, T dest)
+        public static string GenerateUpdateStatment<T>(T source)
         {
             string IdField = "";
             object Id = null;
@@ -93,27 +93,27 @@ namespace net.phraustbyte.dal.dbisam
                 }
                 else if (!(prop.CustomAttributes.Any(x => x.AttributeType == typeof(IgnoreAttribute))))
                 {
-                    if (prop.GetValue(source, null) != prop.GetValue(dest, null))
-                    {
+                    //if (prop.GetValue(source, null) != prop.GetValue(dest, null))
+                    //{
                         if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(DateAttribute)))
-                            UpdateList.Add($"{prop.Name} = CAST('{((DateTime)prop.GetValue(dest, null)).ToString("yyyy-MM-dd")}' AS DATE)");
+                            UpdateList.Add($"{prop.Name} = CAST('{((DateTime)prop.GetValue(source, null)).ToString("yyyy-MM-dd")}' AS DATE)");
                         else if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(TimeAttribute)))
-                            UpdateList.Add($"{prop.Name} = CAST('{((TimeSpan)prop.GetValue(dest, null)).ToString("c")}' AS TIME)");
+                            UpdateList.Add($"{prop.Name} = CAST('{((TimeSpan)prop.GetValue(source, null)).ToString("c")}' AS TIME)");
                         else if (prop.PropertyType == typeof(string))
                         {
-                            var str = ((string)prop.GetValue(dest, null)) ?? "";
+                            var str = ((string)prop.GetValue(source, null)) ?? "";
                             str = str.Replace("'", "'+#39+'");
                             UpdateList.Add($"{prop.Name} = '{str}'");
                         }
                         else if (prop.PropertyType == typeof(int))
-                            UpdateList.Add($"{prop.Name} = {prop.GetValue(dest, null).ToString()}");
+                            UpdateList.Add($"{prop.Name} = {prop.GetValue(source, null).ToString()}");
                         else if (prop.PropertyType == typeof(float))
-                            UpdateList.Add($"{prop.Name} = {((float)prop.GetValue(dest, null)).ToString()}");
+                            UpdateList.Add($"{prop.Name} = {((float)prop.GetValue(source, null)).ToString()}");
                         else if (prop.PropertyType == typeof(bool))
-                            UpdateList.Add($"{prop.Name} = {(((bool)prop.GetValue(dest, null)) ? "True" : "False")}");
+                            UpdateList.Add($"{prop.Name} = {(((bool)prop.GetValue(source, null)) ? "True" : "False")}");
                         else if (prop.PropertyType == typeof(DateTime))
-                            UpdateList.Add($"{prop.Name} = CAST('{((DateTime)prop.GetValue(dest, null)).ToString("yyyy-MM-dd hh:mm:ss")}' AS TIMESTAMP)");
-                    }
+                            UpdateList.Add($"{prop.Name} = CAST('{((DateTime)prop.GetValue(source, null)).ToString("yyyy-MM-dd hh:mm:ss")}' AS TIMESTAMP)");
+                    //}
                 }
             }
             string Query = "";
