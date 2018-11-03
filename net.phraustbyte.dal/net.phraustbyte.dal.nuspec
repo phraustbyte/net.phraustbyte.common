@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.dal</id>
-    <version>2018.10.02.2-alpha</version>
+    <version>2018.10.02.3-alpha</version>
     <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -11,9 +11,10 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for Data Logic Layer</description>
     <releaseNotes>
-      2018.10.02.2-alpha - Fixed issue with update function
-      2018.10.02.1-alpha - Added additional functions for DBISAM Helper
-      2018.10.02 - DBISAM create statement now uses ExecuteNonQuery instead of ExecuteScalar
+2018.10.02.3-alpha - Fixed more issues with update function.      
+2018.10.02.2-alpha - Fixed issue with update function
+2018.10.02.1-alpha - Added additional functions for DBISAM Helper
+2018.10.02 - DBISAM create statement now uses ExecuteNonQuery instead of ExecuteScalar
     </releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>DAL DataAccess Phraustbyte DBISAM MYSQL MSSQL</tags>

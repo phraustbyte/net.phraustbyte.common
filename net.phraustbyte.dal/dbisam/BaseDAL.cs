@@ -84,9 +84,8 @@ namespace net.phraustbyte.dal
             /// Updates a record in the database
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            /// <param name="Obj"></param>
+            /// <param name="obj"></param>
             /// <returns></returns>
-            /// <summary>
             
             public virtual async Task Update<T>(T obj)
             {

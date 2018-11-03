@@ -170,7 +170,14 @@
             <param name="Obj"></param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)" -->
+        <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)">
+            <summary>
+            Updates a record in the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
         <member name="M:net.phraustbyte.dal.dbisam.BaseDAL.ReadAll``1">
             <summary>
             Reads all the records in a database
@@ -217,7 +224,6 @@
             </summary>
             <typeparam name="T"></typeparam>
             <param name="source"></param>
-            <param name="dest"></param>
             <returns></returns>
         </member>
         <member name="M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)">
