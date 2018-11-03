@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.bll</id>
-    <version>2018.10.01</version>
+    <version>2018.11.01</version>
     <title>Phraustbyte Base BLL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -10,11 +10,14 @@
     <projectUrl>https://github.com/phraustbyte/net.phraustbyte.common</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for Business Logic Layer</description>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>
+      2018.11.01 Updates to associated nuget packages
+      2018.10.01 Initial Release
+    </releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>BLL LogicLayer Phraustbyte</tags>
   <dependencies>
-    <dependency id="net.phraustbyte.dal" version="2018.10.1" />
+    <dependency id="net.phraustbyte.dal" version="2018.11.01" />
   </dependencies>
   </metadata>
   <files>

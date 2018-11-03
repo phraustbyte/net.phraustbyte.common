@@ -19,6 +19,7 @@ namespace net.phraustbyte.dal
             /// Constructor
             /// </summary>
             /// <param name="ConnectionString"></param>
+            /// <exception cref="System.ArgumentNullException">Thrown when Connection string is null</exception>
             public BaseDAL(string ConnectionString)
             {
                 this.ConnectionString = ConnectionString ?? throw new ArgumentNullException();
@@ -37,7 +38,13 @@ namespace net.phraustbyte.dal
            /// </summary>
            /// <typeparam name="T"></typeparam>
            /// <param name="Obj"></param>
-           /// <returns></returns>
+           /// <returns>Database Record</returns>
+           /// <example>
+           /// <code>
+           /// Object obj = new Object() ;
+           /// int recordIndex = await Create&gt;Object&lt;(obj);
+           /// </code>
+           /// </example>
             public virtual async Task<int> Create<T>(T Obj)
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
@@ -71,6 +78,12 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
+            /// <example>
+            /// <code>
+            /// Object obj = new Object();
+            /// await Delete(obj);
+            /// </code>
+            /// </example>
             public virtual async Task Delete<T>(T Obj)
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
@@ -98,7 +111,13 @@ namespace net.phraustbyte.dal
             /// Reads all records from the database
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            /// <returns></returns>
+            /// <returns>List of records</returns>
+            /// <example>
+            /// <code>
+            /// List&gt;Object&lt; list = new List&gt;Object&lt;();
+            /// list = await ReadAll&gt;Object&lt;();
+            /// </code>
+            /// </example>
             public async Task<List<T>> ReadAll<T>() where T : new()
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
@@ -131,6 +150,12 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Id"></param>
             /// <returns></returns>
+            /// <example>
+            /// <code>
+            /// int id = 1;
+            /// Object obj = await Read&gt;Object&lt;(id);
+            /// </code>
+            /// </example>
             public virtual async Task<T> Read<T>(int Id) where T : new()
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString)) {
@@ -156,6 +181,14 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
+            /// <example>
+            /// <code>
+            /// RecordObject obj = new RecordObj {
+            ///     Id = 1
+            /// } ;
+            /// await Update&gt;RecordObject&lt;(obj);
+            /// </code>
+            /// </example>
             public virtual async Task Update<T>(T Obj) 
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))

@@ -22,6 +22,6 @@
 
   <ItemGroup>
     <!--<ProjectReference Include="..\net.phraustbyte.dal\net.phraustbyte.dal.csproj" />-->
-      <PackageReference Include="net.phraustbyte.dal" Version="2018.10.1" />
+      <PackageReference Include="net.phraustbyte.dal" Version="2018.10.2.3-alpha" />
   </ItemGroup>
 </Project>
