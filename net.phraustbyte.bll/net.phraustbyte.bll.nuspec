@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.bll</id>
-    <version>2018.11.02</version>
+    <version>2018.11.03</version>
     <title>Phraustbyte Base BLL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -17,7 +17,7 @@
     <copyright>Copyright 2018</copyright>
     <tags>BLL LogicLayer Phraustbyte</tags>
   <dependencies>
-    <dependency id="net.phraustbyte.dal" version="2018.11.02" />
+    <dependency id="net.phraustbyte.dal" version="2018.11.03" />
   </dependencies>
   </metadata>
   <files>

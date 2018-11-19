@@ -322,6 +322,7 @@
             Constructor
             </summary>
             <param name="ConnectionString"></param>
+            <exception cref="T:System.ArgumentNullException">Thrown when Connection string is null</exception>
         </member>
         <member name="P:net.phraustbyte.dal.mssql.BaseDAL.Query">
             <summary>
@@ -339,7 +340,13 @@
             </summary>
             <typeparam name="T"></typeparam>
             <param name="Obj"></param>
-            <returns></returns>
+            <returns>Database Record</returns>
+            <example>
+            <code>
+            Object obj = new Object() ;
+            int recordIndex = await Create&gt;Object&lt;(obj);
+            </code>
+            </example>
         </member>
         <member name="M:net.phraustbyte.dal.mssql.BaseDAL.Delete``1(``0)">
             <summary>
@@ -348,13 +355,25 @@
             <typeparam name="T"></typeparam>
             <param name="Obj"></param>
             <returns></returns>
+            <example>
+            <code>
+            Object obj = new Object();
+            await Delete(obj);
+            </code>
+            </example>
         </member>
         <member name="M:net.phraustbyte.dal.mssql.BaseDAL.ReadAll``1">
             <summary>
             Reads all records from the database
             </summary>
             <typeparam name="T"></typeparam>
-            <returns></returns>
+            <returns>List of records</returns>
+            <example>
+            <code>
+            List&gt;Object&lt; list = new List&gt;Object&lt;();
+            list = await ReadAll&gt;Object&lt;();
+            </code>
+            </example>
         </member>
         <member name="M:net.phraustbyte.dal.mssql.BaseDAL.Read``1(System.Int32)">
             <summary>
@@ -363,6 +382,12 @@
             <typeparam name="T"></typeparam>
             <param name="Id"></param>
             <returns></returns>
+            <example>
+            <code>
+            int id = 1;
+            Object obj = await Read&gt;Object&lt;(id);
+            </code>
+            </example>
         </member>
         <member name="M:net.phraustbyte.dal.mssql.BaseDAL.Update``1(``0)">
             <summary>
@@ -371,6 +396,14 @@
             <typeparam name="T"></typeparam>
             <param name="Obj"></param>
             <returns></returns>
+            <example>
+            <code>
+            RecordObject obj = new RecordObj {
+                Id = 1
+            } ;
+            await Update&gt;RecordObject&lt;(obj);
+            </code>
+            </example>
         </member>
         <member name="M:net.phraustbyte.dal.mssql.BaseDAL.GetParameters``1(``0)">
             <summary>
