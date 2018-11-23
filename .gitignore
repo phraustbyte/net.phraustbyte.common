@@ -42,3 +42,4 @@ Thumbs.db
 /net.phraustbyte.bll/lib/netstandard2.0
 *.nupkg
 /net.phraustbyte.dal/lib/netstandard2.0
+/._net.phraustbyte.sln

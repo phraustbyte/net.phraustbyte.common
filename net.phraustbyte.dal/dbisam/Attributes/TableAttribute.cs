@@ -20,4 +20,5 @@ namespace net.phraustbyte.dal.dbisam
             this.TableName = TableName;
         }
     }
+    
 }
