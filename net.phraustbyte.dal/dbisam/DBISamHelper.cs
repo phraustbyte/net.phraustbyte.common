@@ -146,7 +146,7 @@ namespace net.phraustbyte.dal.dbisam
             {
                 if (prop.CustomAttributes.Any(x => x.AttributeType == typeof(IdentifierAttribute)))
                 {
-                    Ids.Add($"{prop.Name}={prop.GetValue(source, null)}");
+                    Ids.Add($"{prop.Name}={ConvertToString(prop,source)}");
                 }
                 //else if (!IsArray && prop.CustomAttributes.Any(x => x.AttributeType == typeof(IdentifierAttribute)))
                 //{

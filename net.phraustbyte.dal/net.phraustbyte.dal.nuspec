@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.dal</id>
-    <version>2018.11.05</version>
+    <version>2018.11.06</version>
     <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -10,7 +10,8 @@
     <projectUrl>https://github.com/phraustbyte/net.phraustbyte.common</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for Data Logic Layer</description>
-    <releaseNotes>2018.11.05 - Changed DELETE logic for DBISAM to include multiple identifiers
+    <releaseNotes>2018.11.06 - Fixed bug in Delete logic
+2018.11.05 - Changed DELETE logic for DBISAM to include multiple identifiers
 2018.11.04 - Fixed bug with DBISAM query generation
 2018.11.03 - Fixed issue with checksum errors
 2018.11.02 - Added additional functions for DBISAM Helper/Fixed update functions
