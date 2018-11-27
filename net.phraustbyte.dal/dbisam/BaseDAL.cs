@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Data.Odbc;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace net.phraustbyte.dal
 {
@@ -202,6 +203,16 @@ namespace net.phraustbyte.dal
                 }
                 catch (Exception ex)
                 {
+                    //ERROR[HY000][Elevate Software][DBISAM] DBISAM Engine Error # 9729 Duplicate key found in the index 'Primary' of the table 'CALLPNT'
+                    Regex regex = new Regex(@"^(ERROR\[[a-zA-Z0-9]+\]\[Elevate Software\]\[DBISAM\]) ([a-zA-Z ]+)(# )(\d+)(\W.*)$");
+                    Match m = regex.Match(ex.Message);
+                    if (m.Success)
+                    {
+                        if (m.Groups[4].Value == "9729")
+                            return -1;
+                        else
+                            throw ex;
+                    }
                     throw ex;
                 }
                 finally
