@@ -60,10 +60,5 @@
             <param name="Id"></param>
             <returns></returns>
         </member>
-        <member name="P:net.phraustbyte.bll.IBaseBLL.DataLayer">
-            <summary>
-            Represents the datalayer
-            </summary>
-        </member>
     </members>
 </doc>

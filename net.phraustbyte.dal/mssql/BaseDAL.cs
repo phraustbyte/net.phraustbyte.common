@@ -118,7 +118,7 @@ namespace net.phraustbyte.dal
             /// list = await ReadAll&gt;Object&lt;();
             /// </code>
             /// </example>
-            public async Task<List<T>> ReadAll<T>() where T : new()
+            public virtual async Task<List<T>> ReadAll<T>() where T : new()
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {

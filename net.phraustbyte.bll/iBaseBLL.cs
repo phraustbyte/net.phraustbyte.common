@@ -52,9 +52,6 @@ namespace net.phraustbyte.bll
         /// <param name="Id"></param>
         /// <returns></returns>
         Task<IBaseBLL> Read(int Id);
-        /// <summary>
-        /// Represents the datalayer
-        /// </summary>
-        IBaseDAL DataLayer { get; }
+
     }
 }
