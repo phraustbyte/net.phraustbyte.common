@@ -51,7 +51,8 @@ namespace net.phraustbyte.dal
                 {
                     using (SqlCommand command = new SqlCommand{
                         CommandType = System.Data.CommandType.StoredProcedure,
-                        CommandText = this.Query
+                        CommandText = this.Query,
+                        Connection = connection
                     }) 
                     {
                         try
@@ -91,7 +92,8 @@ namespace net.phraustbyte.dal
                     using (SqlCommand command = new SqlCommand
                     {
                         CommandType = System.Data.CommandType.StoredProcedure,
-                        CommandText = this.Query
+                        CommandText = this.Query,
+                        Connection = connection
                     })
                     {
                         try
@@ -125,7 +127,8 @@ namespace net.phraustbyte.dal
                     using (SqlCommand command = new SqlCommand
                     {
                         CommandText = this.Query,
-                        CommandType = System.Data.CommandType.StoredProcedure
+                        CommandType = System.Data.CommandType.StoredProcedure,
+                        Connection = connection
                     })
                     {
                         try
@@ -161,13 +164,15 @@ namespace net.phraustbyte.dal
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString)) {
                     using (SqlCommand command = new SqlCommand {
                         CommandText = this.Query,
-                        CommandType = System.Data.CommandType.StoredProcedure
+                        CommandType = System.Data.CommandType.StoredProcedure,
+                        Connection = connection
                     }) {
                         try {
                             await connection.OpenAsync();
                             command.Parameters.Add(new SqlParameter("@Id",Id));
-                            var result = await command.ExecuteReaderAsync();
-                            return SqlHelper.TranslateResults<T>(result);
+                            var reader = await command.ExecuteReaderAsync();
+                            reader.Read();
+                            return SqlHelper.TranslateResults<T>(reader);
                         }
                         catch (Exception ex){
                             throw ex;
@@ -196,7 +201,8 @@ namespace net.phraustbyte.dal
                     using (SqlCommand command = new SqlCommand
                     {
                         CommandType = System.Data.CommandType.StoredProcedure,
-                        CommandText = this.Query
+                        CommandText = this.Query,
+                        Connection = connection
                     })
                     {
                         try

@@ -204,11 +204,11 @@ namespace net.phraustbyte.dal
                 catch (Exception ex)
                 {
                     //ERROR[HY000][Elevate Software][DBISAM] DBISAM Engine Error # 9729 Duplicate key found in the index 'Primary' of the table 'CALLPNT'
-                    Regex regex = new Regex(@"^(ERROR\[[a-zA-Z0-9]+\]\[Elevate Software\]\[DBISAM\]) ([a-zA-Z ]+)(# )(\d+)(\W.*)$");
+                    Regex regex = new Regex(@"^(ERROR\W?\[[a-zA-Z0-9]+\]\W?[Elevate Software\]\W?\[DBISAM\])\W?([a-zA-Z ]+)(#\W?)(\d+)(.*)$");
                     Match m = regex.Match(ex.Message);
                     if (m.Success)
                     {
-                        if (m.Groups[4].Value == "9729")
+                        if (m.Groups[3].Value == "9729")
                             return -1;
                         else
                             throw ex;
