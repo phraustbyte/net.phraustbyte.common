@@ -63,7 +63,7 @@ namespace net.phraustbyte.dal
                             {
                                 command.Parameters.AddRange(GetParameters(Obj).ToArray());
                                 var result = await command.ExecuteNonQueryAsync();
-                                return Convert.ToInt32(command.Parameters["@Id"]);
+                                return Convert.ToInt32(command.Parameters["@Id"].Value);
                             }
                             throw new Exception("Error connecting to data source");
                         }
