@@ -95,11 +95,11 @@ namespace net.phraustbyte.tests
             await DataLayer.Delete(this);
         }
 
-        public async Task<List<TestClass>> ReadAll()
+        public async Task<List<IBaseBLL>> ReadAll()
         {
             var result = await DataLayer.ReadAll<TestClass>();
-            //List<IBaseBLL> res = result.ToList<IBaseBLL>();
-            return result;
+            List<IBaseBLL> res = result.ToList<IBaseBLL>();
+            return res;
         }
 
         public async Task<IBaseBLL> Read(int Id)

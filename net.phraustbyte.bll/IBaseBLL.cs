@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using net.phraustbyte.dal;
 using System.Threading.Tasks;
 
 namespace net.phraustbyte.bll
@@ -45,13 +44,13 @@ namespace net.phraustbyte.bll
         /// Reads all records in the database
         /// </summary>
         /// <returns></returns>
-        Task<List<T>> ReadAll<T>() where T :IBaseBLL ;
+        Task<List<IBaseBLL>> ReadAll<IBaseBLL>();
         /// <summary>
         /// Reads a single record in a database
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<T> Read<T>(int Id) where T :IBaseBLL;
+        Task<IBaseBLL> Read<IBaseBLL>(int Id);
 
     }
 }
