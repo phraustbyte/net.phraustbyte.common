@@ -45,13 +45,13 @@ namespace net.phraustbyte.bll
         /// Reads all records in the database
         /// </summary>
         /// <returns></returns>
-        Task<List<IBaseBLL>> ReadAll();
+        Task<List<T>> ReadAll<T>() where T :IBaseBLL ;
         /// <summary>
         /// Reads a single record in a database
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<IBaseBLL> Read(int Id);
+        Task<T> Read<T>(int Id) where T :IBaseBLL;
 
     }
 }

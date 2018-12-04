@@ -47,13 +47,13 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.bll.IBaseBLL.ReadAll">
+        <member name="M:net.phraustbyte.bll.IBaseBLL.ReadAll``1">
             <summary>
             Reads all records in the database
             </summary>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.bll.IBaseBLL.Read(System.Int32)">
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Read``1(System.Int32)">
             <summary>
             Reads a single record in a database
             </summary>

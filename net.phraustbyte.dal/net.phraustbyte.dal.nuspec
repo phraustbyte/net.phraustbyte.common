@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.dal</id>
-    <version>2018.11.10</version>
+    <version>2018.12.1</version>
     <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -10,7 +10,9 @@
     <projectUrl>https://github.com/phraustbyte/net.phraustbyte.common</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for Data Logic Layer</description>
-    <releaseNotes>2018-11-10 - Verbose debugging for DBISAM. Bugfixes for MSSQL
+    <releaseNotes>2018-12-1 - Changed byte[] mapping from image to varbinary
+2018-11-11 - Additional bugfixes for MSSQL
+2018-11-10 - Verbose debugging for DBISAM. Bugfixes for MSSQL
 2018.11.08 - Added more verbose debugging for DBISAM
 2018.11.07 - Fixed bug in DAL
 2018.11.06 - Fixed bug in Delete logic

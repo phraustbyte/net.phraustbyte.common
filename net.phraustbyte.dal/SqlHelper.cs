@@ -29,7 +29,7 @@ namespace net.phraustbyte.dal
                 [typeof(short)] = SqlDbType.SmallInt,
                 [typeof(int)] = SqlDbType.Int,
                 [typeof(long)] = SqlDbType.BigInt,
-                [typeof(byte[])] = SqlDbType.Image,
+                [typeof(byte[])] = SqlDbType.VarBinary,
                 [typeof(bool)] = SqlDbType.Bit,
                 [typeof(DateTime)] = SqlDbType.DateTime2,
                 [typeof(DateTimeOffset)] = SqlDbType.DateTimeOffset,
