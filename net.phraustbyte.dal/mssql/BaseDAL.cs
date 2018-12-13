@@ -33,27 +33,28 @@ namespace net.phraustbyte.dal
             /// Represents the connection string to the datasource
             /// </summary>
             public string ConnectionString { get; }
-           /// <summary>
-           /// Creates a record in the database
-           /// </summary>
-           /// <typeparam name="T"></typeparam>
-           /// <param name="Obj"></param>
-           /// <returns>Database Record</returns>
-           /// <example>
-           /// <code>
-           /// Object obj = new Object() ;
-           /// int recordIndex = await Create&gt;Object&lt;(obj);
-           /// </code>
-           /// </example>
+            /// <summary>
+            /// Creates a record in the database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Obj"></param>
+            /// <returns>Database Record</returns>
+            /// <example>
+            /// <code>
+            /// Object obj = new Object() ;
+            /// int recordIndex = await Create&gt;Object&lt;(obj);
+            /// </code>
+            /// </example>
             public virtual async Task<int> Create<T>(T Obj)
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
-                    using (SqlCommand command = new SqlCommand{
+                    using (SqlCommand command = new SqlCommand
+                    {
                         CommandType = System.Data.CommandType.StoredProcedure,
                         CommandText = this.Query,
                         Connection = connection
-                    }) 
+                    })
                     {
                         try
                         {
@@ -67,12 +68,56 @@ namespace net.phraustbyte.dal
                             }
                             throw new Exception("Error connecting to data source");
                         }
-                        catch (Exception ex) {
+                        catch (Exception ex)
+                        {
                             throw ex;
                         }
                     }
                 }
             }
+            /// <summary>
+            /// Creates a record in the database
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="Obj"></param>
+            /// <returns>Database Record</returns>
+            /// <example>
+            /// <code>
+            /// Object obj = new Object() ;
+            /// Guid recordIndex = await Create&gt;Object&lt;(obj);
+            /// </code>
+            /// </example>
+            public virtual async Task<Guid> Insert<T>(T Obj)
+            {
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand
+                    {
+                        CommandType = System.Data.CommandType.StoredProcedure,
+                        CommandText = this.Query,
+                        Connection = connection
+                    })
+                    {
+                        try
+                        {
+                            var q = connection.OpenAsync();
+                            q.Wait();
+                            if (q.IsCompleted)
+                            {
+                                command.Parameters.AddRange(GetParameters(Obj).ToArray());
+                                var result = await command.ExecuteNonQueryAsync();
+                                return (Guid)command.Parameters["@Adjunct"].Value;
+                            }
+                            throw new Exception("Error connecting to data source");
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
+                    }
+                }
+            }
+
             /// <summary>
             /// removes a record from the database
             /// </summary>
@@ -136,7 +181,7 @@ namespace net.phraustbyte.dal
                             List<T> dest = new List<T>();
                             await connection.OpenAsync();
                             var result = await command.ExecuteReaderAsync();
-                            while(result.Read())
+                            while (result.Read())
                                 dest.Add(SqlHelper.TranslateResults<T>(result));
                             return dest;
                         }
@@ -161,20 +206,25 @@ namespace net.phraustbyte.dal
             /// </example>
             public virtual async Task<T> Read<T>(int Id) where T : new()
             {
-                using (SqlConnection connection = new SqlConnection(this.ConnectionString)) {
-                    using (SqlCommand command = new SqlCommand {
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand
+                    {
                         CommandText = this.Query,
                         CommandType = System.Data.CommandType.StoredProcedure,
                         Connection = connection
-                    }) {
-                        try {
+                    })
+                    {
+                        try
+                        {
                             await connection.OpenAsync();
-                            command.Parameters.Add(new SqlParameter("@Id",Id));
+                            command.Parameters.Add(new SqlParameter("@Id", Id));
                             var reader = await command.ExecuteReaderAsync();
                             reader.Read();
                             return SqlHelper.TranslateResults<T>(reader);
                         }
-                        catch (Exception ex){
+                        catch (Exception ex)
+                        {
                             throw ex;
                         }
                     }
@@ -194,7 +244,7 @@ namespace net.phraustbyte.dal
             /// await Update&gt;RecordObject&lt;(obj);
             /// </code>
             /// </example>
-            public virtual async Task Update<T>(T Obj) 
+            public virtual async Task Update<T>(T Obj)
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
@@ -226,15 +276,15 @@ namespace net.phraustbyte.dal
             /// <returns></returns>
             public List<IDataParameter> GetParameters<T>(T Obj)
             {
-                
+
                 try
                 {
                     PropertyInfo[] propertyInfo = Obj.GetType().GetProperties();
                     propertyInfo.DefaultIfEmpty(null);
                     int? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as int?;
                     string Changer = propertyInfo.FirstOrDefault(x => x.Name == "Changer").GetValue(Obj, null) as string;
-
                     List<IDataParameter> Params = new List<IDataParameter>();
+
                     if (Id == 0)
                     {
                         Params.Add(new SqlParameter("@Id", SqlDbType.Int)
@@ -249,13 +299,22 @@ namespace net.phraustbyte.dal
                             Value = Id
                         });
                     }
+                    if (propertyInfo.Any(x => x.Name == "Adjunct"))
+                    {
+                        Guid? Adjunct = propertyInfo.FirstOrDefault(x => x.Name == "Adjunct").GetValue(Obj, null) as Guid?;
+                        if (Adjunct is null)
+                            Params.Add(new SqlParameter("@Adjunct", SqlDbType.UniqueIdentifier) { Direction = System.Data.ParameterDirection.Output });
+                        else
+                            Params.Add(new SqlParameter("@Adjunct", SqlDbType.UniqueIdentifier) { Value = Adjunct });
+                    }
+
                     if (Obj != null)
                     {
                         Type objectType = Obj.GetType();
                         MemberInfo[] memberinfo = objectType.GetMembers();
                         foreach (MemberInfo m in memberinfo)
                         {
-                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer")
+                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer" && m.Name != "Adjunct")
                             {
                                 Params.Add(new SqlParameter("@" + m.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(m.Name).PropertyType))
                                 {
@@ -284,7 +343,7 @@ namespace net.phraustbyte.dal
                 }
             }
 
-            
+
         }
 
     }

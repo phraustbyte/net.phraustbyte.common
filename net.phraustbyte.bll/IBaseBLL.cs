@@ -7,12 +7,16 @@ namespace net.phraustbyte.bll
     /// <summary>
     /// Represents the base of an object
     /// </summary>
-    public interface IBaseBLL : IEquatable<IBaseBLL>
+    public interface IBaseBLL
     {
         /// <summary>
         /// Represents the Id of an object
         /// </summary>
         int Id { get; set; }
+        /// <summary>
+        /// Represents the unique identifier of an object
+        /// </summary>
+        Guid Adjunct { get; set; }
         /// <summary>
         /// Represents the date the record was created
         /// </summary>
@@ -44,13 +48,13 @@ namespace net.phraustbyte.bll
         /// Reads all records in the database
         /// </summary>
         /// <returns></returns>
-        Task<List<IBaseBLL>> ReadAll<IBaseBLL>();
+        Task<List<T>> ReadAll<T>() where T: IBaseBLL, new();
         /// <summary>
         /// Reads a single record in a database
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<IBaseBLL> Read<IBaseBLL>(int Id);
+        Task<T> Read<T>(int Id) where T: IBaseBLL, new();
 
     }
 }

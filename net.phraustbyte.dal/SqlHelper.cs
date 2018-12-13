@@ -36,7 +36,8 @@ namespace net.phraustbyte.dal
                 [typeof(decimal)] = SqlDbType.Money,
                 [typeof(float)] = SqlDbType.Real,
                 [typeof(double)] = SqlDbType.Float,
-                [typeof(TimeSpan)] = SqlDbType.Time
+                [typeof(TimeSpan)] = SqlDbType.Time,
+                [typeof(Guid)] = SqlDbType.UniqueIdentifier
             };
         }
 
@@ -111,6 +112,8 @@ namespace net.phraustbyte.dal
                 throw ex;
             }
         }
+
+
     }
     
 }

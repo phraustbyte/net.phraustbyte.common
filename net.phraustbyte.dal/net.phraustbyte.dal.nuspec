@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.dal</id>
-    <version>2018.12.1</version>
+    <version>2018.12.2.1-pre</version>
     <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
