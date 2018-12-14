@@ -1,20 +1,24 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>net.phraustbyte.bll</id>
+    <id>net.phraustbyte.dal.mysql</id>
     <version>2018.12.4</version>
-    <title>Phraustbyte Base BLL</title>
+    <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
     <license type="expression">GPL-3.0-or-later</license>
     <projectUrl>https://github.com/phraustbyte/net.phraustbyte.common</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Base Class for Business Logic Layer</description>
-    <releaseNotes>
-      Added Adjunct guid to base definition
+    <description>Base Class for MySql Data Logic Layer</description>
+    <releaseNotes>Seperated MySql from base class
     </releaseNotes>
     <copyright>Copyright 2018</copyright>
-    <tags>BLL LogicLayer Phraustbyte</tags>
+    <tags>DAL DataAccess Phraustbyte MYSQL</tags>
+    <dependencies>
+      <dependency id="Microsoft.CSharp" version="4.5.0" />
+      <dependency id="MySql.Data" version="8.0.13" />
+      <dependency id="net.phraustbyte.dal" version="2018.12.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="lib\netstandard2.0\**" target="lib/netstandard2.0/" />

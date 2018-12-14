@@ -33,7 +33,7 @@ namespace net.phraustbyte.bll
         /// Creates a record in the database
         /// </summary>
         /// <returns></returns>
-        Task<int> Create();
+        Task<T> Create<T>();
         /// <summary>
         /// Updates a record in the database
         /// </summary>
@@ -54,7 +54,7 @@ namespace net.phraustbyte.bll
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<T> Read<T>(int Id) where T: IBaseBLL, new();
+        Task<TOut> Read<TIn,TOut>(TIn Id) where TOut: IBaseBLL, new();
 
     }
 }

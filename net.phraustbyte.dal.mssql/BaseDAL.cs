@@ -3,16 +3,15 @@ using System.Collections.Generic;
 
 namespace net.phraustbyte.dal
 {
-    namespace mysql
+    namespace mssql
     {
-        using MySql.Data;
-        using MySql.Data.MySqlClient;
         using System.Data;
+        using System.Data.SqlClient;
         using System.Linq;
         using System.Reflection;
         using System.Threading.Tasks;
         /// <summary>
-        /// Represents a connection to connection to a MySQL database
+        /// represents a connection to a Microsoft SQL datasource
         /// </summary>
         public class BaseDAL : IBaseDAL
         {
@@ -20,29 +19,38 @@ namespace net.phraustbyte.dal
             /// Constructor
             /// </summary>
             /// <param name="ConnectionString"></param>
+            /// <exception cref="System.ArgumentNullException">Thrown when Connection string is null</exception>
             public BaseDAL(string ConnectionString)
             {
                 this.ConnectionString = ConnectionString ?? throw new ArgumentNullException();
+
             }
             /// <summary>
-            /// represents a query command or the name of a stored procedure
+            /// Represents a query to be executed or the name of a stored procedure
             /// </summary>
             public string Query { get; set; }
             /// <summary>
-            /// represents a connection string to a datasource
+            /// Represents the connection string to the datasource
             /// </summary>
             public string ConnectionString { get; }
             /// <summary>
-            /// Creates a record in a database
+            /// Creates a record in the database
             /// </summary>
-            /// <typeparam name="T"></typeparam>
+            /// <typeparam name="TIn"></typeparam>
+            /// <typeparam name="TOut"></typeparam>
             /// <param name="Obj"></param>
-            /// <returns></returns>
-            public virtual async Task<int> Create<T>(T Obj)
+            /// <returns>Database Record</returns>
+            /// <example>
+            /// <code>
+            /// Object obj = new Object() ;
+            /// int recordIndex = await Create&gt;Object&lt;(obj);
+            /// </code>
+            /// </example>
+            public virtual async Task<TOut> Create<TIn, TOut>(TIn Obj)
             {
-                using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
-                    using (MySqlCommand command = new MySqlCommand
+                    using (SqlCommand command = new SqlCommand
                     {
                         CommandType = System.Data.CommandType.StoredProcedure,
                         CommandText = this.Query,
@@ -51,12 +59,16 @@ namespace net.phraustbyte.dal
                     {
                         try
                         {
-                            await connection.OpenAsync();
+                            var q = connection.OpenAsync();
+                            q.Wait();
+                            if (q.IsCompleted)
+                            {
+                                command.Parameters.AddRange(GetParameters(Obj).ToArray());
+                                var result = await command.ExecuteNonQueryAsync();
 
-                            command.Parameters.AddRange(GetParameters(Obj).ToArray());
-                            var result = await command.ExecuteNonQueryAsync();
-                            return Convert.ToInt32(command.Parameters["@Id"]);
-
+                                return (TOut)command.Parameters[typeof(TOut) == typeof(int)?"@Id":"@Adjunct"].Value;
+                            }
+                            throw new Exception("Error connecting to data source");
                         }
                         catch (Exception ex)
                         {
@@ -65,17 +77,66 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
+            ///// <summary>
+            ///// Creates a record in the database
+            ///// </summary>
+            ///// <typeparam name="T"></typeparam>
+            ///// <param name="Obj"></param>
+            ///// <returns>Database Record</returns>
+            ///// <example>
+            ///// <code>
+            ///// Object obj = new Object() ;
+            ///// Guid recordIndex = await Create&gt;Object&lt;(obj);
+            ///// </code>
+            ///// </example>
+            //public virtual async Task<Guid> Insert<T>(T Obj)
+            //{
+            //    using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+            //    {
+            //        using (SqlCommand command = new SqlCommand
+            //        {
+            //            CommandType = System.Data.CommandType.StoredProcedure,
+            //            CommandText = this.Query,
+            //            Connection = connection
+            //        })
+            //        {
+            //            try
+            //            {
+            //                var q = connection.OpenAsync();
+            //                q.Wait();
+            //                if (q.IsCompleted)
+            //                {
+            //                    command.Parameters.AddRange(GetParameters(Obj).ToArray());
+            //                    var result = await command.ExecuteNonQueryAsync();
+            //                    return (Guid)command.Parameters["@Adjunct"].Value;
+            //                }
+            //                throw new Exception("Error connecting to data source");
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                throw ex;
+            //            }
+            //        }
+            //    }
+            //}
+
             /// <summary>
-            /// removes a record from a database
+            /// removes a record from the database
             /// </summary>
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
+            /// <example>
+            /// <code>
+            /// Object obj = new Object();
+            /// await Delete(obj);
+            /// </code>
+            /// </example>
             public virtual async Task Delete<T>(T Obj)
             {
-                using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
-                    using (MySqlCommand command = new MySqlCommand
+                    using (SqlCommand command = new SqlCommand
                     {
                         CommandType = System.Data.CommandType.StoredProcedure,
                         CommandText = this.Query,
@@ -96,15 +157,21 @@ namespace net.phraustbyte.dal
                 }
             }
             /// <summary>
-            /// Reads all records in a database
+            /// Reads all records from the database
             /// </summary>
             /// <typeparam name="T"></typeparam>
-            /// <returns></returns>
+            /// <returns>List of records</returns>
+            /// <example>
+            /// <code>
+            /// List&gt;Object&lt; list = new List&gt;Object&lt;();
+            /// list = await ReadAll&gt;Object&lt;();
+            /// </code>
+            /// </example>
             public virtual async Task<List<T>> ReadAll<T>() where T : new()
             {
-                using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
-                    using (MySqlCommand command = new MySqlCommand
+                    using (SqlCommand command = new SqlCommand
                     {
                         CommandText = this.Query,
                         CommandType = System.Data.CommandType.StoredProcedure,
@@ -117,10 +184,7 @@ namespace net.phraustbyte.dal
                             await connection.OpenAsync();
                             var result = await command.ExecuteReaderAsync();
                             while (result.Read())
-                            {
                                 dest.Add(SqlHelper.TranslateResults<T>(result));
-                            }
-
                             return dest;
                         }
                         catch (Exception ex)
@@ -133,14 +197,21 @@ namespace net.phraustbyte.dal
             /// <summary>
             /// Reads a record from a database
             /// </summary>
-            /// <typeparam name="T"></typeparam>
+            /// <typeparam name="TIn"></typeparam>
+            /// <typeparam name="TOut"></typeparam>
             /// <param name="Id"></param>
             /// <returns></returns>
-            public virtual async Task<T> Read<T>(int Id) where T : new()
+            /// <example>
+            /// <code>
+            /// int id = 1;
+            /// Object obj = await Read&gt;Object&lt;(id);
+            /// </code>
+            /// </example>
+            public virtual async Task<TOut> Read<TIn,TOut>(TIn Id) where TOut : new()
             {
-                using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
-                    using (MySqlCommand command = new MySqlCommand
+                    using (SqlCommand command = new SqlCommand
                     {
                         CommandText = this.Query,
                         CommandType = System.Data.CommandType.StoredProcedure,
@@ -150,9 +221,11 @@ namespace net.phraustbyte.dal
                         try
                         {
                             await connection.OpenAsync();
-                            command.Parameters.Add(new MySqlParameter("@Id", Id));
-                            var result = await command.ExecuteReaderAsync();
-                            return SqlHelper.TranslateResults<T>(result);
+                            command.Parameters.Add(new SqlParameter(
+                                typeof(TIn) == typeof(int)?"@Id":"@Adjunct", Id));
+                            var reader = await command.ExecuteReaderAsync();
+                            reader.Read();
+                            return SqlHelper.TranslateResults<TOut>(reader);
                         }
                         catch (Exception ex)
                         {
@@ -162,16 +235,24 @@ namespace net.phraustbyte.dal
                 }
             }
             /// <summary>
-            /// updates a record in a database
+            /// Updates a record in a database
             /// </summary>
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
+            /// <example>
+            /// <code>
+            /// RecordObject obj = new RecordObj {
+            ///     Id = 1
+            /// } ;
+            /// await Update&gt;RecordObject&lt;(obj);
+            /// </code>
+            /// </example>
             public virtual async Task Update<T>(T Obj)
             {
-                using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
-                    using (MySqlCommand command = new MySqlCommand
+                    using (SqlCommand command = new SqlCommand
                     {
                         CommandType = System.Data.CommandType.StoredProcedure,
                         CommandText = this.Query,
@@ -192,7 +273,7 @@ namespace net.phraustbyte.dal
                 }
             }
             /// <summary>
-            /// Generates a list of parameters based on an object
+            /// Generates parameters based on an object
             /// </summary>
             /// <typeparam name="T"></typeparam>
             /// <param name="Obj"></param>
@@ -206,42 +287,48 @@ namespace net.phraustbyte.dal
                     propertyInfo.DefaultIfEmpty(null);
                     int? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as int?;
                     string Changer = propertyInfo.FirstOrDefault(x => x.Name == "Changer").GetValue(Obj, null) as string;
-
                     List<IDataParameter> Params = new List<IDataParameter>();
+
                     if (Id == 0)
                     {
-                        Params.Add(new MySqlParameter("@Id", SqlDbType.Int)
+                        Params.Add(new SqlParameter("@Id", SqlDbType.Int)
                         {
                             Direction = System.Data.ParameterDirection.Output
                         });
                     }
                     else if (Id > 0)
                     {
-                        Params.Add(new MySqlParameter("@Id", SqlDbType.Int)
+                        Params.Add(new SqlParameter("@Id", SqlDbType.Int)
                         {
                             Value = Id
                         });
                     }
+                    if (propertyInfo.Any(x => x.Name == "Adjunct"))
+                    {
+                        var property = propertyInfo.FirstOrDefault(x => x.Name == "Adjunct");
+                        var Adjunct = Convert.ChangeType(property.GetValue(Obj, null), property.PropertyType);
+                        if (Adjunct is null)
+                            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                        else
+                            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                    }
+
                     if (Obj != null)
                     {
                         Type objectType = Obj.GetType();
                         MemberInfo[] memberinfo = objectType.GetMembers();
-                        foreach (var p in propertyInfo)
+                        foreach (MemberInfo m in memberinfo)
                         {
-                            if ((p.MemberType == MemberTypes.Field || p.MemberType == MemberTypes.Property) &&
-                                p.Name != "Id" &&
-                                p.Name != "Changer" &&
-                                !typeof(IBaseDAL).IsAssignableFrom(p.PropertyType))
-                            //p.PropertyType == typeof(IBaseDAL))
+                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer" && m.Name != "Adjunct")
                             {
-                                Params.Add(new MySqlParameter("@" + p.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(p.Name).PropertyType))
+                                Params.Add(new SqlParameter("@" + m.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(m.Name).PropertyType))
                                 {
-                                    Value = Obj.GetType().GetProperty(p.Name).GetValue(Obj, null)
+                                    Value = Obj.GetType().GetProperty(m.Name).GetValue(Obj, null)
                                 });
                             }
                         }
 
-                        //MySqlParameter XmlParam = new MySqlParameter("@Object", SqlDbType.Xml);
+                        //SqlParameter XmlParam = new SqlParameter("@Object", SqlDbType.Xml);
                         //XmlParam.Value = ProcessXML.SerializeObject(obj);
                         //Params.Add(XmlParam);
                     }
@@ -251,7 +338,7 @@ namespace net.phraustbyte.dal
                     }
                     else
                     {
-                        Params.Add(new MySqlParameter("@Changer", Changer));
+                        Params.Add(new SqlParameter("@Changer", Changer));
                     }
                     return Params;
                 }
@@ -261,47 +348,7 @@ namespace net.phraustbyte.dal
                 }
             }
 
-            //private T TranslateResults<T>(IDataReader source) where T : new()
-            //{
 
-            //    if (source == null)
-            //    {
-            //        throw new ArgumentNullException();
-            //    }
-
-            //    try
-            //    {
-            //        Type objectType = typeof(T);
-            //        //MemberInfo[] memberinfo = objectType.GetMembers();
-            //        var dest = (T)Activator.CreateInstance(typeof(T));
-            //        PropertyInfo[] propertyInfo = objectType.GetProperties();
-            //        foreach (var p in propertyInfo)
-            //        {
-            //            if (p.SetMethod != null)
-            //            {
-            //                var drValue = source[p.Name];
-            //                Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
-            //                var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
-            //                p.SetValue(dest, drValueConverted, null);
-            //            }
-            //        }
-            //        return dest;
-            //    }
-            //    catch (MissingMethodException ex)
-            //    {
-            //        throw ex;
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        throw ex;
-            //    }
-            //}
-
-            List<IDataParameter> IBaseDAL.GetParameters<T>(T Obj)
-            {
-                throw new NotImplementedException();
-            }
         }
 
     }

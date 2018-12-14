@@ -1,6 +1,5 @@
 ﻿using net.phraustbyte.bll;
 using net.phraustbyte.dal;
-using net.phraustbyte.dal.mssql;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -19,18 +18,21 @@ namespace net.phraustbyte.tests
 
         public TestClass()
         {
-            DataLayer = new BaseDAL("ConnectionString");
+            DataLayer = null;// TestConfig.GetMock().Object;  //new BaseDAL("ConnectionString");
         }
         public TestClass(IBaseDAL dal)
         {
             DataLayer = dal;
         }
 
-        public async Task<int> Create()
+        public async Task<T> Create<T>()
         {
-            return await DataLayer.Create(this);
+            return await DataLayer.Create<TestClass,T>(this);
         }
-
+        //public async Task<Guid> Insert()
+        //{
+        //    return await DataLayer.Insert<Guid,TestClass>(this);
+        //}
         public async Task Delete()
         {
             await DataLayer.Delete(this);
@@ -48,9 +50,9 @@ namespace net.phraustbyte.tests
         //    return res;
         //}
 
-        public async Task<T> Read<T>(int Id) where T : IBaseBLL, new()
+        public async Task<TOut> Read<TIn,TOut>(TIn Id) where TOut : IBaseBLL, new()
         {
-            return await DataLayer.Read<T>(Id);
+            return await DataLayer.Read<TIn,TOut>(Id);
         }
 
         public async Task Update()

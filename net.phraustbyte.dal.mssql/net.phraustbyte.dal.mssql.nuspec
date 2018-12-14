@@ -1,21 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2018/10/nuspec.xsd">
+<?xml version="1.0"?>
+<package >
   <metadata>
-    <id>net.phraustbyte.dal</id>
+    <id>net.phraustbyte.dal.mssql</id>
     <version>2018.12.4</version>
     <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
     <license type="expression">GPL-3.0-or-later</license>
-    <projectUrl>https://github.com/phraustbyte/net.phraustbyte.common</projectUrl>
+     <projectUrl>https://github.com/phraustbyte/net.phraustbyte.common</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Base Class for Data Logic Layer</description>
-    <releaseNotes>Split specific frameworks fromb ase
+    <description>Base Class for MSSQL Data Logic Layer</description>
+    <releaseNotes>Split MsSQL from main dal
     </releaseNotes>
     <copyright>Copyright 2018</copyright>
-    <tags>DAL DataAccess Phraustbyte</tags>
+    <tags>DAL DataAccess Phraustbyte MSSQL</tags>
     <dependencies>
       <dependency id="Microsoft.CSharp" version="4.5.0" />
+      <dependency id="System.Data.SqlClient" version="4.6.0" />
+      <dependency id="net.phraustbyte.dal" version="2018.12.4" />
     </dependencies>
   </metadata>
   <files>

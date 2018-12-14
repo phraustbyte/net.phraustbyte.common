@@ -14,6 +14,11 @@
             Represents the Id of an object
             </summary>
         </member>
+        <member name="P:net.phraustbyte.bll.IBaseBLL.Adjunct">
+            <summary>
+            Represents the unique identifier of an object
+            </summary>
+        </member>
         <member name="P:net.phraustbyte.bll.IBaseBLL.CreatedDate">
             <summary>
             Represents the date the record was created
@@ -29,7 +34,7 @@
             Indicates whether the record is active (not deleted)
             </summary>
         </member>
-        <member name="M:net.phraustbyte.bll.IBaseBLL.Create">
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Create``1">
             <summary>
             Creates a record in the database
             </summary>
@@ -53,7 +58,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.bll.IBaseBLL.Read``1(System.Int32)">
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Read``2(``0)">
             <summary>
             Reads a single record in a database
             </summary>

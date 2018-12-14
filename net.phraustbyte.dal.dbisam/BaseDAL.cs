@@ -219,6 +219,21 @@ namespace net.phraustbyte.dal
                 {
                 }
             }
+
+            public Task<Guid> Insert<T>(T Obj)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Task<TOut> Create<TIn, TOut>(TIn Obj)
+            {
+                throw new NotImplementedException();
+            }
+
+            public Task<TOut> Read<TIn, TOut>(TIn Id) where TOut : new()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

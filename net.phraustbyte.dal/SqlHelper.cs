@@ -9,7 +9,7 @@ namespace net.phraustbyte.dal
     /// <summary>
     /// Helper Classes for the DAL
     /// </summary>
-    static class SqlHelper
+   public static class SqlHelper
     {
         /// <summary>
         /// Dictionary of SQL DB Types

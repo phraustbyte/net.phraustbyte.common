@@ -43,3 +43,6 @@ Thumbs.db
 *.nupkg
 /net.phraustbyte.dal/lib/netstandard2.0
 /._net.phraustbyte.sln
+/net.phraustbyte.dal.dbisam/lib/netstandard2.0
+/net.phraustbyte.dal.mssql/lib/netstandard2.0
+/net.phraustbyte.dal.mysql/lib/netstandard2.0
