@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using net.phraustbyte.dal;
 using System.Threading.Tasks;
 
 namespace net.phraustbyte.bll
@@ -8,12 +7,16 @@ namespace net.phraustbyte.bll
     /// <summary>
     /// Represents the base of an object
     /// </summary>
-    public interface IBaseBLL : IEquatable<IBaseBLL>
+    public interface IBaseBLL
     {
         /// <summary>
         /// Represents the Id of an object
         /// </summary>
         int Id { get; set; }
+        /// <summary>
+        /// Represents the unique identifier of an object
+        /// </summary>
+        Guid Adjunct { get; set; }
         /// <summary>
         /// Represents the date the record was created
         /// </summary>
@@ -30,7 +33,7 @@ namespace net.phraustbyte.bll
         /// Creates a record in the database
         /// </summary>
         /// <returns></returns>
-        Task<int> Create();
+        Task<T> Create<T>();
         /// <summary>
         /// Updates a record in the database
         /// </summary>
@@ -45,13 +48,13 @@ namespace net.phraustbyte.bll
         /// Reads all records in the database
         /// </summary>
         /// <returns></returns>
-        Task<List<T>> ReadAll<T>() where T :IBaseBLL ;
+        Task<List<T>> ReadAll<T>() where T: IBaseBLL, new();
         /// <summary>
         /// Reads a single record in a database
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<T> Read<T>(int Id) where T :IBaseBLL;
+        Task<TOut> Read<TIn,TOut>(TIn Id) where TOut: IBaseBLL, new();
 
     }
 }

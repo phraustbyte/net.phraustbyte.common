@@ -110,5 +110,13 @@ namespace net.phraustbyte.tests
             object obj = new object();
             Assert.Throws<ArgumentException>(() =>obj.GetType().GetDbType());
         }
+        [Fact]
+        public void TestDefaultTranslation()
+        {
+            //var x = default(Guid);
+            var x = (Guid)Activator.CreateInstance(typeof(Guid));
+            Guid guid = new Guid();
+            Assert.Equal(guid, x);
+        }
     }
 }

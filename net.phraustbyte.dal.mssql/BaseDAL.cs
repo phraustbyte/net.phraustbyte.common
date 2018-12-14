@@ -306,11 +306,23 @@ namespace net.phraustbyte.dal
                     if (propertyInfo.Any(x => x.Name == "Adjunct"))
                     {
                         var property = propertyInfo.FirstOrDefault(x => x.Name == "Adjunct");
-                        var Adjunct = Convert.ChangeType(property.GetValue(Obj, null), property.PropertyType);
-                        if (Adjunct is null)
-                            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
-                        else
-                            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                        if (property.PropertyType.IsPrimitive || property.PropertyType == typeof(string) || property.PropertyType == typeof(decimal))
+                        {
+                            var Adjunct = Convert.ChangeType(property.GetValue(Obj, null), property.PropertyType);
+                            var defValue = Activator.CreateInstance(property.PropertyType);
+                            if (Adjunct == defValue)
+                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                            else
+                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                        }
+                        else if (property.PropertyType == typeof(Guid))
+                        {
+                            var Adjunct = (Guid)property.GetValue(Obj, null);
+                            if (Adjunct == new Guid())
+                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                            else
+                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                        }
                     }
 
                     if (Obj != null)
