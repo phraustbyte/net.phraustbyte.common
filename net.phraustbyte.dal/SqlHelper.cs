@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -81,22 +82,32 @@ namespace net.phraustbyte.dal
                 throw new ArgumentNullException();
             try
             {
+
                 Type objectType = typeof(T);
-                //MemberInfo[] memberinfo = objectType.GetMembers();
                 var dest = (T)Activator.CreateInstance(typeof(T));
-                PropertyInfo[] propertyInfo = objectType.GetProperties();
-                foreach (var p in propertyInfo)
+                if (source.FieldCount > 0)
                 {
-                    if (p.SetMethod != null)
+                    PropertyInfo[] propertyInfo = objectType.GetProperties();
+                    var fieldNames = Enumerable.Range(0, source.FieldCount).Select(i => source.GetName(i)).ToArray();
+                    foreach (var p in propertyInfo)
                     {
-                        var drValue = source[p.Name];
-                        if (drValue.GetType() == typeof(DBNull))
-                            p.SetValue(dest, null, null);
-                        else
+                        if (p.SetMethod != null)
                         {
-                            Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
-                            var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
-                            p.SetValue(dest, drValueConverted, null);
+                            if (fieldNames.Contains(p.Name))
+                            {
+                                var drValue = source.GetValue(source.GetOrdinal(p.Name));
+                                if (!(drValue is null))
+                                {
+                                    if (drValue.GetType() == typeof(DBNull))
+                                        p.SetValue(dest, null, null);
+                                    else
+                                    {
+                                        Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
+                                        var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
+                                        p.SetValue(dest, drValueConverted, null);
+                                    }
+                                }
+                            }
                         }
                     }
                 }

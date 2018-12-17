@@ -1,4 +1,5 @@
-﻿using net.phraustbyte.dal;
+﻿using Moq;
+using net.phraustbyte.dal;
 using System;
 using System.Data;
 using Xunit;
@@ -117,6 +118,88 @@ namespace net.phraustbyte.tests
             var x = (Guid)Activator.CreateInstance(typeof(Guid));
             Guid guid = new Guid();
             Assert.Equal(guid, x);
+        }
+
+        [Fact]
+        public void TranslateSQL_To_Object_Success()
+        {
+            var dataReader = new Mock<IDataReader>();
+            dataReader.Setup(m => m.FieldCount).Returns(6); 
+            dataReader.Setup(m => m.GetName(0)).Returns("Id"); 
+            dataReader.Setup(m => m.GetName(1)).Returns("Adjunct");
+            dataReader.Setup(m => m.GetName(2)).Returns("CreatedDate");
+            dataReader.Setup(m => m.GetName(3)).Returns("Changer");
+            dataReader.Setup(m => m.GetName(4)).Returns("Name");
+            dataReader.Setup(m => m.GetName(5)).Returns("Active");
+            dataReader.Setup(m => m.GetOrdinal("Id")).Returns(0);
+            dataReader.Setup(m => m.GetOrdinal("Adjunct")).Returns(1);
+            dataReader.Setup(m => m.GetOrdinal("CreatedDate")).Returns(2);
+            dataReader.Setup(m => m.GetOrdinal("Changer")).Returns(3);
+            dataReader.Setup(m => m.GetOrdinal("Name")).Returns(4);
+            dataReader.Setup(m => m.GetOrdinal("Active")).Returns(5);
+            dataReader.Setup(m => m.GetFieldType(0)).Returns(typeof(int)); 
+            dataReader.Setup(m => m.GetFieldType(1)).Returns(typeof(Guid));
+            dataReader.Setup(m => m.GetFieldType(2)).Returns(typeof(DateTime));
+            dataReader.Setup(m => m.GetFieldType(3)).Returns(typeof(string));
+            dataReader.Setup(m => m.GetFieldType(4)).Returns(typeof(string));
+            dataReader.Setup(m => m.GetFieldType(5)).Returns(typeof(bool));
+            dataReader.Setup(m => m.GetValue(0)).Returns(new Random().Next());
+            dataReader.Setup(m => m.GetValue(1)).Returns(Guid.NewGuid());
+            dataReader.Setup(m => m.GetValue(2)).Returns(DateTime.UtcNow);
+            dataReader.Setup(m => m.GetValue(3)).Returns("ChangerString");
+            dataReader.Setup(m => m.GetValue(4)).Returns("TestClassObject");
+            dataReader.Setup(m => m.GetValue(5)).Returns(true);
+            TestClass obj = SqlHelper.TranslateResults<TestClass>(dataReader.Object);
+            Assert.NotNull(obj);
+            Assert.True(obj.Id>0);
+            Assert.True(obj.Adjunct != new Guid());
+            Assert.True(obj.CreatedDate != new DateTime());
+            Assert.NotNull(obj.Changer);
+            Assert.NotNull(obj.Name);
+
+        }
+
+        [Fact]
+        public void TranslateSQL_To_Object_EmptyDataSet_Success()
+        {
+            var dataReader = new Mock<IDataReader>();
+            dataReader.Setup(m => m.FieldCount).Returns(6);
+            dataReader.Setup(m => m.GetName(0)).Returns("Id");
+            dataReader.Setup(m => m.GetName(1)).Returns("Adjunct");
+            dataReader.Setup(m => m.GetName(2)).Returns("CreatedDate");
+            dataReader.Setup(m => m.GetName(3)).Returns("Changer");
+            dataReader.Setup(m => m.GetName(5)).Returns("Active");
+            dataReader.Setup(m => m.GetOrdinal("Id")).Returns(0);
+            dataReader.Setup(m => m.GetOrdinal("Adjunct")).Returns(1);
+            dataReader.Setup(m => m.GetOrdinal("CreatedDate")).Returns(2);
+            dataReader.Setup(m => m.GetOrdinal("Changer")).Returns(3);
+            dataReader.Setup(m => m.GetOrdinal("Active")).Returns(5);
+            dataReader.Setup(m => m.GetFieldType(0)).Returns(typeof(int));
+            dataReader.Setup(m => m.GetFieldType(1)).Returns(typeof(Guid));
+            dataReader.Setup(m => m.GetFieldType(2)).Returns(typeof(DateTime));
+            dataReader.Setup(m => m.GetFieldType(3)).Returns(typeof(string));
+            dataReader.Setup(m => m.GetFieldType(5)).Returns(typeof(bool));
+            dataReader.Setup(m => m.GetValue(0)).Returns(new Random().Next());
+            dataReader.Setup(m => m.GetValue(1)).Returns(Guid.NewGuid());
+            dataReader.Setup(m => m.GetValue(2)).Returns(DateTime.UtcNow);
+            dataReader.Setup(m => m.GetValue(3)).Returns("ChangerString");
+            dataReader.Setup(m => m.GetValue(5)).Returns(true);
+            TestClass obj = SqlHelper.TranslateResults<TestClass>(dataReader.Object);
+            Assert.NotNull(obj);
+            Assert.True(obj.Id > 0);
+            Assert.True(obj.Adjunct != new Guid());
+            Assert.True(obj.CreatedDate != new DateTime());
+            Assert.NotNull(obj.Changer);
+
+        }
+        [Fact]
+        public void TranslateSQL_To_Object_with_missing_value_Success()
+        {
+            var dataReader = new Mock<IDataReader>();
+            dataReader.Setup(m => m.FieldCount).Returns(0);
+            TestClass obj = SqlHelper.TranslateResults<TestClass>(dataReader.Object);
+            Assert.Equal(default(TestClass),obj);
+
         }
     }
 }

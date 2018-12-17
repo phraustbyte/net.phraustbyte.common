@@ -224,8 +224,15 @@ namespace net.phraustbyte.dal
                             command.Parameters.Add(new SqlParameter(
                                 typeof(TIn) == typeof(int)?"@Id":"@Adjunct", Id));
                             var reader = await command.ExecuteReaderAsync();
-                            reader.Read();
-                            return SqlHelper.TranslateResults<TOut>(reader);
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                return SqlHelper.TranslateResults<TOut>(reader);
+                            }
+                            else
+                            {
+                                throw new RecordNotFoundException($"Record Id: {Id.ToString()}");
+                            }
                         }
                         catch (Exception ex)
                         {
