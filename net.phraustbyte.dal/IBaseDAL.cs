@@ -62,5 +62,14 @@ namespace net.phraustbyte.dal
         /// <param name="Obj"></param>
         /// <returns></returns>
         List<IDataParameter> GetParameters<T>(T Obj);
+        /// <summary>
+        /// Reads records based on filter criteria
+        /// </summary>
+        /// <typeparam name="TOut"></typeparam>
+        /// <typeparam name="TParam"></typeparam>
+        /// <param name="FilterValue"></param>
+        /// <param name="FilterKey"></param>
+        /// <returns></returns>
+        Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new();
     }
 }

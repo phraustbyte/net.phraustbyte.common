@@ -2,7 +2,6 @@
 using net.phraustbyte.dal;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace net.phraustbyte.tests
@@ -13,7 +12,13 @@ namespace net.phraustbyte.tests
         {
             var mock = new Mock<IBaseDAL>();
             mock.Setup(x => x.Create<TestClass, int>(It.IsAny<TestClass>())).ReturnsAsync(5);
-            //mock.Setup(x => x.Insert(It.IsAny<TestClass>())).ReturnsAsync(new Guid());
+            mock.Setup(x => x.ReadAllByFilter<TestClass, object>(It.IsAny<object>(), It.IsAny<string>()))
+                .ReturnsAsync(new List<TestClass>{
+
+                    new TestClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameFive" },
+                    new TestClass { Id = 6, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameSix" },
+                    new TestClass { Id = 7, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameSeven" }
+                });
             mock.Setup(x => x.Delete(It.IsAny<TestClass>())).Returns(Task.CompletedTask).Verifiable();
             mock.Setup(x => x.Update(It.IsAny<TestClass>())).Returns(Task.CompletedTask).Verifiable();
             mock.Setup(x => x.Read<int, TestClass>(5))

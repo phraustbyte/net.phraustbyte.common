@@ -68,6 +68,16 @@
             <param name="Obj"></param>
             <returns></returns>
         </member>
+        <member name="M:net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)">
+            <summary>
+            Reads records based on filter criteria
+            </summary>
+            <typeparam name="TOut"></typeparam>
+            <typeparam name="TParam"></typeparam>
+            <param name="FilterValue"></param>
+            <param name="FilterKey"></param>
+            <returns></returns>
+        </member>
         <member name="T:net.phraustbyte.dal.RecordNotFoundException">
             <summary>
             Represents an exception generated when a record is not found

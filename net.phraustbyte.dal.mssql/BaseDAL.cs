@@ -194,6 +194,48 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
+            public virtual async Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new()
+            {
+                var objName = typeof(TOut).Name;
+                this.Query = $"App.usp{objName}_SelectAllByFilter";
+
+                using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand
+                    {
+                        CommandText = this.Query,
+                        CommandType = System.Data.CommandType.StoredProcedure,
+                        Connection = connection
+                    })
+                    {
+                        try
+                        {
+                            await connection.OpenAsync();
+                            command.Parameters.Add(new SqlParameter($"@{FilterKey}", SqlHelper.GetDbType<TParam>())
+                            {
+                                Value = FilterValue
+                            });
+                            var reader = await command.ExecuteReaderAsync();
+                            if (reader.HasRows)
+                            {
+                                List<TOut> dest = new List<TOut>();
+                               // await connection.OpenAsync();
+                                while (reader.Read())
+                                    dest.Add(SqlHelper.TranslateResults<TOut>(reader));
+                                return dest;
+                            }
+                            else
+                            {
+                                throw new RecordNotFoundException($"Filter Value: {FilterValue.ToString()}");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
+                    }
+                }
+            }
             /// <summary>
             /// Reads a record from a database
             /// </summary>

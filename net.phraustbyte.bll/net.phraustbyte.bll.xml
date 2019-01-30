@@ -65,5 +65,15 @@
             <param name="Id"></param>
             <returns></returns>
         </member>
+        <member name="M:net.phraustbyte.bll.IBaseBLL.ReadAllByFilter``2(``1,System.String)">
+            <summary>
+            Reads all records in the database that match the filter
+            </summary>
+            <typeparam name="TOut"></typeparam>
+            <typeparam name="TParam"></typeparam>
+            <param name="FilterValue"></param>
+            <param name="FilterKey"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

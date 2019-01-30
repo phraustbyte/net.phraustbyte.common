@@ -69,5 +69,10 @@ namespace net.phraustbyte.tests
 
             return (this.Id == other.Id);
         }
+
+        public async Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : IBaseBLL, new()
+        {
+           return await DataLayer.ReadAllByFilter<TOut,TParam>(FilterValue, FilterKey);
+        }
     }
 }

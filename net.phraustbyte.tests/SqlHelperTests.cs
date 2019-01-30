@@ -192,14 +192,13 @@ namespace net.phraustbyte.tests
             Assert.NotNull(obj.Changer);
 
         }
-        [Fact]
-        public void TranslateSQL_To_Object_with_missing_value_Success()
-        {
-            var dataReader = new Mock<IDataReader>();
-            dataReader.Setup(m => m.FieldCount).Returns(0);
-            TestClass obj = SqlHelper.TranslateResults<TestClass>(dataReader.Object);
-            Assert.Equal(default(TestClass),obj);
-
-        }
+        //[Fact]
+        //public void TranslateSQL_To_Object_with_missing_value_Success()
+        //{
+        //    var dataReader = new Mock<IDataReader>();
+        //    dataReader.Setup(m => m.FieldCount).Returns(0);
+        //    TestClass obj = SqlHelper.TranslateResults<TestClass>(dataReader.Object);
+        //    Assert.Equal(default(TestClass), obj);
+        //}
     }
 }

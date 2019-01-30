@@ -16,7 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="net.phraustbyte.dal" Version="2018.12.6" />
+    <PackageReference Include="net.phraustbyte.dal" Version="2018.12.7" />
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
   </ItemGroup>
 </Project>

@@ -88,6 +88,14 @@ namespace net.phraustbyte.tests
             var result = await tc.ReadAll<TestClass>();
             Assert.True(result.Count == 3);
         }
+        [Fact]
+        public async Task MocDAL_ReadAllByFilter_Success()
+        {
+            var mock = TestConfig.GetMock();
+            TestClass tc = new TestClass(mock.Object);
+            var result = await tc.ReadAllByFilter<TestClass,object>(new object(),"Changer");
+            Assert.True(result.Count == 3);
+        }
 
     }
 }

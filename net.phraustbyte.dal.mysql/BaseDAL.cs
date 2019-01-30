@@ -263,7 +263,49 @@ namespace net.phraustbyte.dal
                     throw new Exception("Error creating SQL Parameters", ex);
                 }
             }
+            public virtual async Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new()
+            {
+                var objName = typeof(TOut).Name;
+                this.Query = $"App.usp{objName}_SelectAllByFilter";
 
+                using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
+                {
+                    using (MySqlCommand command = new MySqlCommand
+                    {
+                        CommandText = this.Query,
+                        CommandType = System.Data.CommandType.StoredProcedure,
+                        Connection = connection
+                    })
+                    {
+                        try
+                        {
+                            await connection.OpenAsync();
+                            command.Parameters.Add(new MySqlParameter($"@{FilterKey}", SqlHelper.GetDbType<TParam>())
+                            {
+                                Value = FilterValue
+                            });
+                            var reader = await command.ExecuteReaderAsync();
+                            if (reader.HasRows)
+                            {
+                                List<TOut> dest = new List<TOut>();
+                                await connection.OpenAsync();
+                                var result = await command.ExecuteReaderAsync();
+                                while (result.Read())
+                                    dest.Add(SqlHelper.TranslateResults<TOut>(result));
+                                return dest;
+                            }
+                            else
+                            {
+                                throw new RecordNotFoundException($"Filter Value: {FilterValue.ToString()}");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
+                    }
+                }
+            }
             //private T TranslateResults<T>(IDataReader source) where T : new()
             //{
 

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.bll</id>
-    <version>2018.12.4</version>
+    <version>2018.12.5</version>
     <title>Phraustbyte Base BLL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for Business Logic Layer</description>
     <releaseNotes>
-      Added Adjunct guid to base definition
+      Added class for reading records by filter
     </releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>BLL LogicLayer Phraustbyte</tags>
