@@ -56,14 +56,14 @@ namespace net.phraustbyte.bll
         /// <returns></returns>
         Task<TOut> Read<TIn,TOut>(TIn Id) where TOut: IBaseBLL, new();
         /// <summary>
-        /// Reads all records in the database that match the filter
+        /// Reads all records by a specified filter
         /// </summary>
         /// <typeparam name="TOut"></typeparam>
         /// <typeparam name="TParam"></typeparam>
         /// <param name="FilterValue"></param>
         /// <param name="FilterKey"></param>
         /// <returns></returns>
-        Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : IBaseBLL,new();
+        Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new();
 
     }
 }

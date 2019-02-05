@@ -1,7 +1,6 @@
 using Moq;
 using net.phraustbyte.dal;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -48,7 +47,7 @@ namespace net.phraustbyte.tests
         //    Assert.IsType<Guid>(result);
         //}
         [Fact]
-        public async Task MocDAL_ReadById_Success()
+        public async Task MockDAL_ReadById_Success()
         {
             var mock = TestConfig.GetMock();
             TestClass tc = new TestClass(mock.Object)
@@ -64,7 +63,7 @@ namespace net.phraustbyte.tests
             Assert.Equal(tc.Name, result.Name);
         }
         [Fact]
-        public async Task MocDAL_ReadByGuid_Success()
+        public async Task MockDAL_ReadByGuid_Success()
         {
             var mock = TestConfig.GetMock();
             TestClass tc = new TestClass(mock.Object)
@@ -81,7 +80,7 @@ namespace net.phraustbyte.tests
             Assert.Equal(tc.Name, result.Name);
         }
         [Fact]
-        public async Task MocDAL_ReadAll_Success()
+        public async Task MockDAL_ReadAll_Success()
         {
             var mock = TestConfig.GetMock();
             TestClass tc = new TestClass(mock.Object);
@@ -89,7 +88,7 @@ namespace net.phraustbyte.tests
             Assert.True(result.Count == 3);
         }
         [Fact]
-        public async Task MocDAL_ReadAllByFilter_Success()
+        public async Task MockDAL_ReadAllByFilter_Success()
         {
             var mock = TestConfig.GetMock();
             TestClass tc = new TestClass(mock.Object);

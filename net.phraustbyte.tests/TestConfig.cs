@@ -35,5 +35,33 @@ namespace net.phraustbyte.tests
             return mock;
 
         }
+        public static Mock<IBaseDAL> GetBLLTestMock()
+        {
+            Guid guid = Guid.NewGuid();
+            var mock = new Mock<IBaseDAL>();
+            mock.Setup(x => x.Create<TestBLLClass, Guid>(It.IsAny<TestBLLClass>())).ReturnsAsync(guid);
+            mock.Setup(x => x.ReadAllByFilter<TestBLLClass, object>(It.IsAny<object>(), It.IsAny<string>()))
+                .ReturnsAsync(new List<TestBLLClass>{
+
+                    new TestBLLClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameFive" , Adjunct = guid},
+                    new TestBLLClass { Id = 6, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameSix" , Adjunct = guid},
+                    new TestBLLClass { Id = 7, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameSeven" , Adjunct = guid}
+                });
+            mock.Setup(x => x.Delete(It.IsAny<TestBLLClass>())).Returns(Task.CompletedTask).Verifiable();
+            mock.Setup(x => x.Update(It.IsAny<TestBLLClass>())).Returns(Task.CompletedTask).Verifiable();
+            mock.Setup(x => x.Read<int, TestBLLClass>(5))
+                .ReturnsAsync(new TestBLLClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "User", Name = "Name", Adjunct = guid });
+            mock.Setup(x => x.Read<Guid, TestBLLClass>(It.IsAny<Guid>()))
+                .ReturnsAsync(new TestBLLClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "User", Name = "Name", Adjunct = guid });
+            mock.Setup(x => x.ReadAll<TestBLLClass>())
+                .ReturnsAsync(new List<TestBLLClass>
+                {
+                    new TestBLLClass { Id = 5, CreatedDate = DateTime.UtcNow, Changer = "UserFive", Name = "NameFive", Adjunct = guid },
+                    new TestBLLClass { Id = 6, CreatedDate = DateTime.UtcNow, Changer = "UserSix", Name = "NameSix" , Adjunct = guid},
+                    new TestBLLClass { Id = 7, CreatedDate = DateTime.UtcNow, Changer = "UserSeven", Name = "NameSeven" , Adjunct = guid}
+                });
+            return mock;
+
+        }
     }
 }

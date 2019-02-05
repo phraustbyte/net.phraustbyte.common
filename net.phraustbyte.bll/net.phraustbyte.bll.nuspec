@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.bll</id>
-    <version>2018.12.5</version>
+    <version>2019.01.01</version>
     <title>Phraustbyte Base BLL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -11,9 +11,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for Business Logic Layer</description>
     <releaseNotes>
-      Added class for reading records by filter
+      Added Abstract BLL Class
     </releaseNotes>
-    <copyright>Copyright 2018</copyright>
+    <copyright>Copyright 2019</copyright>
     <tags>BLL LogicLayer Phraustbyte</tags>
   </metadata>
   <files>
