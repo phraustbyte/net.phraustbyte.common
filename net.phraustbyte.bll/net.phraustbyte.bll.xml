@@ -4,6 +4,86 @@
         <name>net.phraustbyte.bll</name>
     </assembly>
     <members>
+        <member name="T:net.phraustbyte.bll.BaseBLL">
+            <summary>
+            Represents the base BLL object
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.BaseBLL.Id">
+            <summary>
+            Integer Identifier
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.BaseBLL.Adjunct">
+            <summary>
+            Guid Identifier
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.BaseBLL.CreatedDate">
+            <summary>
+            Date/Time the record was created
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.BaseBLL.Changer">
+            <summary>
+            Changer of the record
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.BaseBLL.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+        <member name="P:net.phraustbyte.bll.BaseBLL.DAL">
+            <summary>
+            represents the DAL
+            </summary>
+        </member>
+        <member name="M:net.phraustbyte.bll.BaseBLL.Create``1">
+            <summary>
+            Creates a record
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.BaseBLL.Delete">
+            <summary>
+            Deletes a record
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.BaseBLL.Read``2(``0)">
+            <summary>
+            Reads a record by identifier
+            </summary>
+            <typeparam name="TIn"></typeparam>
+            <typeparam name="TOut"></typeparam>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.BaseBLL.ReadAll``1">
+            <summary>
+            Reads all records
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.BaseBLL.Update">
+            <summary>
+            Updates a record
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:net.phraustbyte.bll.BaseBLL.ReadAllByFilter``2(``1,System.String)">
+            <summary>
+            Reads all records by a filter
+            </summary>
+            <typeparam name="TOut"></typeparam>
+            <typeparam name="TParam"></typeparam>
+            <param name="FilterValue"></param>
+            <param name="FilterKey"></param>
+            <returns></returns>
+        </member>
         <member name="T:net.phraustbyte.bll.IBaseBLL">
             <summary>
             Represents the base of an object
@@ -67,7 +147,7 @@
         </member>
         <member name="M:net.phraustbyte.bll.IBaseBLL.ReadAllByFilter``2(``1,System.String)">
             <summary>
-            Reads all records in the database that match the filter
+            Reads all records by a specified filter
             </summary>
             <typeparam name="TOut"></typeparam>
             <typeparam name="TParam"></typeparam>

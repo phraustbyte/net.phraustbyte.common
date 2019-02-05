@@ -196,8 +196,6 @@ namespace net.phraustbyte.dal
             }
             public virtual async Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new()
             {
-                var objName = typeof(TOut).Name;
-                this.Query = $"App.usp{objName}_SelectAllByFilter";
 
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
