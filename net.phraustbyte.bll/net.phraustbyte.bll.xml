@@ -14,11 +14,6 @@
             Integer Identifier
             </summary>
         </member>
-        <member name="P:net.phraustbyte.bll.BaseBLL.Adjunct">
-            <summary>
-            Guid Identifier
-            </summary>
-        </member>
         <member name="P:net.phraustbyte.bll.BaseBLL.CreatedDate">
             <summary>
             Date/Time the record was created
@@ -52,12 +47,11 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.bll.BaseBLL.Read``2(``0)">
+        <member name="M:net.phraustbyte.bll.BaseBLL.Read``1(System.Guid)">
             <summary>
             Reads a record by identifier
             </summary>
-            <typeparam name="TIn"></typeparam>
-            <typeparam name="TOut"></typeparam>
+            <typeparam name="T"></typeparam>
             <param name="Id"></param>
             <returns></returns>
         </member>
@@ -92,11 +86,6 @@
         <member name="P:net.phraustbyte.bll.IBaseBLL.Id">
             <summary>
             Represents the Id of an object
-            </summary>
-        </member>
-        <member name="P:net.phraustbyte.bll.IBaseBLL.Adjunct">
-            <summary>
-            Represents the unique identifier of an object
             </summary>
         </member>
         <member name="P:net.phraustbyte.bll.IBaseBLL.CreatedDate">
@@ -138,7 +127,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.bll.IBaseBLL.Read``2(``0)">
+        <member name="M:net.phraustbyte.bll.IBaseBLL.Read``1(System.Guid)">
             <summary>
             Reads a single record in a database
             </summary>

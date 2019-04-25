@@ -20,6 +20,12 @@
     <DocumentationFile>C:\bin\Repos\GC\net.phraustbyte.common\net.phraustbyte.dal\net.phraustbyte.dal.xml</DocumentationFile>
   </PropertyGroup>
 
+
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+    <None Remove="._.DS_Store" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
   </ItemGroup>

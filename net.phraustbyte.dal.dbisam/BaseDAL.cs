@@ -225,12 +225,18 @@ namespace net.phraustbyte.dal
                 throw new NotImplementedException();
             }
 
-            public Task<TOut> Create<TIn, TOut>(TIn Obj)
+
+            public Task<T> Read<T>(Guid Id) where T : new()
             {
                 throw new NotImplementedException();
             }
 
-            public Task<TOut> Read<TIn, TOut>(TIn Id) where TOut : new()
+            public Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new()
+            {
+                throw new NotImplementedException();
+            }
+
+            Task<Guid> IBaseDAL.Create<T>(T Obj)
             {
                 throw new NotImplementedException();
             }

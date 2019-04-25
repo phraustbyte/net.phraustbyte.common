@@ -9,12 +9,11 @@
             Represents a connection to a data source
             </summary>
         </member>
-        <member name="M:net.phraustbyte.dal.IBaseDAL.Create``2(``0)">
+        <member name="M:net.phraustbyte.dal.IBaseDAL.Create``1(``0)">
             <summary>
             Creates a record in a database
             </summary>
-            <typeparam name="TIn"></typeparam>
-            <typeparam name="TOut"></typeparam>
+            <typeparam name="T"></typeparam>
             <param name="Obj"></param>
             <returns></returns>
         </member>
@@ -41,12 +40,11 @@
             <typeparam name="T"></typeparam>
             <returns></returns>
         </member>
-        <member name="M:net.phraustbyte.dal.IBaseDAL.Read``2(``0)">
+        <member name="M:net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)">
             <summary>
             Reads a single record in a database
             </summary>
-            <typeparam name="TIn"></typeparam>
-            <typeparam name="TOut"></typeparam>
+            <typeparam name="T"></typeparam>
             <param name="Id"></param>
             <returns></returns>
         </member>

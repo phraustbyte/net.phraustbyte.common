@@ -13,7 +13,7 @@ namespace net.phraustbyte.tests
 
             TestBLLClass test = new TestBLLClass(TestConfig.GetBLLTestMock().Object)
             {
-                 Id = 5, Active = true, Adjunct = Guid.NewGuid(), Changer="Script", CreatedDate=DateTime.UtcNow, Description="Some Description", Name="Some Name"
+                 Id = Guid.NewGuid(), Active = true, Changer="Script", CreatedDate=DateTime.UtcNow, Description="Some Description", Name="Some Name"
             };
             var result = await test.Create<Guid>();
             Assert.IsType<Guid>(result);
@@ -21,7 +21,7 @@ namespace net.phraustbyte.tests
         }
         [Fact]
         public async Task BLL_Read_Success() {
-            var result = await (new TestBLLClass(TestConfig.GetBLLTestMock().Object)).Read<Guid, TestBLLClass>(new Guid());
+            var result = await (new TestBLLClass(TestConfig.GetBLLTestMock().Object)).Read<TestBLLClass>(new Guid());
             Assert.IsType<TestBLLClass>(result);
         }
         [Fact]
@@ -33,9 +33,8 @@ namespace net.phraustbyte.tests
         public async Task BLL_Update_Success() {
             TestBLLClass test = new TestBLLClass(TestConfig.GetBLLTestMock().Object)
             {
-                Id = 5,
+                Id = Guid.NewGuid(),
                 Active = true,
-                Adjunct = Guid.NewGuid(),
                 Changer = "Script",
                 CreatedDate = DateTime.UtcNow,
                 Description = "Some Description",
@@ -47,9 +46,8 @@ namespace net.phraustbyte.tests
         public async Task BLL_Delete_Success() {
             TestBLLClass test = new TestBLLClass(TestConfig.GetBLLTestMock().Object)
             {
-                Id = 5,
+                Id = Guid.NewGuid(),
                 Active = true,
-                Adjunct = Guid.NewGuid(),
                 Changer = "Script",
                 CreatedDate = DateTime.UtcNow,
                 Description = "Some Description",

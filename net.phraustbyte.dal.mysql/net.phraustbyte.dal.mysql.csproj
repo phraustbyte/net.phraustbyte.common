@@ -16,7 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="MySql.Data" Version="8.0.13" />
-    <PackageReference Include="net.phraustbyte.dal" Version="2018.12.7" />
+    <PackageReference Include="MySql.Data" Version="8.0.15" />
+    <PackageReference Include="net.phraustbyte.dal" Version="2019.4.1" />
   </ItemGroup>
 </Project>
