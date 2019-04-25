@@ -23,9 +23,9 @@ namespace net.phraustbyte.tests
             DAL = null;
         }
 
-        public async override Task<T> Create<T>()
+        public async override Task<Guid> Create<T>()
         {
-            return await DAL.Create<TestBLLClass,T>(this);
+            return await DAL.Create(this);
         }
 
         public async override Task Delete()
@@ -33,9 +33,9 @@ namespace net.phraustbyte.tests
             await DAL.Delete(this);
         }
 
-        public async override Task<TOut> Read<TIn, TOut>(TIn Id)
+        public async override Task<T> Read<T>(Guid Id)
         {
-            return await DAL.Read<TIn, TOut>(Id);
+            return await DAL.Read<T>(Id);
         }
 
         public async override Task<List<T>> ReadAll<T>()

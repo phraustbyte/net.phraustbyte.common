@@ -46,7 +46,7 @@ namespace net.phraustbyte.dal
             /// int recordIndex = await Create&gt;Object&lt;(obj);
             /// </code>
             /// </example>
-            public virtual async Task<TOut> Create<TIn, TOut>(TIn Obj)
+            public virtual async Task<Guid> Create<T>(T Obj)
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
@@ -66,7 +66,7 @@ namespace net.phraustbyte.dal
                                 command.Parameters.AddRange(GetParameters(Obj).ToArray());
                                 var result = await command.ExecuteNonQueryAsync();
 
-                                return (TOut)command.Parameters[typeof(TOut) == typeof(int)?"@Id":"@Adjunct"].Value;
+                                return (Guid)command.Parameters["@Id"].Value;
                             }
                             throw new Exception("Error connecting to data source");
                         }
@@ -77,48 +77,7 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-            ///// <summary>
-            ///// Creates a record in the database
-            ///// </summary>
-            ///// <typeparam name="T"></typeparam>
-            ///// <param name="Obj"></param>
-            ///// <returns>Database Record</returns>
-            ///// <example>
-            ///// <code>
-            ///// Object obj = new Object() ;
-            ///// Guid recordIndex = await Create&gt;Object&lt;(obj);
-            ///// </code>
-            ///// </example>
-            //public virtual async Task<Guid> Insert<T>(T Obj)
-            //{
-            //    using (SqlConnection connection = new SqlConnection(this.ConnectionString))
-            //    {
-            //        using (SqlCommand command = new SqlCommand
-            //        {
-            //            CommandType = System.Data.CommandType.StoredProcedure,
-            //            CommandText = this.Query,
-            //            Connection = connection
-            //        })
-            //        {
-            //            try
-            //            {
-            //                var q = connection.OpenAsync();
-            //                q.Wait();
-            //                if (q.IsCompleted)
-            //                {
-            //                    command.Parameters.AddRange(GetParameters(Obj).ToArray());
-            //                    var result = await command.ExecuteNonQueryAsync();
-            //                    return (Guid)command.Parameters["@Adjunct"].Value;
-            //                }
-            //                throw new Exception("Error connecting to data source");
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                throw ex;
-            //            }
-            //        }
-            //    }
-            //}
+
 
             /// <summary>
             /// removes a record from the database
@@ -247,7 +206,7 @@ namespace net.phraustbyte.dal
             /// Object obj = await Read&gt;Object&lt;(id);
             /// </code>
             /// </example>
-            public virtual async Task<TOut> Read<TIn,TOut>(TIn Id) where TOut : new()
+            public virtual async Task<T> Read<T>(Guid Id) where T : new()
             {
                 using (SqlConnection connection = new SqlConnection(this.ConnectionString))
                 {
@@ -261,13 +220,12 @@ namespace net.phraustbyte.dal
                         try
                         {
                             await connection.OpenAsync();
-                            command.Parameters.Add(new SqlParameter(
-                                typeof(TIn) == typeof(int)?"@Id":"@Adjunct", Id));
+                            command.Parameters.Add(new SqlParameter("@Id", Id));
                             var reader = await command.ExecuteReaderAsync();
                             if (reader.HasRows)
                             {
                                 reader.Read();
-                                return SqlHelper.TranslateResults<TOut>(reader);
+                                return SqlHelper.TranslateResults<T>(reader);
                             }
                             else
                             {
@@ -332,45 +290,49 @@ namespace net.phraustbyte.dal
                 {
                     PropertyInfo[] propertyInfo = Obj.GetType().GetProperties();
                     propertyInfo.DefaultIfEmpty(null);
-                    int? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as int?;
+                    Guid? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as Guid?;
                     string Changer = propertyInfo.FirstOrDefault(x => x.Name == "Changer").GetValue(Obj, null) as string;
                     List<IDataParameter> Params = new List<IDataParameter>();
 
-                    if (Id == 0)
-                    {
-                        Params.Add(new SqlParameter("@Id", SqlDbType.Int)
-                        {
-                            Direction = System.Data.ParameterDirection.Output
-                        });
-                    }
-                    else if (Id > 0)
-                    {
-                        Params.Add(new SqlParameter("@Id", SqlDbType.Int)
-                        {
-                            Value = Id
-                        });
-                    }
-                    if (propertyInfo.Any(x => x.Name == "Adjunct"))
-                    {
-                        var property = propertyInfo.FirstOrDefault(x => x.Name == "Adjunct");
-                        if (property.PropertyType.IsPrimitive || property.PropertyType == typeof(string) || property.PropertyType == typeof(decimal))
-                        {
-                            var Adjunct = Convert.ChangeType(property.GetValue(Obj, null), property.PropertyType);
-                            var defValue = Activator.CreateInstance(property.PropertyType);
-                            if (Adjunct == defValue)
-                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
-                            else
-                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
-                        }
-                        else if (property.PropertyType == typeof(Guid))
-                        {
-                            var Adjunct = (Guid)property.GetValue(Obj, null);
-                            if (Adjunct == new Guid())
-                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
-                            else
-                                Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
-                        }
-                    }
+                    //if (Id == 0)
+                    //{
+                    //    Params.Add(new SqlParameter("@Id", SqlDbType.Int)
+                    //    {
+                    //        Direction = System.Data.ParameterDirection.Output
+                    //    });
+                    //}
+                    //else if (Id > 0)
+                    //{
+                    //    Params.Add(new SqlParameter("@Id", SqlDbType.Int)
+                    //    {
+                    //        Value = Id
+                    //    });
+                    //}
+                    
+                        if (Id == new Guid())
+                            Params.Add(new SqlParameter("@Id", SqlDbType.UniqueIdentifier) { Direction = System.Data.ParameterDirection.Output });
+                        else
+                            Params.Add(new SqlParameter("@Id", SqlDbType.UniqueIdentifier) { Value = Id });
+                    
+                    
+                    //    if (property.PropertyType.IsPrimitive || property.PropertyType == typeof(string) || property.PropertyType == typeof(decimal))
+                    //    {
+                    //        var Adjunct = Convert.ChangeType(property.GetValue(Obj, null), property.PropertyType);
+                    //        var defValue = Activator.CreateInstance(property.PropertyType);
+                    //        if (Adjunct == defValue)
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                    //        else
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                    //    }
+                    //    else if (property.PropertyType == typeof(Guid))
+                    //    {
+                    //        var Adjunct = (Guid)property.GetValue(Obj, null);
+                    //        if (Adjunct == new Guid())
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                    //        else
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                    //    }
+                    //}
 
                     if (Obj != null)
                     {
@@ -378,7 +340,7 @@ namespace net.phraustbyte.dal
                         MemberInfo[] memberinfo = objectType.GetMembers();
                         foreach (MemberInfo m in memberinfo)
                         {
-                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer" && m.Name != "Adjunct")
+                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer")
                             {
                                 Params.Add(new SqlParameter("@" + m.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(m.Name).PropertyType))
                                 {

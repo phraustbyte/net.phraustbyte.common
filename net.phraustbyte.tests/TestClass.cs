@@ -8,8 +8,7 @@ namespace net.phraustbyte.tests
 {
     public class TestClass : IBaseBLL
     {
-        public int Id { get; set; }
-        public Guid Adjunct { get; set; }
+        public Guid Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Changer { get; set; }
         public string Name { get; set; }
@@ -25,9 +24,9 @@ namespace net.phraustbyte.tests
             DataLayer = dal;
         }
 
-        public async Task<T> Create<T>()
+        public async Task<Guid> Create<T>()
         {
-            return await DataLayer.Create<TestClass,T>(this);
+            return await DataLayer.Create<TestClass>(this);
         }
         //public async Task<Guid> Insert()
         //{
@@ -50,9 +49,9 @@ namespace net.phraustbyte.tests
         //    return res;
         //}
 
-        public async Task<TOut> Read<TIn,TOut>(TIn Id) where TOut : IBaseBLL, new()
+        public async Task<T> Read<T>(Guid Id) where T : IBaseBLL, new()
         {
-            return await DataLayer.Read<TIn,TOut>(Id);
+            return await DataLayer.Read<T>(Id);
         }
 
         public async Task Update()
@@ -74,5 +73,7 @@ namespace net.phraustbyte.tests
         {
             return await DataLayer.ReadAllByFilter<TOut, TParam>(FilterValue, FilterKey);
         }
+
+
     }
 }

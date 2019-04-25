@@ -14,11 +14,8 @@ namespace net.phraustbyte.bll
         /// <summary>
         /// Integer Identifier
         /// </summary>
-        public int Id { get; set; }
-        /// <summary>
-        /// Guid Identifier
-        /// </summary>
-        public Guid Adjunct { get; set; }
+        public Guid Id { get; set; }
+        
         /// <summary>
         /// Date/Time the record was created
         /// </summary>
@@ -41,7 +38,7 @@ namespace net.phraustbyte.bll
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public abstract Task<T> Create<T>();
+        public abstract Task<Guid> Create<T>();
         /// <summary>
         /// Deletes a record
         /// </summary>
@@ -50,11 +47,10 @@ namespace net.phraustbyte.bll
         /// <summary>
         /// Reads a record by identifier
         /// </summary>
-        /// <typeparam name="TIn"></typeparam>
-        /// <typeparam name="TOut"></typeparam>
+        /// <typeparam name="T"></typeparam>
         /// <param name="Id"></param>
         /// <returns></returns>
-        public abstract Task<TOut> Read<TIn, TOut>(TIn Id) where TOut : IBaseBLL, new();
+        public abstract Task<T> Read<T>(Guid Id) where T : IBaseBLL, new();
         /// <summary>
         /// Reads all records
         /// </summary>

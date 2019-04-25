@@ -40,7 +40,7 @@ namespace net.phraustbyte.dal
             /// <typeparam name="TOut"></typeparam>
             /// <param name="Obj"></param>
             /// <returns></returns>
-            public virtual async Task<TOut> Create<TIn,TOut>(TIn Obj)
+            public virtual async Task<Guid> Create<T>(T Obj)
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
                 {
@@ -57,7 +57,7 @@ namespace net.phraustbyte.dal
 
                             command.Parameters.AddRange(GetParameters(Obj).ToArray());
                             var result = await command.ExecuteNonQueryAsync();
-                            return (TOut)command.Parameters[typeof(TOut) == typeof(int) ? "@Id" : "@Adjunct"].Value;
+                            return (Guid)command.Parameters["@Id"].Value;
 
                         }
                         catch (Exception ex)
@@ -138,7 +138,7 @@ namespace net.phraustbyte.dal
             /// <typeparam name="T"></typeparam>
             /// <param name="Id"></param>
             /// <returns></returns>
-            public virtual async Task<TOut> Read<TIn,TOut>(TIn Id) where TOut : new()
+            public virtual async Task<T> Read<T>(Guid Id) where T : new()
             {
                 using (MySqlConnection connection = new MySqlConnection(this.ConnectionString))
                 {
@@ -152,10 +152,9 @@ namespace net.phraustbyte.dal
                         try
                         {
                             await connection.OpenAsync();
-                            command.Parameters.Add(new MySqlParameter(
-                                typeof(TIn) == typeof(int) ? "@Id" : "@Adjunct", Id));
+                            command.Parameters.Add(new MySqlParameter("@Id", Id));
                             var result = await command.ExecuteReaderAsync();
-                            return SqlHelper.TranslateResults<TOut>(result);
+                            return SqlHelper.TranslateResults<T>(result);
                         }
                         catch (Exception ex)
                         {
@@ -207,44 +206,66 @@ namespace net.phraustbyte.dal
                 {
                     PropertyInfo[] propertyInfo = Obj.GetType().GetProperties();
                     propertyInfo.DefaultIfEmpty(null);
-                    int? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as int?;
+                    Guid? Id = propertyInfo.FirstOrDefault(x => x.Name == "Id").GetValue(Obj, null) as Guid?;
                     string Changer = propertyInfo.FirstOrDefault(x => x.Name == "Changer").GetValue(Obj, null) as string;
-
                     List<IDataParameter> Params = new List<IDataParameter>();
-                    if (Id == 0)
-                    {
-                        Params.Add(new MySqlParameter("@Id", SqlDbType.Int)
-                        {
-                            Direction = System.Data.ParameterDirection.Output
-                        });
-                    }
-                    else if (Id > 0)
-                    {
-                        Params.Add(new MySqlParameter("@Id", SqlDbType.Int)
-                        {
-                            Value = Id
-                        });
-                    }
+
+                    //if (Id == 0)
+                    //{
+                    //    Params.Add(new SqlParameter("@Id", SqlDbType.Int)
+                    //    {
+                    //        Direction = System.Data.ParameterDirection.Output
+                    //    });
+                    //}
+                    //else if (Id > 0)
+                    //{
+                    //    Params.Add(new SqlParameter("@Id", SqlDbType.Int)
+                    //    {
+                    //        Value = Id
+                    //    });
+                    //}
+
+                    if (Id == new Guid())
+                        Params.Add(new MySqlParameter("@Id", SqlDbType.UniqueIdentifier) { Direction = System.Data.ParameterDirection.Output });
+                    else
+                        Params.Add(new MySqlParameter("@Id", SqlDbType.UniqueIdentifier) { Value = Id });
+
+
+                    //    if (property.PropertyType.IsPrimitive || property.PropertyType == typeof(string) || property.PropertyType == typeof(decimal))
+                    //    {
+                    //        var Adjunct = Convert.ChangeType(property.GetValue(Obj, null), property.PropertyType);
+                    //        var defValue = Activator.CreateInstance(property.PropertyType);
+                    //        if (Adjunct == defValue)
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                    //        else
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                    //    }
+                    //    else if (property.PropertyType == typeof(Guid))
+                    //    {
+                    //        var Adjunct = (Guid)property.GetValue(Obj, null);
+                    //        if (Adjunct == new Guid())
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Direction = System.Data.ParameterDirection.Output });
+                    //        else
+                    //            Params.Add(new SqlParameter("@Adjunct", SqlHelper.GetDbType(property.PropertyType)) { Value = Adjunct });
+                    //    }
+                    //}
+
                     if (Obj != null)
                     {
                         Type objectType = Obj.GetType();
                         MemberInfo[] memberinfo = objectType.GetMembers();
-                        foreach (var p in propertyInfo)
+                        foreach (MemberInfo m in memberinfo)
                         {
-                            if ((p.MemberType == MemberTypes.Field || p.MemberType == MemberTypes.Property) &&
-                                p.Name != "Id" &&
-                                p.Name != "Changer" &&
-                                !typeof(IBaseDAL).IsAssignableFrom(p.PropertyType))
-                            //p.PropertyType == typeof(IBaseDAL))
+                            if ((m.MemberType == MemberTypes.Field || m.MemberType == MemberTypes.Property) && m.Name != "Id" && m.Name != "Changer")
                             {
-                                Params.Add(new MySqlParameter("@" + p.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(p.Name).PropertyType))
+                                Params.Add(new MySqlParameter("@" + m.Name, SqlHelper.GetDbType(Obj.GetType().GetProperty(m.Name).PropertyType))
                                 {
-                                    Value = Obj.GetType().GetProperty(p.Name).GetValue(Obj, null)
+                                    Value = Obj.GetType().GetProperty(m.Name).GetValue(Obj, null)
                                 });
                             }
                         }
 
-                        //MySqlParameter XmlParam = new MySqlParameter("@Object", SqlDbType.Xml);
+                        //SqlParameter XmlParam = new SqlParameter("@Object", SqlDbType.Xml);
                         //XmlParam.Value = ProcessXML.SerializeObject(obj);
                         //Params.Add(XmlParam);
                     }
@@ -306,49 +327,6 @@ namespace net.phraustbyte.dal
                     }
                 }
             }
-            //private T TranslateResults<T>(IDataReader source) where T : new()
-            //{
-
-            //    if (source == null)
-            //    {
-            //        throw new ArgumentNullException();
-            //    }
-
-            //    try
-            //    {
-            //        Type objectType = typeof(T);
-            //        //MemberInfo[] memberinfo = objectType.GetMembers();
-            //        var dest = (T)Activator.CreateInstance(typeof(T));
-            //        PropertyInfo[] propertyInfo = objectType.GetProperties();
-            //        foreach (var p in propertyInfo)
-            //        {
-            //            if (p.SetMethod != null)
-            //            {
-            //                var drValue = source[p.Name];
-            //                Type t = Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType;
-            //                var drValueConverted = (drValue == null) ? null : Convert.ChangeType(drValue, t);
-            //                p.SetValue(dest, drValueConverted, null);
-            //            }
-            //        }
-            //        return dest;
-            //    }
-            //    catch (MissingMethodException ex)
-            //    {
-            //        throw ex;
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        throw ex;
-            //    }
-            //}
-
-            List<IDataParameter> IBaseDAL.GetParameters<T>(T Obj)
-            {
-                throw new NotImplementedException();
-            }
-
         }
-
     }
 }

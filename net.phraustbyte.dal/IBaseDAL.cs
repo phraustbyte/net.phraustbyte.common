@@ -13,11 +13,10 @@ namespace net.phraustbyte.dal
         /// <summary>
         /// Creates a record in a database
         /// </summary>
-        /// <typeparam name="TIn"></typeparam>
-        /// <typeparam name="TOut"></typeparam>
+        /// <typeparam name="T"></typeparam>
         /// <param name="Obj"></param>
         /// <returns></returns>
-        Task<TOut> Create<TIn,TOut>(TIn Obj);
+        Task<Guid> Create<T>(T Obj);
 
         /// <summary>
         /// Updates a record in a database
@@ -42,11 +41,10 @@ namespace net.phraustbyte.dal
         /// <summary>
         /// Reads a single record in a database
         /// </summary>
-        /// <typeparam name="TIn"></typeparam>
-        /// <typeparam name="TOut"></typeparam>
+        /// <typeparam name="T"></typeparam>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<TOut> Read<TIn,TOut>(TIn Id) where TOut :new();
+        Task<T> Read<T>(Guid Id) where T :new();
         /// <summary>
         /// Represents a connection string to a datasource
         /// </summary>

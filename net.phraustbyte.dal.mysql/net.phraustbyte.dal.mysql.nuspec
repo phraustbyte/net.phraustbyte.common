@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net.phraustbyte.dal.mysql</id>
-    <version>2018.12.6</version>
+    <version>2019.4.1</version>
     <title>Phraustbyte Base DAL</title>
     <authors>Graham A Campbell, C.E.T.</authors>
     <owners>Phraustbyte Enterprises</owners>
@@ -11,14 +11,14 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Base Class for MySql Data Logic Layer</description>
     <releaseNotes>
-      Updated Base DAL
+      Updated code based on dependencies
     </releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>DAL DataAccess Phraustbyte MYSQL</tags>
     <dependencies>
       <dependency id="Microsoft.CSharp" version="4.5.0" />
-      <dependency id="MySql.Data" version="8.0.13" />
-      <dependency id="net.phraustbyte.dal" version="2018.12.7" />
+      <dependency id="MySql.Data" version="8.0.15" />
+      <dependency id="net.phraustbyte.dal" version="2019.4.1" />
     </dependencies>
   </metadata>
   <files>
