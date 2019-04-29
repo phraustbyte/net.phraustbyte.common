@@ -1,0 +1,14 @@
+{
+  "net.phraustbyte.dal.mysql": "net.phraustbyte.dal.mysql.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.#ctor(System.String)": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.ConnectionString": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.Create``1(``0)": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.Delete``1(``0)": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.GetParameters``1(``0)": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.Query": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.Read``1(System.Guid)": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.ReadAll``1": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter``2(``1,System.String)": "net.phraustbyte.dal.mysql.BaseDAL.yml",
+  "net.phraustbyte.dal.mysql.BaseDAL.Update``1(``0)": "net.phraustbyte.dal.mysql.BaseDAL.yml"
+}

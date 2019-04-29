@@ -1,0 +1,21 @@
+{
+  "net.phraustbyte.dal": "net.phraustbyte.dal.yml",
+  "net.phraustbyte.dal.IBaseDAL": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.ConnectionString": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.Create``1(``0)": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.Delete``1(``0)": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.GetParameters``1(``0)": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.Query": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.ReadAll``1": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.IBaseDAL.Update``1(``0)": "net.phraustbyte.dal.IBaseDAL.yml",
+  "net.phraustbyte.dal.RecordNotFoundException": "net.phraustbyte.dal.RecordNotFoundException.yml",
+  "net.phraustbyte.dal.RecordNotFoundException.#ctor": "net.phraustbyte.dal.RecordNotFoundException.yml",
+  "net.phraustbyte.dal.RecordNotFoundException.#ctor(System.String)": "net.phraustbyte.dal.RecordNotFoundException.yml",
+  "net.phraustbyte.dal.RecordNotFoundException.#ctor(System.String,System.Exception)": "net.phraustbyte.dal.RecordNotFoundException.yml",
+  "net.phraustbyte.dal.SqlHelper": "net.phraustbyte.dal.SqlHelper.yml",
+  "net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)": "net.phraustbyte.dal.SqlHelper.yml",
+  "net.phraustbyte.dal.SqlHelper.GetDbType``1": "net.phraustbyte.dal.SqlHelper.yml",
+  "net.phraustbyte.dal.SqlHelper.TranslateResults``1(System.Data.IDataReader)": "net.phraustbyte.dal.SqlHelper.yml"
+}

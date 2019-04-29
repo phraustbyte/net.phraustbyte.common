@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.dal.mysql
+  commentId: N:net.phraustbyte.dal.mysql
+  id: net.phraustbyte.dal.mysql
+  children:
+  - net.phraustbyte.dal.mysql.BaseDAL
+  langs:
+  - csharp
+  - vb
+  name: net.phraustbyte.dal.mysql
+  nameWithType: net.phraustbyte.dal.mysql
+  fullName: net.phraustbyte.dal.mysql
+  type: Namespace
+  assemblies:
+  - net.phraustbyte.dal.mysql
+references:
+- uid: net.phraustbyte.dal.mysql.BaseDAL
+  commentId: T:net.phraustbyte.dal.mysql.BaseDAL
+  name: BaseDAL
+  nameWithType: BaseDAL
+  fullName: net.phraustbyte.dal.mysql.BaseDAL

@@ -1,0 +1,24 @@
+### YamlMime:TableOfContent
+- uid: net.phraustbyte.dal.dbisam
+  name: net.phraustbyte.dal.dbisam
+  items:
+  - uid: net.phraustbyte.dal.dbisam.ActiveAttribute
+    name: ActiveAttribute
+  - uid: net.phraustbyte.dal.dbisam.AutoIncAttribute
+    name: AutoIncAttribute
+  - uid: net.phraustbyte.dal.dbisam.BaseDAL
+    name: BaseDAL
+  - uid: net.phraustbyte.dal.dbisam.DateAttribute
+    name: DateAttribute
+  - uid: net.phraustbyte.dal.dbisam.DBISamHelper
+    name: DBISamHelper
+  - uid: net.phraustbyte.dal.dbisam.IdentifierAttribute
+    name: IdentifierAttribute
+  - uid: net.phraustbyte.dal.dbisam.IgnoreAttribute
+    name: IgnoreAttribute
+  - uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+    name: InsertViaSelectAttribute
+  - uid: net.phraustbyte.dal.dbisam.TableAttribute
+    name: TableAttribute
+  - uid: net.phraustbyte.dal.dbisam.TimeAttribute
+    name: TimeAttribute

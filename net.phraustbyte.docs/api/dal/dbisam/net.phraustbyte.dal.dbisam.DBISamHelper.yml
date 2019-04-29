@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper
+  commentId: T:net.phraustbyte.dal.dbisam.DBISamHelper
+  id: DBISamHelper
+  parent: net.phraustbyte.dal.dbisam
+  children:
+  - net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)
+  - net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)
+  - net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement``1
+  - net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement``1(System.Object)
+  - net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: DBISamHelper
+  nameWithType: DBISamHelper
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper
+  type: Class
+  source:
+    remote:
+      path: net.phraustbyte.dal.dbisam/DBISamHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: DBISamHelper
+    path: ../net.phraustbyte.dal.dbisam/DBISamHelper.cs
+    startLine: 10
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+  namespace: net.phraustbyte.dal.dbisam
+  summary: "\nHelper class for DBISam\n"
+  example: []
+  syntax:
+    content: public static class DBISamHelper
+    content.vb: Public Module DBISamHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)
+  id: GenerateInsertStatment``1(``0)
+  parent: net.phraustbyte.dal.dbisam.DBISamHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateInsertStatment<T>(T)
+  nameWithType: DBISamHelper.GenerateInsertStatment<T>(T)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal.dbisam/DBISamHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GenerateInsertStatment
+    path: ../net.phraustbyte.dal.dbisam/DBISamHelper.cs
+    startLine: 18
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+  namespace: net.phraustbyte.dal.dbisam
+  summary: "\nGenerates an insert statement using reflection\n"
+  example: []
+  syntax:
+    content: public static string GenerateInsertStatment<T>(T obj)
+    parameters:
+    - id: obj
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GenerateInsertStatment(Of T)(obj As T) As String
+  overload: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment*
+  nameWithType.vb: DBISamHelper.GenerateInsertStatment(Of T)(T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment(Of T)(T)
+  name.vb: GenerateInsertStatment(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0)
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0)
+  id: GenerateUpdateStatment``1(``0)
+  parent: net.phraustbyte.dal.dbisam.DBISamHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateUpdateStatment<T>(T)
+  nameWithType: DBISamHelper.GenerateUpdateStatment<T>(T)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal.dbisam/DBISamHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GenerateUpdateStatment
+    path: ../net.phraustbyte.dal.dbisam/DBISamHelper.cs
+    startLine: 75
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+  namespace: net.phraustbyte.dal.dbisam
+  summary: "\nGenerates an update statement using reflection\n"
+  example: []
+  syntax:
+    content: public static string GenerateUpdateStatment<T>(T source)
+    parameters:
+    - id: source
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GenerateUpdateStatment(Of T)(source As T) As String
+  overload: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment*
+  nameWithType.vb: DBISamHelper.GenerateUpdateStatment(Of T)(T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment(Of T)(T)
+  name.vb: GenerateUpdateStatment(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)
+  id: GenerateDeleteStatement``1(``0)
+  parent: net.phraustbyte.dal.dbisam.DBISamHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateDeleteStatement<T>(T)
+  nameWithType: DBISamHelper.GenerateDeleteStatement<T>(T)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal.dbisam/DBISamHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GenerateDeleteStatement
+    path: ../net.phraustbyte.dal.dbisam/DBISamHelper.cs
+    startLine: 131
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+  namespace: net.phraustbyte.dal.dbisam
+  summary: "\nGenerates a delete statement using reflection if the object contains no Active flag. \nExistance of an Active flag will change that value to false using an update statement\n"
+  example: []
+  syntax:
+    content: public static string GenerateDeleteStatement<T>(T source)
+    parameters:
+    - id: source
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GenerateDeleteStatement(Of T)(source As T) As String
+  overload: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement*
+  nameWithType.vb: DBISamHelper.GenerateDeleteStatement(Of T)(T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement(Of T)(T)
+  name.vb: GenerateDeleteStatement(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement``1(System.Object)
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement``1(System.Object)
+  id: GenerateReadStatement``1(System.Object)
+  parent: net.phraustbyte.dal.dbisam.DBISamHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateReadStatement<T>(Object)
+  nameWithType: DBISamHelper.GenerateReadStatement<T>(Object)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement<T>(System.Object)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal.dbisam/DBISamHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GenerateReadStatement
+    path: ../net.phraustbyte.dal.dbisam/DBISamHelper.cs
+    startLine: 176
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+  namespace: net.phraustbyte.dal.dbisam
+  summary: "\nGenerates a read statement using an Id. Source object must have a property containing the Identifier attribute\n"
+  example: []
+  syntax:
+    content: public static string GenerateReadStatement<T>(object Id)
+    parameters:
+    - id: Id
+      type: System.Object
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GenerateReadStatement(Of T)(Id As Object) As String
+  overload: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement*
+  nameWithType.vb: DBISamHelper.GenerateReadStatement(Of T)(Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement(Of T)(System.Object)
+  name.vb: GenerateReadStatement(Of T)(Object)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement``1
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement``1
+  id: GenerateReadAllStatement``1
+  parent: net.phraustbyte.dal.dbisam.DBISamHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateReadAllStatement<T>()
+  nameWithType: DBISamHelper.GenerateReadAllStatement<T>()
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement<T>()
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal.dbisam/DBISamHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GenerateReadAllStatement
+    path: ../net.phraustbyte.dal.dbisam/DBISamHelper.cs
+    startLine: 204
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+  namespace: net.phraustbyte.dal.dbisam
+  summary: "\nGenerates a read all statement using reflection\n"
+  example: []
+  syntax:
+    content: public static string GenerateReadAllStatement<T>()
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GenerateReadAllStatement(Of T) As String
+  overload: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement*
+  nameWithType.vb: DBISamHelper.GenerateReadAllStatement(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement(Of T)()
+  name.vb: GenerateReadAllStatement(Of T)()
+references:
+- uid: net.phraustbyte.dal.dbisam
+  commentId: N:net.phraustbyte.dal.dbisam
+  name: net.phraustbyte.dal.dbisam
+  nameWithType: net.phraustbyte.dal.dbisam
+  fullName: net.phraustbyte.dal.dbisam
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment*
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment
+  name: GenerateInsertStatment
+  nameWithType: DBISamHelper.GenerateInsertStatment
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment*
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment
+  name: GenerateUpdateStatment
+  nameWithType: DBISamHelper.GenerateUpdateStatment
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement*
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement
+  name: GenerateDeleteStatement
+  nameWithType: DBISamHelper.GenerateDeleteStatement
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement*
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement
+  name: GenerateReadStatement
+  nameWithType: DBISamHelper.GenerateReadStatement
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement*
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement
+  name: GenerateReadAllStatement
+  nameWithType: DBISamHelper.GenerateReadAllStatement
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement

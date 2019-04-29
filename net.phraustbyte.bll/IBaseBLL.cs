@@ -12,11 +12,8 @@ namespace net.phraustbyte.bll
         /// <summary>
         /// Represents the Id of an object
         /// </summary>
-        int Id { get; set; }
-        /// <summary>
-        /// Represents the unique identifier of an object
-        /// </summary>
-        Guid Adjunct { get; set; }
+        Guid Id { get; set; }
+        
         /// <summary>
         /// Represents the date the record was created
         /// </summary>
@@ -33,7 +30,7 @@ namespace net.phraustbyte.bll
         /// Creates a record in the database
         /// </summary>
         /// <returns></returns>
-        Task<T> Create<T>();
+        Task<Guid> Create<T>();
         /// <summary>
         /// Updates a record in the database
         /// </summary>
@@ -54,7 +51,16 @@ namespace net.phraustbyte.bll
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        Task<TOut> Read<TIn,TOut>(TIn Id) where TOut: IBaseBLL, new();
+        Task<T> Read<T>(Guid Id) where T: IBaseBLL, new();
+        /// <summary>
+        /// Reads all records by a specified filter
+        /// </summary>
+        /// <typeparam name="TOut"></typeparam>
+        /// <typeparam name="TParam"></typeparam>
+        /// <param name="FilterValue"></param>
+        /// <param name="FilterKey"></param>
+        /// <returns></returns>
+        Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey) where TOut : new();
 
     }
 }

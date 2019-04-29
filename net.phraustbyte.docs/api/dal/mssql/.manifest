@@ -1,0 +1,14 @@
+{
+  "net.phraustbyte.dal.mssql": "net.phraustbyte.dal.mssql.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.#ctor(System.String)": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.ConnectionString": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.Create``1(``0)": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.Delete``1(``0)": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.GetParameters``1(``0)": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.Query": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.Read``1(System.Guid)": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.ReadAll``1": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter``2(``1,System.String)": "net.phraustbyte.dal.mssql.BaseDAL.yml",
+  "net.phraustbyte.dal.mssql.BaseDAL.Update``1(``0)": "net.phraustbyte.dal.mssql.BaseDAL.yml"
+}

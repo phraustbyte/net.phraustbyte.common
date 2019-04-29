@@ -1,0 +1,533 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.dal.SqlHelper
+  commentId: T:net.phraustbyte.dal.SqlHelper
+  id: SqlHelper
+  parent: net.phraustbyte.dal
+  children:
+  - net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  - net.phraustbyte.dal.SqlHelper.GetDbType``1
+  - net.phraustbyte.dal.SqlHelper.TranslateResults``1(System.Data.IDataReader)
+  langs:
+  - csharp
+  - vb
+  name: SqlHelper
+  nameWithType: SqlHelper
+  fullName: net.phraustbyte.dal.SqlHelper
+  type: Class
+  source:
+    remote:
+      path: net.phraustbyte.dal/SqlHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: SqlHelper
+    path: ../net.phraustbyte.dal/SqlHelper.cs
+    startLine: 12
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nHelper Classes for the DAL\n"
+  example: []
+  syntax:
+    content: public static class SqlHelper
+    content.vb: Public Module SqlHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  commentId: M:net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  id: GetDbType(System.Type)
+  isExtensionMethod: true
+  parent: net.phraustbyte.dal.SqlHelper
+  langs:
+  - csharp
+  - vb
+  name: GetDbType(Type)
+  nameWithType: SqlHelper.GetDbType(Type)
+  fullName: net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/SqlHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GetDbType
+    path: ../net.phraustbyte.dal/SqlHelper.cs
+    startLine: 49
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nGets equivelant SQLDataType from specified Type\n"
+  example: []
+  syntax:
+    content: public static SqlDbType GetDbType(this Type giveType)
+    parameters:
+    - id: giveType
+      type: System.Type
+      description: ''
+    return:
+      type: System.Data.SqlDbType
+      description: SqlDataType
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetDbType(giveType As Type) As SqlDbType
+  overload: net.phraustbyte.dal.SqlHelper.GetDbType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: net.phraustbyte.dal.SqlHelper.GetDbType``1
+  commentId: M:net.phraustbyte.dal.SqlHelper.GetDbType``1
+  id: GetDbType``1
+  parent: net.phraustbyte.dal.SqlHelper
+  langs:
+  - csharp
+  - vb
+  name: GetDbType<T>()
+  nameWithType: SqlHelper.GetDbType<T>()
+  fullName: net.phraustbyte.dal.SqlHelper.GetDbType<T>()
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/SqlHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GetDbType
+    path: ../net.phraustbyte.dal/SqlHelper.cs
+    startLine: 67
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nGets SqlDBType from Type T\n"
+  example: []
+  syntax:
+    content: public static SqlDbType GetDbType<T>()
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Data.SqlDbType
+      description: SQLDataType
+    content.vb: Public Shared Function GetDbType(Of T) As SqlDbType
+  overload: net.phraustbyte.dal.SqlHelper.GetDbType*
+  nameWithType.vb: SqlHelper.GetDbType(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.SqlHelper.GetDbType(Of T)()
+  name.vb: GetDbType(Of T)()
+- uid: net.phraustbyte.dal.SqlHelper.TranslateResults``1(System.Data.IDataReader)
+  commentId: M:net.phraustbyte.dal.SqlHelper.TranslateResults``1(System.Data.IDataReader)
+  id: TranslateResults``1(System.Data.IDataReader)
+  parent: net.phraustbyte.dal.SqlHelper
+  langs:
+  - csharp
+  - vb
+  name: TranslateResults<T>(IDataReader)
+  nameWithType: SqlHelper.TranslateResults<T>(IDataReader)
+  fullName: net.phraustbyte.dal.SqlHelper.TranslateResults<T>(System.Data.IDataReader)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/SqlHelper.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: TranslateResults
+    path: ../net.phraustbyte.dal/SqlHelper.cs
+    startLine: 77
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nTranslates an IDataReader objet into an object\n"
+  example: []
+  syntax:
+    content: >-
+      public static T TranslateResults<T>(IDataReader source)
+
+          where T : new()
+    parameters:
+    - id: source
+      type: System.Data.IDataReader
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Shared Function TranslateResults(Of T As New)(source As IDataReader) As T
+  overload: net.phraustbyte.dal.SqlHelper.TranslateResults*
+  nameWithType.vb: SqlHelper.TranslateResults(Of T)(IDataReader)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: net.phraustbyte.dal.SqlHelper.TranslateResults(Of T)(System.Data.IDataReader)
+  name.vb: TranslateResults(Of T)(IDataReader)
+references:
+- uid: net.phraustbyte.dal
+  commentId: N:net.phraustbyte.dal
+  name: net.phraustbyte.dal
+  nameWithType: net.phraustbyte.dal
+  fullName: net.phraustbyte.dal
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: net.phraustbyte.dal.SqlHelper.GetDbType*
+  commentId: Overload:net.phraustbyte.dal.SqlHelper.GetDbType
+  name: GetDbType
+  nameWithType: SqlHelper.GetDbType
+  fullName: net.phraustbyte.dal.SqlHelper.GetDbType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Data.SqlDbType
+  commentId: T:System.Data.SqlDbType
+  parent: System.Data
+  isExternal: true
+  name: SqlDbType
+  nameWithType: SqlDbType
+  fullName: System.Data.SqlDbType
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+- uid: net.phraustbyte.dal.SqlHelper.TranslateResults*
+  commentId: Overload:net.phraustbyte.dal.SqlHelper.TranslateResults
+  name: TranslateResults
+  nameWithType: SqlHelper.TranslateResults
+  fullName: net.phraustbyte.dal.SqlHelper.TranslateResults
+- uid: System.Data.IDataReader
+  commentId: T:System.Data.IDataReader
+  parent: System.Data
+  isExternal: true
+  name: IDataReader
+  nameWithType: IDataReader
+  fullName: System.Data.IDataReader
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

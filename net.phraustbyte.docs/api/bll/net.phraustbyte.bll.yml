@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.bll
+  commentId: N:net.phraustbyte.bll
+  id: net.phraustbyte.bll
+  children:
+  - net.phraustbyte.bll.BaseBLL
+  - net.phraustbyte.bll.IBaseBLL
+  langs:
+  - csharp
+  - vb
+  name: net.phraustbyte.bll
+  nameWithType: net.phraustbyte.bll
+  fullName: net.phraustbyte.bll
+  type: Namespace
+  assemblies:
+  - net.phraustbyte.bll
+references:
+- uid: net.phraustbyte.bll.BaseBLL
+  commentId: T:net.phraustbyte.bll.BaseBLL
+  name: BaseBLL
+  nameWithType: BaseBLL
+  fullName: net.phraustbyte.bll.BaseBLL
+- uid: net.phraustbyte.bll.IBaseBLL
+  commentId: T:net.phraustbyte.bll.IBaseBLL
+  parent: net.phraustbyte.bll
+  name: IBaseBLL
+  nameWithType: IBaseBLL
+  fullName: net.phraustbyte.bll.IBaseBLL
+- uid: net.phraustbyte.bll
+  commentId: N:net.phraustbyte.bll
+  name: net.phraustbyte.bll
+  nameWithType: net.phraustbyte.bll
+  fullName: net.phraustbyte.bll

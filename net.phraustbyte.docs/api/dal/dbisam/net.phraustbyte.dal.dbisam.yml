@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.dal.dbisam
+  commentId: N:net.phraustbyte.dal.dbisam
+  id: net.phraustbyte.dal.dbisam
+  children:
+  - net.phraustbyte.dal.dbisam.ActiveAttribute
+  - net.phraustbyte.dal.dbisam.AutoIncAttribute
+  - net.phraustbyte.dal.dbisam.BaseDAL
+  - net.phraustbyte.dal.dbisam.DateAttribute
+  - net.phraustbyte.dal.dbisam.DBISamHelper
+  - net.phraustbyte.dal.dbisam.IdentifierAttribute
+  - net.phraustbyte.dal.dbisam.IgnoreAttribute
+  - net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+  - net.phraustbyte.dal.dbisam.TableAttribute
+  - net.phraustbyte.dal.dbisam.TimeAttribute
+  langs:
+  - csharp
+  - vb
+  name: net.phraustbyte.dal.dbisam
+  nameWithType: net.phraustbyte.dal.dbisam
+  fullName: net.phraustbyte.dal.dbisam
+  type: Namespace
+  assemblies:
+  - net.phraustbyte.dal.dbisam
+references:
+- uid: net.phraustbyte.dal.dbisam.ActiveAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.ActiveAttribute
+  name: ActiveAttribute
+  nameWithType: ActiveAttribute
+  fullName: net.phraustbyte.dal.dbisam.ActiveAttribute
+- uid: net.phraustbyte.dal.dbisam.AutoIncAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.AutoIncAttribute
+  name: AutoIncAttribute
+  nameWithType: AutoIncAttribute
+  fullName: net.phraustbyte.dal.dbisam.AutoIncAttribute
+- uid: net.phraustbyte.dal.dbisam.DateAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.DateAttribute
+  name: DateAttribute
+  nameWithType: DateAttribute
+  fullName: net.phraustbyte.dal.dbisam.DateAttribute
+- uid: net.phraustbyte.dal.dbisam.IdentifierAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.IdentifierAttribute
+  name: IdentifierAttribute
+  nameWithType: IdentifierAttribute
+  fullName: net.phraustbyte.dal.dbisam.IdentifierAttribute
+- uid: net.phraustbyte.dal.dbisam.IgnoreAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.IgnoreAttribute
+  name: IgnoreAttribute
+  nameWithType: IgnoreAttribute
+  fullName: net.phraustbyte.dal.dbisam.IgnoreAttribute
+- uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+  name: InsertViaSelectAttribute
+  nameWithType: InsertViaSelectAttribute
+  fullName: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+- uid: net.phraustbyte.dal.dbisam.TableAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.TableAttribute
+  name: TableAttribute
+  nameWithType: TableAttribute
+  fullName: net.phraustbyte.dal.dbisam.TableAttribute
+- uid: net.phraustbyte.dal.dbisam.TimeAttribute
+  commentId: T:net.phraustbyte.dal.dbisam.TimeAttribute
+  name: TimeAttribute
+  nameWithType: TimeAttribute
+  fullName: net.phraustbyte.dal.dbisam.TimeAttribute
+- uid: net.phraustbyte.dal.dbisam.BaseDAL
+  commentId: T:net.phraustbyte.dal.dbisam.BaseDAL
+  name: BaseDAL
+  nameWithType: BaseDAL
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper
+  commentId: T:net.phraustbyte.dal.dbisam.DBISamHelper
+  name: DBISamHelper
+  nameWithType: DBISamHelper
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper
