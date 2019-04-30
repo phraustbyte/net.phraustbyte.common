@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Logic Layer </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Business Logic Layer ">
+    <meta name="generator" content="docfx 2.42.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="business-logic-layer">Business Logic Layer</h1>
+
+<p>There are two options with the BLL. Either the interface <code>IBaseBLL</code> or the abstract class <code>BaseBLL</code> can be used from the library. The abstract class
+inherits from the interface already, so the prefered method is to use the abstract class.</p>
+<h2 id="members">Members</h2>
+<p>By Default the interface has the following members:</p>
+<pre><code> Guid Id { get; set; }
+ DateTime CreatedDate { get; set; }
+ string Changer { get; set; }
+ bool Active { get; set; }
+</code></pre>
+<p>These members are required for use with the BaseBLL and the <code>Id</code> field and <code>Changer</code> field are required for the DAL.</p>
+<p>The Abstract class also contains the member DAL which represents the BaseDAL interface</p>
+<pre><code> abstract IBaseDAL DAL {get;}
+</code></pre>
+<p>When inheriting the BaseBLL, this member is required. The recommended usage is:</p>
+<pre><code> protected override IBaseDAL DAL { get; }
+</code></pre>
+<h2 id="constructor">Constructor</h2>
+<p>As the DAL is protected and only will allow sets as part of the contructor, it is recommended that the DAL be set as part of the default constructor.</p>
+<pre><code> public InheritedClass() {
+ 	 DAL = new BaseDAL()
+ }
+</code></pre>
+<h2 id="methods">Methods</h2>
+<p>The Business Logic Layer is designed to apply some logic to the methods used for CRUD operations before sending them to the database. With that
+in mind, the following examples are base/core code - the minimum required to use the crud operations.</p>
+<h3 id="create">Create</h3>
+<pre><code>    public async override Task&lt;Guid&gt; Create&lt;T&gt;()
+    {
+        return await DAL.Create(this);
+    }
+</code></pre>
+<h3 id="delete">Delete</h3>
+<pre><code>    public async override Task Delete()
+    {
+        await DAL.Delete(this);
+    }
+</code></pre>
+<h3 id="read-one-record">Read (One Record)</h3>
+<pre><code>    public async override Task&lt;T&gt; Read&lt;T&gt;(Guid Id)
+    {
+        return await DAL.Read&lt;T&gt;(Id);
+    }
+</code></pre>
+<h3 id="read-all-records">Read (All Records)</h3>
+<pre><code>    public async override Task&lt;List&lt;T&gt;&gt; ReadAll&lt;T&gt;()
+    {
+        return await DAL.ReadAll&lt;T&gt;();
+    }
+</code></pre>
+<h3 id="read-by-filter">Read (By Filter)</h3>
+<pre><code>    public async override Task&lt;List&lt;TOut&gt;&gt; ReadAllByFilter&lt;TOut, TParam&gt;(TParam FilterValue, string FilterKey)
+    {
+        return await DAL.ReadAllByFilter&lt;TOut, TParam&gt;(FilterValue, FilterKey);
+    }
+</code></pre>
+<h3 id="update">Update</h3>
+<pre><code>    public async override Task Update()
+    {
+        await DAL.Update(this);
+    }
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/phraustbyte/net.phraustbyte.common/blob/docs/net.phraustbyte.docs/articles/BLL.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

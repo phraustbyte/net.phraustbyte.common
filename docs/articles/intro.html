@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Backend Generation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Backend Generation ">
+    <meta name="generator" content="docfx 2.42.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="backend-generation">Backend Generation</h1>
+
+<p><em>2019-04-27 Graham A Campbell</em></p>
+<p>The backend libraries are designed to expidite the creation of both Data and Business Logic Layers.
+Basically, it creates an alternative to things like Entity Framework with the added advantage of being able to easily swap the backend simply by changing the interface.</p>
+<h2 id="base-interfaces--abastrct-class">Base Interfaces / Abastrct Class</h2>
+<p>There are two base interfaces and one abstract class that creates the foundation of the libraries.</p>
+<h3 id="base-dal">Base DAL</h3>
+<p>The BaseDAL contains an interface with 7 methods that facilitate actions that will be performed by the selected backend database.
+There are also 2 properties representing the query (or usp if applicable) and connection strings.</p>
+<h3 id="base-bll">Base BLL</h3>
+<p>The BaseBLL contains both an interface and an abstract class. The interface contains some default properties that are fairly standard across database designs (such as Id, change user, change date, etc).
+The interface also contains similar methods to the DAL that facilitate CRUD operations.</p>
+<p>The Abstract class extends the interface further, including a property for the DAL.</p>
+<h2 id="extended-classes">Extended Classes</h2>
+<h3 id="dal-dbisam">DAL DBISAM</h3>
+<p>Look, if you have never heard of this, consider yourself lucky. It is mostly used with Pascal... but in this case, it was needed for use with a ODBC connection to a database for use with a pascal application. Do not ask.
+In order to make it work, it is likely that most of the operations will have to be overridden anyway.</p>
+<h3 id="dal-mssql">DAL MsSQL</h3>
+<p>This class is the most extensively tested backend framework. The whole concept was really designed around M$ SQL. It essentially provides a backend option for the baseDAL interface.
+Connect this up to the code, and it <em>should</em> allow pretty straight-forward connection to the database.... However, the stored procedures do have to follow a fairly specific format.</p>
+<h3 id="dal-mysql">DAL MySQL</h3>
+<p>This class is modeled after the M$ SQL version. It is largly untested, but <em>should</em> work.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/phraustbyte/net.phraustbyte.common/blob/docs/net.phraustbyte.docs/articles/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

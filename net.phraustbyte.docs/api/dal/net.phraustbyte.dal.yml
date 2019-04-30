@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.dal
+  commentId: N:net.phraustbyte.dal
+  id: net.phraustbyte.dal
+  children:
+  - net.phraustbyte.dal.IBaseDAL
+  - net.phraustbyte.dal.RecordNotFoundException
+  - net.phraustbyte.dal.SqlHelper
+  langs:
+  - csharp
+  - vb
+  name: net.phraustbyte.dal
+  nameWithType: net.phraustbyte.dal
+  fullName: net.phraustbyte.dal
+  type: Namespace
+  assemblies:
+  - net.phraustbyte.dal
+references:
+- uid: net.phraustbyte.dal.IBaseDAL
+  commentId: T:net.phraustbyte.dal.IBaseDAL
+  name: IBaseDAL
+  nameWithType: IBaseDAL
+  fullName: net.phraustbyte.dal.IBaseDAL
+- uid: net.phraustbyte.dal.RecordNotFoundException
+  commentId: T:net.phraustbyte.dal.RecordNotFoundException
+  name: RecordNotFoundException
+  nameWithType: RecordNotFoundException
+  fullName: net.phraustbyte.dal.RecordNotFoundException
+- uid: net.phraustbyte.dal.SqlHelper
+  commentId: T:net.phraustbyte.dal.SqlHelper
+  name: SqlHelper
+  nameWithType: SqlHelper
+  fullName: net.phraustbyte.dal.SqlHelper

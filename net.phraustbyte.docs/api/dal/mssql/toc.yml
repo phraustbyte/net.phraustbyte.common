@@ -1,0 +1,6 @@
+### YamlMime:TableOfContent
+- uid: net.phraustbyte.dal.mssql
+  name: net.phraustbyte.dal.mssql
+  items:
+  - uid: net.phraustbyte.dal.mssql.BaseDAL
+    name: BaseDAL

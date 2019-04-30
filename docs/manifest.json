@@ -1,0 +1,486 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/bin/Repos/GC/net.phraustbyte.common/net.phraustbyte.docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/bll/net.phraustbyte.bll.BaseBLL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/bll/net.phraustbyte.bll.BaseBLL.html",
+          "hash": "hXO3Efcp71PtEhBcRkifkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/bll/net.phraustbyte.bll.IBaseBLL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/bll/net.phraustbyte.bll.IBaseBLL.html",
+          "hash": "UmPmVeVVA03NW3oYo+QPSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/bll/net.phraustbyte.bll.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/bll/net.phraustbyte.bll.html",
+          "hash": "kjP9Hd/dNpWwZPSBo9EGzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/bll/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/bll/toc.html",
+          "hash": "ETVt+vGbKygWyQnMeVi5Gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.html",
+          "hash": "od6Q2LMNNiV+olgAoisQmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.html",
+          "hash": "cj+o52T5V/2Z9d4nbwY/cQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html",
+          "hash": "S4vATL1gBW61LBZtRb3e8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html",
+          "hash": "HSLUXBE854JGAJ7j7WwvVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.html",
+          "hash": "inU/TlMTr9NYU1LXQfnSiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.html",
+          "hash": "d1rRhISicLG2nTtvUHRZtg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.html",
+          "hash": "4FIPT8QqIkPiBoRna1s8uA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.html",
+          "hash": "gwdJ7WqUFFUOVhStMLTRqw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.html",
+          "hash": "HhfSt3yFL2OkealPvAomjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.html",
+          "hash": "7BKYHMPIiyLkKdNG8ujKTw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/net.phraustbyte.dal.dbisam.html",
+          "hash": "O5YqGHc5QWQ+b64oTmcAng=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/dal/dbisam/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/dbisam/toc.html",
+          "hash": "AL8DLHfBjGwSON+hvu5Tvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html",
+          "hash": "QO3NhAbH8AOCS9GxbIPjUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/mssql/net.phraustbyte.dal.mssql.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/mssql/net.phraustbyte.dal.mssql.html",
+          "hash": "/kCXpZ1gCFOcybufphRiFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/dal/mssql/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/mssql/toc.html",
+          "hash": "40RGGLXNbTxMEIDZJ6t8sA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html",
+          "hash": "M0+iZZvQTH0LZIDYjQYqUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/mysql/net.phraustbyte.dal.mysql.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/mysql/net.phraustbyte.dal.mysql.html",
+          "hash": "XVViAebcJ5tWBddA6EF3rQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/dal/mysql/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/mysql/toc.html",
+          "hash": "Mgmg9HzRH4wB8mKDQgX3fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/net.phraustbyte.dal.IBaseDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/net.phraustbyte.dal.IBaseDAL.html",
+          "hash": "DXmCMfVPpsfkesFcvapE1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/net.phraustbyte.dal.RecordNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/net.phraustbyte.dal.RecordNotFoundException.html",
+          "hash": "rS9EXkQ5JxzYQM1/UCWRzg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/net.phraustbyte.dal.SqlHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/net.phraustbyte.dal.SqlHelper.html",
+          "hash": "hdsfqjZHqCLUcOQ/IZlsLQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dal/net.phraustbyte.dal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/net.phraustbyte.dal.html",
+          "hash": "uJPR0ZeAZN4G3vFrmbRKlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/dal/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dal/toc.html",
+          "hash": "mJ8GaHRz3js0+y2DzARkbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "ZQXe3pOxbrfV8iOJuZ11Rg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "+wKM/v7Y1OVpfBib0rkUwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/BLL.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/BLL.html",
+          "hash": "dKj0yShOHtLPKiNfJecB6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/DALMsSQL.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/DALMsSQL.html",
+          "hash": "DLfKFsVr6+GlyEfd/rzTRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/StoredProcs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/StoredProcs.html",
+          "hash": "aHuC5vBTHeYv5Ot/dHq0wA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "T0KiYcF9uBBBbFhqKsTuXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "fC2V31PPhzVr6BJkbOoyGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "u+IJvPxa8WVmVSZPa6hSoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "o8gSnVfInGXNFRmuhh4BSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 4
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 22,
+          "skipped_file_count": 22
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

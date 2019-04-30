@@ -1,0 +1,127 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "src": "C:\\bin\\Repos\\GC\\net.phraustbyte.common\\net.phraustbyte.dal"
+        }
+      ],
+      "dest": "api/dal",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "src": "C:\\bin\\Repos\\GC\\net.phraustbyte.common\\net.phraustbyte.bll"
+        }
+      ],
+      "dest": "api/bll",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "src": "C:\\bin\\Repos\\GC\\net.phraustbyte.common\\net.phraustbyte.dal.mssql"
+        }
+      ],
+      "dest": "api/dal/mssql",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "src": "C:\\bin\\Repos\\GC\\net.phraustbyte.common\\net.phraustbyte.dal.mysql"
+        }
+      ],
+      "dest": "api/dal/mysql",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "src": "C:\\bin\\Repos\\GC\\net.phraustbyte.common\\net.phraustbyte.dal.dbisam"
+        }
+      ],
+      "dest": "api/dal/dbisam",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md",
+          "api/dal/**.yml",
+          "api/dal/index.md",
+          "api/bll/**.yml",
+          "api/bll/index.md",
+          "api/dal/dbisam/**.yml",
+          "api/dal/dbisam/index.md",
+          "api/dal/mysql/**.yml",
+          "api/dal/mysql/index.md",
+          "api/dal/mssql/**.yml",
+          "api/dal/mssql/index.md"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

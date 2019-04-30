@@ -1,0 +1,8 @@
+### YamlMime:TableOfContent
+- uid: net.phraustbyte.bll
+  name: net.phraustbyte.bll
+  items:
+  - uid: net.phraustbyte.bll.BaseBLL
+    name: BaseBLL
+  - uid: net.phraustbyte.bll.IBaseBLL
+    name: IBaseBLL

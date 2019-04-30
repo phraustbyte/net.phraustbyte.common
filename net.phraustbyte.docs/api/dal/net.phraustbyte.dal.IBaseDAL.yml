@@ -1,0 +1,852 @@
+### YamlMime:ManagedReference
+items:
+- uid: net.phraustbyte.dal.IBaseDAL
+  commentId: T:net.phraustbyte.dal.IBaseDAL
+  id: IBaseDAL
+  parent: net.phraustbyte.dal
+  children:
+  - net.phraustbyte.dal.IBaseDAL.ConnectionString
+  - net.phraustbyte.dal.IBaseDAL.Create``1(``0)
+  - net.phraustbyte.dal.IBaseDAL.Delete``1(``0)
+  - net.phraustbyte.dal.IBaseDAL.GetParameters``1(``0)
+  - net.phraustbyte.dal.IBaseDAL.Query
+  - net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)
+  - net.phraustbyte.dal.IBaseDAL.ReadAll``1
+  - net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)
+  - net.phraustbyte.dal.IBaseDAL.Update``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: IBaseDAL
+  nameWithType: IBaseDAL
+  fullName: net.phraustbyte.dal.IBaseDAL
+  type: Interface
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: IBaseDAL
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 10
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nRepresents a connection to a data source\n"
+  example: []
+  syntax:
+    content: public interface IBaseDAL
+    content.vb: Public Interface IBaseDAL
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: net.phraustbyte.dal.IBaseDAL.Create``1(``0)
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Create``1(``0)
+  id: Create``1(``0)
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: Create<T>(T)
+  nameWithType: IBaseDAL.Create<T>(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.Create<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: Create
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 18
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nCreates a record in a database\n"
+  example: []
+  syntax:
+    content: Task<Guid> Create<T>(T Obj)
+    parameters:
+    - id: Obj
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Guid}
+      description: ''
+    content.vb: Function Create(Of T)(Obj As T) As Task(Of Guid)
+  overload: net.phraustbyte.dal.IBaseDAL.Create*
+  nameWithType.vb: IBaseDAL.Create(Of T)(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Create(Of T)(T)
+  name.vb: Create(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.Update``1(``0)
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Update``1(``0)
+  id: Update``1(``0)
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: Update<T>(T)
+  nameWithType: IBaseDAL.Update<T>(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.Update<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: Update
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 26
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nUpdates a record in a database\n"
+  example: []
+  syntax:
+    content: Task Update<T>(T Obj)
+    parameters:
+    - id: Obj
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Function Update(Of T)(Obj As T) As Task
+  overload: net.phraustbyte.dal.IBaseDAL.Update*
+  nameWithType.vb: IBaseDAL.Update(Of T)(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Update(Of T)(T)
+  name.vb: Update(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.Delete``1(``0)
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Delete``1(``0)
+  id: Delete``1(``0)
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: Delete<T>(T)
+  nameWithType: IBaseDAL.Delete<T>(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.Delete<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: Delete
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 33
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nDeletes a record in a database\n"
+  example: []
+  syntax:
+    content: Task Delete<T>(T Obj)
+    parameters:
+    - id: Obj
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Function Delete(Of T)(Obj As T) As Task
+  overload: net.phraustbyte.dal.IBaseDAL.Delete*
+  nameWithType.vb: IBaseDAL.Delete(Of T)(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Delete(Of T)(T)
+  name.vb: Delete(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAll``1
+  commentId: M:net.phraustbyte.dal.IBaseDAL.ReadAll``1
+  id: ReadAll``1
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: ReadAll<T>()
+  nameWithType: IBaseDAL.ReadAll<T>()
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAll<T>()
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: ReadAll
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 39
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nReads all records in a database\n"
+  example: []
+  syntax:
+    content: >-
+      Task<List<T>> ReadAll<T>()
+
+          where T : new()
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{{T}}}
+      description: ''
+    content.vb: Function ReadAll(Of T As New) As Task(Of List(Of T))
+  overload: net.phraustbyte.dal.IBaseDAL.ReadAll*
+  nameWithType.vb: IBaseDAL.ReadAll(Of T)()
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.ReadAll(Of T)()
+  name.vb: ReadAll(Of T)()
+- uid: net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)
+  id: Read``1(System.Guid)
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: Read<T>(Guid)
+  nameWithType: IBaseDAL.Read<T>(Guid)
+  fullName: net.phraustbyte.dal.IBaseDAL.Read<T>(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: Read
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 46
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nReads a single record in a database\n"
+  example: []
+  syntax:
+    content: >-
+      Task<T> Read<T>(Guid Id)
+
+          where T : new()
+    parameters:
+    - id: Id
+      type: System.Guid
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+      description: ''
+    content.vb: Function Read(Of T As New)(Id As Guid) As Task(Of T)
+  overload: net.phraustbyte.dal.IBaseDAL.Read*
+  nameWithType.vb: IBaseDAL.Read(Of T)(Guid)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Read(Of T)(System.Guid)
+  name.vb: Read(Of T)(Guid)
+- uid: net.phraustbyte.dal.IBaseDAL.ConnectionString
+  commentId: P:net.phraustbyte.dal.IBaseDAL.ConnectionString
+  id: ConnectionString
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: ConnectionString
+  nameWithType: IBaseDAL.ConnectionString
+  fullName: net.phraustbyte.dal.IBaseDAL.ConnectionString
+  type: Property
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: ConnectionString
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 50
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nRepresents a connection string to a datasource\n"
+  example: []
+  syntax:
+    content: string ConnectionString { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property ConnectionString As String
+  overload: net.phraustbyte.dal.IBaseDAL.ConnectionString*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: net.phraustbyte.dal.IBaseDAL.Query
+  commentId: P:net.phraustbyte.dal.IBaseDAL.Query
+  id: Query
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: IBaseDAL.Query
+  fullName: net.phraustbyte.dal.IBaseDAL.Query
+  type: Property
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: Query
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 54
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nRepresents a query command or name of a stored procedure\n"
+  example: []
+  syntax:
+    content: string Query { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property Query As String
+  overload: net.phraustbyte.dal.IBaseDAL.Query*
+  modifiers.csharp:
+  - get
+  - set
+- uid: net.phraustbyte.dal.IBaseDAL.GetParameters``1(``0)
+  commentId: M:net.phraustbyte.dal.IBaseDAL.GetParameters``1(``0)
+  id: GetParameters``1(``0)
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: GetParameters<T>(T)
+  nameWithType: IBaseDAL.GetParameters<T>(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.GetParameters<T>(T)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: GetParameters
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 61
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nGenerates a list of parameters based on an object\n"
+  example: []
+  syntax:
+    content: List<IDataParameter> GetParameters<T>(T Obj)
+    parameters:
+    - id: Obj
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Collections.Generic.List{System.Data.IDataParameter}
+      description: ''
+    content.vb: Function GetParameters(Of T)(Obj As T) As List(Of IDataParameter)
+  overload: net.phraustbyte.dal.IBaseDAL.GetParameters*
+  nameWithType.vb: IBaseDAL.GetParameters(Of T)(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.GetParameters(Of T)(T)
+  name.vb: GetParameters(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)
+  commentId: M:net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)
+  id: ReadAllByFilter``2(``1,System.String)
+  parent: net.phraustbyte.dal.IBaseDAL
+  langs:
+  - csharp
+  - vb
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType: IBaseDAL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  type: Method
+  source:
+    remote:
+      path: net.phraustbyte.dal/IBaseDAL.cs
+      branch: master
+      repo: https://github.com/phraustbyte/net.phraustbyte.common.git
+    id: ReadAllByFilter
+    path: ../net.phraustbyte.dal/IBaseDAL.cs
+    startLine: 70
+  assemblies:
+  - net.phraustbyte.dal
+  namespace: net.phraustbyte.dal
+  summary: "\nReads records based on filter criteria\n"
+  example: []
+  syntax:
+    content: >-
+      Task<List<TOut>> ReadAllByFilter<TOut, TParam>(TParam FilterValue, string FilterKey)
+
+          where TOut : new()
+    parameters:
+    - id: FilterValue
+      type: '{TParam}'
+      description: ''
+    - id: FilterKey
+      type: System.String
+      description: ''
+    typeParameters:
+    - id: TOut
+      description: ''
+    - id: TParam
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{{TOut}}}
+      description: ''
+    content.vb: Function ReadAllByFilter(Of TOut As New, TParam)(FilterValue As TParam, FilterKey As String) As Task(Of List(Of TOut))
+  overload: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter*
+  nameWithType.vb: IBaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+references:
+- uid: net.phraustbyte.dal
+  commentId: N:net.phraustbyte.dal
+  name: net.phraustbyte.dal
+  nameWithType: net.phraustbyte.dal
+  fullName: net.phraustbyte.dal
+- uid: net.phraustbyte.dal.IBaseDAL.Create*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Create
+  name: Create
+  nameWithType: IBaseDAL.Create
+  fullName: net.phraustbyte.dal.IBaseDAL.Create
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task{System.Guid}
+  commentId: T:System.Threading.Tasks.Task{System.Guid}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Guid>
+  nameWithType: Task<Guid>
+  fullName: System.Threading.Tasks.Task<System.Guid>
+  nameWithType.vb: Task(Of Guid)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Guid)
+  name.vb: Task(Of Guid)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: net.phraustbyte.dal.IBaseDAL.Update*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Update
+  name: Update
+  nameWithType: IBaseDAL.Update
+  fullName: net.phraustbyte.dal.IBaseDAL.Update
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: net.phraustbyte.dal.IBaseDAL.Delete*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Delete
+  name: Delete
+  nameWithType: IBaseDAL.Delete
+  fullName: net.phraustbyte.dal.IBaseDAL.Delete
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAll*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.ReadAll
+  name: ReadAll
+  nameWithType: IBaseDAL.ReadAll
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAll
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{{T}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<List<T>>
+  nameWithType: Task<List<T>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<T>>
+  nameWithType.vb: Task(Of List(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of T))
+  name.vb: Task(Of List(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: net.phraustbyte.dal.IBaseDAL.Read*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Read
+  name: Read
+  nameWithType: IBaseDAL.Read
+  fullName: net.phraustbyte.dal.IBaseDAL.Read
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: net.phraustbyte.dal.IBaseDAL.ConnectionString*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.ConnectionString
+  name: ConnectionString
+  nameWithType: IBaseDAL.ConnectionString
+  fullName: net.phraustbyte.dal.IBaseDAL.ConnectionString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: net.phraustbyte.dal.IBaseDAL.Query*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Query
+  name: Query
+  nameWithType: IBaseDAL.Query
+  fullName: net.phraustbyte.dal.IBaseDAL.Query
+- uid: net.phraustbyte.dal.IBaseDAL.GetParameters*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.GetParameters
+  name: GetParameters
+  nameWithType: IBaseDAL.GetParameters
+  fullName: net.phraustbyte.dal.IBaseDAL.GetParameters
+- uid: System.Collections.Generic.List{System.Data.IDataParameter}
+  commentId: T:System.Collections.Generic.List{System.Data.IDataParameter}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDataParameter>
+  nameWithType: List<IDataParameter>
+  fullName: System.Collections.Generic.List<System.Data.IDataParameter>
+  nameWithType.vb: List(Of IDataParameter)
+  fullName.vb: System.Collections.Generic.List(Of System.Data.IDataParameter)
+  name.vb: List(Of IDataParameter)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter*
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.ReadAllByFilter
+  name: ReadAllByFilter
+  nameWithType: IBaseDAL.ReadAllByFilter
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter
+- uid: '{TParam}'
+  commentId: '!:TParam'
+  definition: TParam
+  name: TParam
+  nameWithType: TParam
+  fullName: TParam
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{{TOut}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<List<TOut>>
+  nameWithType: Task<List<TOut>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<TOut>>
+  nameWithType.vb: Task(Of List(Of TOut))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of TOut))
+  name.vb: Task(Of List(Of TOut))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOut
+    nameWithType: TOut
+    fullName: TOut
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOut
+    nameWithType: TOut
+    fullName: TOut
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TParam
+  commentId: '!:TParam'
+  name: TParam
+  nameWithType: TParam
+  fullName: TParam

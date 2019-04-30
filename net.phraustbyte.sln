@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.dal", "net.phraustbyte.dal\net.phraustbyte.dal.csproj", "{2BF67249-0C1A-41A3-A429-D51BABE67495}"
 EndProject
@@ -8,11 +8,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.bll", "net.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.tests", "net.phraustbyte.tests\net.phraustbyte.tests.csproj", "{C461E8C3-670C-47DA-9337-AFB05E0AEEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net.phraustbyte.dal.mssql", "net.phraustbyte.dal.mssql\net.phraustbyte.dal.mssql.csproj", "{832E6B4A-8CE3-4DB8-9C83-4CC03C15F0FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.dal.mssql", "net.phraustbyte.dal.mssql\net.phraustbyte.dal.mssql.csproj", "{832E6B4A-8CE3-4DB8-9C83-4CC03C15F0FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net.phraustbyte.dal.mysql", "net.phraustbyte.dal.mysql\net.phraustbyte.dal.mysql.csproj", "{2DF00685-AA70-4D92-8974-BAFF7F8CF447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.dal.mysql", "net.phraustbyte.dal.mysql\net.phraustbyte.dal.mysql.csproj", "{2DF00685-AA70-4D92-8974-BAFF7F8CF447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net.phraustbyte.dal.dbisam", "net.phraustbyte.dal.dbisam\net.phraustbyte.dal.dbisam.csproj", "{A2F02373-2ADF-4E0A-A0B3-9FF66041B86A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net.phraustbyte.dal.dbisam", "net.phraustbyte.dal.dbisam\net.phraustbyte.dal.dbisam.csproj", "{A2F02373-2ADF-4E0A-A0B3-9FF66041B86A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net.phraustbyte.docs", "net.phraustbyte.docs\net.phraustbyte.docs.csproj", "{D5CECCE6-CBF5-4FB1-AB59-8C979B48139B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{A2F02373-2ADF-4E0A-A0B3-9FF66041B86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2F02373-2ADF-4E0A-A0B3-9FF66041B86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2F02373-2ADF-4E0A-A0B3-9FF66041B86A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5CECCE6-CBF5-4FB1-AB59-8C979B48139B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5CECCE6-CBF5-4FB1-AB59-8C979B48139B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5CECCE6-CBF5-4FB1-AB59-8C979B48139B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5CECCE6-CBF5-4FB1-AB59-8C979B48139B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

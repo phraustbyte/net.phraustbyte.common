@@ -1,0 +1,1417 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: net.phraustbyte.bll
+  name: net.phraustbyte.bll
+  href: api/bll/net.phraustbyte.bll.html
+  commentId: N:net.phraustbyte.bll
+  fullName: net.phraustbyte.bll
+  nameWithType: net.phraustbyte.bll
+- uid: net.phraustbyte.bll.BaseBLL
+  name: BaseBLL
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html
+  commentId: T:net.phraustbyte.bll.BaseBLL
+  fullName: net.phraustbyte.bll.BaseBLL
+  nameWithType: BaseBLL
+- uid: net.phraustbyte.bll.BaseBLL.Active
+  name: Active
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Active
+  commentId: P:net.phraustbyte.bll.BaseBLL.Active
+  fullName: net.phraustbyte.bll.BaseBLL.Active
+  nameWithType: BaseBLL.Active
+- uid: net.phraustbyte.bll.BaseBLL.Active*
+  name: Active
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Active_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Active
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Active
+  nameWithType: BaseBLL.Active
+- uid: net.phraustbyte.bll.BaseBLL.Changer
+  name: Changer
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Changer
+  commentId: P:net.phraustbyte.bll.BaseBLL.Changer
+  fullName: net.phraustbyte.bll.BaseBLL.Changer
+  nameWithType: BaseBLL.Changer
+- uid: net.phraustbyte.bll.BaseBLL.Changer*
+  name: Changer
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Changer_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Changer
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Changer
+  nameWithType: BaseBLL.Changer
+- uid: net.phraustbyte.bll.BaseBLL.Create*
+  name: Create
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Create_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Create
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Create
+  nameWithType: BaseBLL.Create
+- uid: net.phraustbyte.bll.BaseBLL.Create``1
+  name: Create<T>()
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Create__1
+  commentId: M:net.phraustbyte.bll.BaseBLL.Create``1
+  name.vb: Create(Of T)()
+  fullName: net.phraustbyte.bll.BaseBLL.Create<T>()
+  fullName.vb: net.phraustbyte.bll.BaseBLL.Create(Of T)()
+  nameWithType: BaseBLL.Create<T>()
+  nameWithType.vb: BaseBLL.Create(Of T)()
+- uid: net.phraustbyte.bll.BaseBLL.CreatedDate
+  name: CreatedDate
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_CreatedDate
+  commentId: P:net.phraustbyte.bll.BaseBLL.CreatedDate
+  fullName: net.phraustbyte.bll.BaseBLL.CreatedDate
+  nameWithType: BaseBLL.CreatedDate
+- uid: net.phraustbyte.bll.BaseBLL.CreatedDate*
+  name: CreatedDate
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_CreatedDate_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.CreatedDate
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.CreatedDate
+  nameWithType: BaseBLL.CreatedDate
+- uid: net.phraustbyte.bll.BaseBLL.DAL
+  name: DAL
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_DAL
+  commentId: P:net.phraustbyte.bll.BaseBLL.DAL
+  fullName: net.phraustbyte.bll.BaseBLL.DAL
+  nameWithType: BaseBLL.DAL
+- uid: net.phraustbyte.bll.BaseBLL.DAL*
+  name: DAL
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_DAL_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.DAL
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.DAL
+  nameWithType: BaseBLL.DAL
+- uid: net.phraustbyte.bll.BaseBLL.Delete
+  name: Delete()
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Delete
+  commentId: M:net.phraustbyte.bll.BaseBLL.Delete
+  fullName: net.phraustbyte.bll.BaseBLL.Delete()
+  nameWithType: BaseBLL.Delete()
+- uid: net.phraustbyte.bll.BaseBLL.Delete*
+  name: Delete
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Delete_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Delete
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Delete
+  nameWithType: BaseBLL.Delete
+- uid: net.phraustbyte.bll.BaseBLL.Id
+  name: Id
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Id
+  commentId: P:net.phraustbyte.bll.BaseBLL.Id
+  fullName: net.phraustbyte.bll.BaseBLL.Id
+  nameWithType: BaseBLL.Id
+- uid: net.phraustbyte.bll.BaseBLL.Id*
+  name: Id
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Id_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Id
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Id
+  nameWithType: BaseBLL.Id
+- uid: net.phraustbyte.bll.BaseBLL.Read*
+  name: Read
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Read_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Read
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Read
+  nameWithType: BaseBLL.Read
+- uid: net.phraustbyte.bll.BaseBLL.Read``1(System.Guid)
+  name: Read<T>(Guid)
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Read__1_System_Guid_
+  commentId: M:net.phraustbyte.bll.BaseBLL.Read``1(System.Guid)
+  name.vb: Read(Of T)(Guid)
+  fullName: net.phraustbyte.bll.BaseBLL.Read<T>(System.Guid)
+  fullName.vb: net.phraustbyte.bll.BaseBLL.Read(Of T)(System.Guid)
+  nameWithType: BaseBLL.Read<T>(Guid)
+  nameWithType.vb: BaseBLL.Read(Of T)(Guid)
+- uid: net.phraustbyte.bll.BaseBLL.ReadAll*
+  name: ReadAll
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_ReadAll_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.ReadAll
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.ReadAll
+  nameWithType: BaseBLL.ReadAll
+- uid: net.phraustbyte.bll.BaseBLL.ReadAll``1
+  name: ReadAll<T>()
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_ReadAll__1
+  commentId: M:net.phraustbyte.bll.BaseBLL.ReadAll``1
+  name.vb: ReadAll(Of T)()
+  fullName: net.phraustbyte.bll.BaseBLL.ReadAll<T>()
+  fullName.vb: net.phraustbyte.bll.BaseBLL.ReadAll(Of T)()
+  nameWithType: BaseBLL.ReadAll<T>()
+  nameWithType.vb: BaseBLL.ReadAll(Of T)()
+- uid: net.phraustbyte.bll.BaseBLL.ReadAllByFilter*
+  name: ReadAllByFilter
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_ReadAllByFilter_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.ReadAllByFilter
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.ReadAllByFilter
+  nameWithType: BaseBLL.ReadAllByFilter
+- uid: net.phraustbyte.bll.BaseBLL.ReadAllByFilter``2(``1,System.String)
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_ReadAllByFilter__2___1_System_String_
+  commentId: M:net.phraustbyte.bll.BaseBLL.ReadAllByFilter``2(``1,System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName: net.phraustbyte.bll.BaseBLL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  fullName.vb: net.phraustbyte.bll.BaseBLL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  nameWithType: BaseBLL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType.vb: BaseBLL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+- uid: net.phraustbyte.bll.BaseBLL.Update
+  name: Update()
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Update
+  commentId: M:net.phraustbyte.bll.BaseBLL.Update
+  fullName: net.phraustbyte.bll.BaseBLL.Update()
+  nameWithType: BaseBLL.Update()
+- uid: net.phraustbyte.bll.BaseBLL.Update*
+  name: Update
+  href: api/bll/net.phraustbyte.bll.BaseBLL.html#net_phraustbyte_bll_BaseBLL_Update_
+  commentId: Overload:net.phraustbyte.bll.BaseBLL.Update
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.BaseBLL.Update
+  nameWithType: BaseBLL.Update
+- uid: net.phraustbyte.bll.IBaseBLL
+  name: IBaseBLL
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html
+  commentId: T:net.phraustbyte.bll.IBaseBLL
+  fullName: net.phraustbyte.bll.IBaseBLL
+  nameWithType: IBaseBLL
+- uid: net.phraustbyte.bll.IBaseBLL.Active
+  name: Active
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Active
+  commentId: P:net.phraustbyte.bll.IBaseBLL.Active
+  fullName: net.phraustbyte.bll.IBaseBLL.Active
+  nameWithType: IBaseBLL.Active
+- uid: net.phraustbyte.bll.IBaseBLL.Active*
+  name: Active
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Active_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Active
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Active
+  nameWithType: IBaseBLL.Active
+- uid: net.phraustbyte.bll.IBaseBLL.Changer
+  name: Changer
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Changer
+  commentId: P:net.phraustbyte.bll.IBaseBLL.Changer
+  fullName: net.phraustbyte.bll.IBaseBLL.Changer
+  nameWithType: IBaseBLL.Changer
+- uid: net.phraustbyte.bll.IBaseBLL.Changer*
+  name: Changer
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Changer_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Changer
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Changer
+  nameWithType: IBaseBLL.Changer
+- uid: net.phraustbyte.bll.IBaseBLL.Create*
+  name: Create
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Create_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Create
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Create
+  nameWithType: IBaseBLL.Create
+- uid: net.phraustbyte.bll.IBaseBLL.Create``1
+  name: Create<T>()
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Create__1
+  commentId: M:net.phraustbyte.bll.IBaseBLL.Create``1
+  name.vb: Create(Of T)()
+  fullName: net.phraustbyte.bll.IBaseBLL.Create<T>()
+  fullName.vb: net.phraustbyte.bll.IBaseBLL.Create(Of T)()
+  nameWithType: IBaseBLL.Create<T>()
+  nameWithType.vb: IBaseBLL.Create(Of T)()
+- uid: net.phraustbyte.bll.IBaseBLL.CreatedDate
+  name: CreatedDate
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_CreatedDate
+  commentId: P:net.phraustbyte.bll.IBaseBLL.CreatedDate
+  fullName: net.phraustbyte.bll.IBaseBLL.CreatedDate
+  nameWithType: IBaseBLL.CreatedDate
+- uid: net.phraustbyte.bll.IBaseBLL.CreatedDate*
+  name: CreatedDate
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_CreatedDate_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.CreatedDate
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.CreatedDate
+  nameWithType: IBaseBLL.CreatedDate
+- uid: net.phraustbyte.bll.IBaseBLL.Delete
+  name: Delete()
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Delete
+  commentId: M:net.phraustbyte.bll.IBaseBLL.Delete
+  fullName: net.phraustbyte.bll.IBaseBLL.Delete()
+  nameWithType: IBaseBLL.Delete()
+- uid: net.phraustbyte.bll.IBaseBLL.Delete*
+  name: Delete
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Delete_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Delete
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Delete
+  nameWithType: IBaseBLL.Delete
+- uid: net.phraustbyte.bll.IBaseBLL.Id
+  name: Id
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Id
+  commentId: P:net.phraustbyte.bll.IBaseBLL.Id
+  fullName: net.phraustbyte.bll.IBaseBLL.Id
+  nameWithType: IBaseBLL.Id
+- uid: net.phraustbyte.bll.IBaseBLL.Id*
+  name: Id
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Id_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Id
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Id
+  nameWithType: IBaseBLL.Id
+- uid: net.phraustbyte.bll.IBaseBLL.Read*
+  name: Read
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Read_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Read
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Read
+  nameWithType: IBaseBLL.Read
+- uid: net.phraustbyte.bll.IBaseBLL.Read``1(System.Guid)
+  name: Read<T>(Guid)
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Read__1_System_Guid_
+  commentId: M:net.phraustbyte.bll.IBaseBLL.Read``1(System.Guid)
+  name.vb: Read(Of T)(Guid)
+  fullName: net.phraustbyte.bll.IBaseBLL.Read<T>(System.Guid)
+  fullName.vb: net.phraustbyte.bll.IBaseBLL.Read(Of T)(System.Guid)
+  nameWithType: IBaseBLL.Read<T>(Guid)
+  nameWithType.vb: IBaseBLL.Read(Of T)(Guid)
+- uid: net.phraustbyte.bll.IBaseBLL.ReadAll*
+  name: ReadAll
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_ReadAll_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.ReadAll
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.ReadAll
+  nameWithType: IBaseBLL.ReadAll
+- uid: net.phraustbyte.bll.IBaseBLL.ReadAll``1
+  name: ReadAll<T>()
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_ReadAll__1
+  commentId: M:net.phraustbyte.bll.IBaseBLL.ReadAll``1
+  name.vb: ReadAll(Of T)()
+  fullName: net.phraustbyte.bll.IBaseBLL.ReadAll<T>()
+  fullName.vb: net.phraustbyte.bll.IBaseBLL.ReadAll(Of T)()
+  nameWithType: IBaseBLL.ReadAll<T>()
+  nameWithType.vb: IBaseBLL.ReadAll(Of T)()
+- uid: net.phraustbyte.bll.IBaseBLL.ReadAllByFilter*
+  name: ReadAllByFilter
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_ReadAllByFilter_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.ReadAllByFilter
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.ReadAllByFilter
+  nameWithType: IBaseBLL.ReadAllByFilter
+- uid: net.phraustbyte.bll.IBaseBLL.ReadAllByFilter``2(``1,System.String)
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_ReadAllByFilter__2___1_System_String_
+  commentId: M:net.phraustbyte.bll.IBaseBLL.ReadAllByFilter``2(``1,System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName: net.phraustbyte.bll.IBaseBLL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  fullName.vb: net.phraustbyte.bll.IBaseBLL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  nameWithType: IBaseBLL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType.vb: IBaseBLL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+- uid: net.phraustbyte.bll.IBaseBLL.Update
+  name: Update()
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Update
+  commentId: M:net.phraustbyte.bll.IBaseBLL.Update
+  fullName: net.phraustbyte.bll.IBaseBLL.Update()
+  nameWithType: IBaseBLL.Update()
+- uid: net.phraustbyte.bll.IBaseBLL.Update*
+  name: Update
+  href: api/bll/net.phraustbyte.bll.IBaseBLL.html#net_phraustbyte_bll_IBaseBLL_Update_
+  commentId: Overload:net.phraustbyte.bll.IBaseBLL.Update
+  isSpec: "True"
+  fullName: net.phraustbyte.bll.IBaseBLL.Update
+  nameWithType: IBaseBLL.Update
+- uid: net.phraustbyte.dal
+  name: net.phraustbyte.dal
+  href: api/dal/net.phraustbyte.dal.html
+  commentId: N:net.phraustbyte.dal
+  fullName: net.phraustbyte.dal
+  nameWithType: net.phraustbyte.dal
+- uid: net.phraustbyte.dal.dbisam
+  name: net.phraustbyte.dal.dbisam
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.html
+  commentId: N:net.phraustbyte.dal.dbisam
+  fullName: net.phraustbyte.dal.dbisam
+  nameWithType: net.phraustbyte.dal.dbisam
+- uid: net.phraustbyte.dal.dbisam.ActiveAttribute
+  name: ActiveAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.ActiveAttribute
+  fullName: net.phraustbyte.dal.dbisam.ActiveAttribute
+  nameWithType: ActiveAttribute
+- uid: net.phraustbyte.dal.dbisam.ActiveAttribute.#ctor
+  name: ActiveAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.html#net_phraustbyte_dal_dbisam_ActiveAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.ActiveAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.ActiveAttribute.ActiveAttribute()
+  nameWithType: ActiveAttribute.ActiveAttribute()
+- uid: net.phraustbyte.dal.dbisam.ActiveAttribute.#ctor*
+  name: ActiveAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.html#net_phraustbyte_dal_dbisam_ActiveAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.ActiveAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.ActiveAttribute.ActiveAttribute
+  nameWithType: ActiveAttribute.ActiveAttribute
+- uid: net.phraustbyte.dal.dbisam.ActiveAttribute.Active
+  name: Active
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.html#net_phraustbyte_dal_dbisam_ActiveAttribute_Active
+  commentId: P:net.phraustbyte.dal.dbisam.ActiveAttribute.Active
+  fullName: net.phraustbyte.dal.dbisam.ActiveAttribute.Active
+  nameWithType: ActiveAttribute.Active
+- uid: net.phraustbyte.dal.dbisam.ActiveAttribute.Active*
+  name: Active
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.ActiveAttribute.html#net_phraustbyte_dal_dbisam_ActiveAttribute_Active_
+  commentId: Overload:net.phraustbyte.dal.dbisam.ActiveAttribute.Active
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.ActiveAttribute.Active
+  nameWithType: ActiveAttribute.Active
+- uid: net.phraustbyte.dal.dbisam.AutoIncAttribute
+  name: AutoIncAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.AutoIncAttribute
+  fullName: net.phraustbyte.dal.dbisam.AutoIncAttribute
+  nameWithType: AutoIncAttribute
+- uid: net.phraustbyte.dal.dbisam.AutoIncAttribute.#ctor
+  name: AutoIncAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.html#net_phraustbyte_dal_dbisam_AutoIncAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.AutoIncAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoIncAttribute()
+  nameWithType: AutoIncAttribute.AutoIncAttribute()
+- uid: net.phraustbyte.dal.dbisam.AutoIncAttribute.#ctor*
+  name: AutoIncAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.html#net_phraustbyte_dal_dbisam_AutoIncAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.AutoIncAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoIncAttribute
+  nameWithType: AutoIncAttribute.AutoIncAttribute
+- uid: net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoInc
+  name: AutoInc
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.html#net_phraustbyte_dal_dbisam_AutoIncAttribute_AutoInc
+  commentId: P:net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoInc
+  fullName: net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoInc
+  nameWithType: AutoIncAttribute.AutoInc
+- uid: net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoInc*
+  name: AutoInc
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.AutoIncAttribute.html#net_phraustbyte_dal_dbisam_AutoIncAttribute_AutoInc_
+  commentId: Overload:net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoInc
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.AutoIncAttribute.AutoInc
+  nameWithType: AutoIncAttribute.AutoInc
+- uid: net.phraustbyte.dal.dbisam.BaseDAL
+  name: BaseDAL
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html
+  commentId: T:net.phraustbyte.dal.dbisam.BaseDAL
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL
+  nameWithType: BaseDAL
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.#ctor(System.String)
+  name: BaseDAL(String)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL__ctor_System_String_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.#ctor(System.String)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.BaseDAL(System.String)
+  nameWithType: BaseDAL.BaseDAL(String)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.#ctor*
+  name: BaseDAL
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.BaseDAL
+  nameWithType: BaseDAL.BaseDAL
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString
+  name: ConnectionString
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_ConnectionString
+  commentId: P:net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString
+  nameWithType: BaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString*
+  name: ConnectionString
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_ConnectionString_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.ConnectionString
+  nameWithType: BaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Create*
+  name: Create
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Create_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.Create
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Create
+  nameWithType: BaseDAL.Create
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Create``1(``0)
+  name: Create<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Create__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.Create``1(``0)
+  name.vb: Create(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Create<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.Create(Of T)(T)
+  nameWithType: BaseDAL.Create<T>(T)
+  nameWithType.vb: BaseDAL.Create(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Delete*
+  name: Delete
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Delete_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.Delete
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Delete
+  nameWithType: BaseDAL.Delete
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Delete``1(``0)
+  name: Delete<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Delete__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.Delete``1(``0)
+  name.vb: Delete(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Delete<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.Delete(Of T)(T)
+  nameWithType: BaseDAL.Delete<T>(T)
+  nameWithType.vb: BaseDAL.Delete(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.GetParameters*
+  name: GetParameters
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_GetParameters_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.GetParameters
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.GetParameters
+  nameWithType: BaseDAL.GetParameters
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.GetParameters``1(``0)
+  name: GetParameters<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_GetParameters__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.GetParameters``1(``0)
+  name.vb: GetParameters(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.GetParameters<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.GetParameters(Of T)(T)
+  nameWithType: BaseDAL.GetParameters<T>(T)
+  nameWithType.vb: BaseDAL.GetParameters(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Insert*
+  name: Insert
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Insert_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.Insert
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Insert
+  nameWithType: BaseDAL.Insert
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Insert``1(``0)
+  name: Insert<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Insert__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.Insert``1(``0)
+  name.vb: Insert(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Insert<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.Insert(Of T)(T)
+  nameWithType: BaseDAL.Insert<T>(T)
+  nameWithType.vb: BaseDAL.Insert(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.net#phraustbyte#dal#IBaseDAL#Create*
+  name: IBaseDAL.Create
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_net_phraustbyte_dal_IBaseDAL_Create_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.net#phraustbyte#dal#IBaseDAL#Create
+  isSpec: "True"
+  name.vb: net.phraustbyte.dal.IBaseDAL.Create
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.net.phraustbyte.dal.IBaseDAL.Create
+  nameWithType: BaseDAL.IBaseDAL.Create
+  nameWithType.vb: BaseDAL.net.phraustbyte.dal.IBaseDAL.Create
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.net#phraustbyte#dal#IBaseDAL#Create``1(``0)
+  name: IBaseDAL.Create<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_net_phraustbyte_dal_IBaseDAL_Create__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.net#phraustbyte#dal#IBaseDAL#Create``1(``0)
+  name.vb: net.phraustbyte.dal.IBaseDAL.Create(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.net.phraustbyte.dal.IBaseDAL.Create<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.net.phraustbyte.dal.IBaseDAL.Create(Of T)(T)
+  nameWithType: BaseDAL.IBaseDAL.Create<T>(T)
+  nameWithType.vb: BaseDAL.net.phraustbyte.dal.IBaseDAL.Create(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Query
+  name: Query
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Query
+  commentId: P:net.phraustbyte.dal.dbisam.BaseDAL.Query
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Query
+  nameWithType: BaseDAL.Query
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Query*
+  name: Query
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Query_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.Query
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Query
+  nameWithType: BaseDAL.Query
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Read*
+  name: Read
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Read_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.Read
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Read
+  nameWithType: BaseDAL.Read
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Read``1(System.Guid)
+  name: Read<T>(Guid)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Read__1_System_Guid_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.Read``1(System.Guid)
+  name.vb: Read(Of T)(Guid)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Read<T>(System.Guid)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.Read(Of T)(System.Guid)
+  nameWithType: BaseDAL.Read<T>(Guid)
+  nameWithType.vb: BaseDAL.Read(Of T)(Guid)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Read``1(System.Int32)
+  name: Read<T>(Int32)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Read__1_System_Int32_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.Read``1(System.Int32)
+  name.vb: Read(Of T)(Int32)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Read<T>(System.Int32)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.Read(Of T)(System.Int32)
+  nameWithType: BaseDAL.Read<T>(Int32)
+  nameWithType.vb: BaseDAL.Read(Of T)(Int32)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.ReadAll*
+  name: ReadAll
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_ReadAll_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.ReadAll
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.ReadAll
+  nameWithType: BaseDAL.ReadAll
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.ReadAll``1
+  name: ReadAll<T>()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_ReadAll__1
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.ReadAll``1
+  name.vb: ReadAll(Of T)()
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.ReadAll<T>()
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.ReadAll(Of T)()
+  nameWithType: BaseDAL.ReadAll<T>()
+  nameWithType.vb: BaseDAL.ReadAll(Of T)()
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter*
+  name: ReadAllByFilter
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_ReadAllByFilter_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter
+  nameWithType: BaseDAL.ReadAllByFilter
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter``2(``1,System.String)
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_ReadAllByFilter__2___1_System_String_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter``2(``1,System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  nameWithType: BaseDAL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType.vb: BaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Update*
+  name: Update
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Update_
+  commentId: Overload:net.phraustbyte.dal.dbisam.BaseDAL.Update
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Update
+  nameWithType: BaseDAL.Update
+- uid: net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)
+  name: Update<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.BaseDAL.html#net_phraustbyte_dal_dbisam_BaseDAL_Update__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.BaseDAL.Update``1(``0)
+  name.vb: Update(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.BaseDAL.Update<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.BaseDAL.Update(Of T)(T)
+  nameWithType: BaseDAL.Update<T>(T)
+  nameWithType.vb: BaseDAL.Update(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.DateAttribute
+  name: DateAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.DateAttribute
+  fullName: net.phraustbyte.dal.dbisam.DateAttribute
+  nameWithType: DateAttribute
+- uid: net.phraustbyte.dal.dbisam.DateAttribute.#ctor
+  name: DateAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.html#net_phraustbyte_dal_dbisam_DateAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.DateAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.DateAttribute.DateAttribute()
+  nameWithType: DateAttribute.DateAttribute()
+- uid: net.phraustbyte.dal.dbisam.DateAttribute.#ctor*
+  name: DateAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.html#net_phraustbyte_dal_dbisam_DateAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DateAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DateAttribute.DateAttribute
+  nameWithType: DateAttribute.DateAttribute
+- uid: net.phraustbyte.dal.dbisam.DateAttribute.Date
+  name: Date
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.html#net_phraustbyte_dal_dbisam_DateAttribute_Date
+  commentId: P:net.phraustbyte.dal.dbisam.DateAttribute.Date
+  fullName: net.phraustbyte.dal.dbisam.DateAttribute.Date
+  nameWithType: DateAttribute.Date
+- uid: net.phraustbyte.dal.dbisam.DateAttribute.Date*
+  name: Date
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DateAttribute.html#net_phraustbyte_dal_dbisam_DateAttribute_Date_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DateAttribute.Date
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DateAttribute.Date
+  nameWithType: DateAttribute.Date
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper
+  name: DBISamHelper
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html
+  commentId: T:net.phraustbyte.dal.dbisam.DBISamHelper
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper
+  nameWithType: DBISamHelper
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement*
+  name: GenerateDeleteStatement
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateDeleteStatement_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement
+  nameWithType: DBISamHelper.GenerateDeleteStatement
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)
+  name: GenerateDeleteStatement<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateDeleteStatement__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement``1(``0)
+  name.vb: GenerateDeleteStatement(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateDeleteStatement(Of T)(T)
+  nameWithType: DBISamHelper.GenerateDeleteStatement<T>(T)
+  nameWithType.vb: DBISamHelper.GenerateDeleteStatement(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment*
+  name: GenerateInsertStatment
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateInsertStatment_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment
+  nameWithType: DBISamHelper.GenerateInsertStatment
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)
+  name: GenerateInsertStatment<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateInsertStatment__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment``1(``0)
+  name.vb: GenerateInsertStatment(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateInsertStatment(Of T)(T)
+  nameWithType: DBISamHelper.GenerateInsertStatment<T>(T)
+  nameWithType.vb: DBISamHelper.GenerateInsertStatment(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement*
+  name: GenerateReadAllStatement
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateReadAllStatement_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement
+  nameWithType: DBISamHelper.GenerateReadAllStatement
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement``1
+  name: GenerateReadAllStatement<T>()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateReadAllStatement__1
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement``1
+  name.vb: GenerateReadAllStatement(Of T)()
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement<T>()
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadAllStatement(Of T)()
+  nameWithType: DBISamHelper.GenerateReadAllStatement<T>()
+  nameWithType.vb: DBISamHelper.GenerateReadAllStatement(Of T)()
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement*
+  name: GenerateReadStatement
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateReadStatement_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement
+  nameWithType: DBISamHelper.GenerateReadStatement
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement``1(System.Object)
+  name: GenerateReadStatement<T>(Object)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateReadStatement__1_System_Object_
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement``1(System.Object)
+  name.vb: GenerateReadStatement(Of T)(Object)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement<T>(System.Object)
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateReadStatement(Of T)(System.Object)
+  nameWithType: DBISamHelper.GenerateReadStatement<T>(Object)
+  nameWithType.vb: DBISamHelper.GenerateReadStatement(Of T)(Object)
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment*
+  name: GenerateUpdateStatment
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateUpdateStatment_
+  commentId: Overload:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment
+  nameWithType: DBISamHelper.GenerateUpdateStatment
+- uid: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0)
+  name: GenerateUpdateStatment<T>(T)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.DBISamHelper.html#net_phraustbyte_dal_dbisam_DBISamHelper_GenerateUpdateStatment__1___0_
+  commentId: M:net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment``1(``0)
+  name.vb: GenerateUpdateStatment(Of T)(T)
+  fullName: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment<T>(T)
+  fullName.vb: net.phraustbyte.dal.dbisam.DBISamHelper.GenerateUpdateStatment(Of T)(T)
+  nameWithType: DBISamHelper.GenerateUpdateStatment<T>(T)
+  nameWithType.vb: DBISamHelper.GenerateUpdateStatment(Of T)(T)
+- uid: net.phraustbyte.dal.dbisam.IdentifierAttribute
+  name: IdentifierAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.IdentifierAttribute
+  fullName: net.phraustbyte.dal.dbisam.IdentifierAttribute
+  nameWithType: IdentifierAttribute
+- uid: net.phraustbyte.dal.dbisam.IdentifierAttribute.#ctor
+  name: IdentifierAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.html#net_phraustbyte_dal_dbisam_IdentifierAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.IdentifierAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.IdentifierAttribute.IdentifierAttribute()
+  nameWithType: IdentifierAttribute.IdentifierAttribute()
+- uid: net.phraustbyte.dal.dbisam.IdentifierAttribute.#ctor*
+  name: IdentifierAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.html#net_phraustbyte_dal_dbisam_IdentifierAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.IdentifierAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.IdentifierAttribute.IdentifierAttribute
+  nameWithType: IdentifierAttribute.IdentifierAttribute
+- uid: net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier
+  name: Identifier
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.html#net_phraustbyte_dal_dbisam_IdentifierAttribute_Identifier
+  commentId: P:net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier
+  fullName: net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier
+  nameWithType: IdentifierAttribute.Identifier
+- uid: net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier*
+  name: Identifier
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IdentifierAttribute.html#net_phraustbyte_dal_dbisam_IdentifierAttribute_Identifier_
+  commentId: Overload:net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.IdentifierAttribute.Identifier
+  nameWithType: IdentifierAttribute.Identifier
+- uid: net.phraustbyte.dal.dbisam.IgnoreAttribute
+  name: IgnoreAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.IgnoreAttribute
+  fullName: net.phraustbyte.dal.dbisam.IgnoreAttribute
+  nameWithType: IgnoreAttribute
+- uid: net.phraustbyte.dal.dbisam.IgnoreAttribute.#ctor
+  name: IgnoreAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.html#net_phraustbyte_dal_dbisam_IgnoreAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.IgnoreAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.IgnoreAttribute.IgnoreAttribute()
+  nameWithType: IgnoreAttribute.IgnoreAttribute()
+- uid: net.phraustbyte.dal.dbisam.IgnoreAttribute.#ctor*
+  name: IgnoreAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.html#net_phraustbyte_dal_dbisam_IgnoreAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.IgnoreAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.IgnoreAttribute.IgnoreAttribute
+  nameWithType: IgnoreAttribute.IgnoreAttribute
+- uid: net.phraustbyte.dal.dbisam.IgnoreAttribute.Ignore
+  name: Ignore
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.html#net_phraustbyte_dal_dbisam_IgnoreAttribute_Ignore
+  commentId: P:net.phraustbyte.dal.dbisam.IgnoreAttribute.Ignore
+  fullName: net.phraustbyte.dal.dbisam.IgnoreAttribute.Ignore
+  nameWithType: IgnoreAttribute.Ignore
+- uid: net.phraustbyte.dal.dbisam.IgnoreAttribute.Ignore*
+  name: Ignore
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.IgnoreAttribute.html#net_phraustbyte_dal_dbisam_IgnoreAttribute_Ignore_
+  commentId: Overload:net.phraustbyte.dal.dbisam.IgnoreAttribute.Ignore
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.IgnoreAttribute.Ignore
+  nameWithType: IgnoreAttribute.Ignore
+- uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+  name: InsertViaSelectAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+  fullName: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute
+  nameWithType: InsertViaSelectAttribute
+- uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.#ctor
+  name: InsertViaSelectAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.html#net_phraustbyte_dal_dbisam_InsertViaSelectAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelectAttribute()
+  nameWithType: InsertViaSelectAttribute.InsertViaSelectAttribute()
+- uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.#ctor*
+  name: InsertViaSelectAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.html#net_phraustbyte_dal_dbisam_InsertViaSelectAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelectAttribute
+  nameWithType: InsertViaSelectAttribute.InsertViaSelectAttribute
+- uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelect
+  name: InsertViaSelect
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.html#net_phraustbyte_dal_dbisam_InsertViaSelectAttribute_InsertViaSelect
+  commentId: P:net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelect
+  fullName: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelect
+  nameWithType: InsertViaSelectAttribute.InsertViaSelect
+- uid: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelect*
+  name: InsertViaSelect
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.html#net_phraustbyte_dal_dbisam_InsertViaSelectAttribute_InsertViaSelect_
+  commentId: Overload:net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelect
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.InsertViaSelectAttribute.InsertViaSelect
+  nameWithType: InsertViaSelectAttribute.InsertViaSelect
+- uid: net.phraustbyte.dal.dbisam.TableAttribute
+  name: TableAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.TableAttribute
+  fullName: net.phraustbyte.dal.dbisam.TableAttribute
+  nameWithType: TableAttribute
+- uid: net.phraustbyte.dal.dbisam.TableAttribute.#ctor(System.String)
+  name: TableAttribute(String)
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.html#net_phraustbyte_dal_dbisam_TableAttribute__ctor_System_String_
+  commentId: M:net.phraustbyte.dal.dbisam.TableAttribute.#ctor(System.String)
+  fullName: net.phraustbyte.dal.dbisam.TableAttribute.TableAttribute(System.String)
+  nameWithType: TableAttribute.TableAttribute(String)
+- uid: net.phraustbyte.dal.dbisam.TableAttribute.#ctor*
+  name: TableAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.html#net_phraustbyte_dal_dbisam_TableAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.TableAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.TableAttribute.TableAttribute
+  nameWithType: TableAttribute.TableAttribute
+- uid: net.phraustbyte.dal.dbisam.TableAttribute.TableName
+  name: TableName
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.html#net_phraustbyte_dal_dbisam_TableAttribute_TableName
+  commentId: P:net.phraustbyte.dal.dbisam.TableAttribute.TableName
+  fullName: net.phraustbyte.dal.dbisam.TableAttribute.TableName
+  nameWithType: TableAttribute.TableName
+- uid: net.phraustbyte.dal.dbisam.TableAttribute.TableName*
+  name: TableName
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TableAttribute.html#net_phraustbyte_dal_dbisam_TableAttribute_TableName_
+  commentId: Overload:net.phraustbyte.dal.dbisam.TableAttribute.TableName
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.TableAttribute.TableName
+  nameWithType: TableAttribute.TableName
+- uid: net.phraustbyte.dal.dbisam.TimeAttribute
+  name: TimeAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.html
+  commentId: T:net.phraustbyte.dal.dbisam.TimeAttribute
+  fullName: net.phraustbyte.dal.dbisam.TimeAttribute
+  nameWithType: TimeAttribute
+- uid: net.phraustbyte.dal.dbisam.TimeAttribute.#ctor
+  name: TimeAttribute()
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.html#net_phraustbyte_dal_dbisam_TimeAttribute__ctor
+  commentId: M:net.phraustbyte.dal.dbisam.TimeAttribute.#ctor
+  fullName: net.phraustbyte.dal.dbisam.TimeAttribute.TimeAttribute()
+  nameWithType: TimeAttribute.TimeAttribute()
+- uid: net.phraustbyte.dal.dbisam.TimeAttribute.#ctor*
+  name: TimeAttribute
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.html#net_phraustbyte_dal_dbisam_TimeAttribute__ctor_
+  commentId: Overload:net.phraustbyte.dal.dbisam.TimeAttribute.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.TimeAttribute.TimeAttribute
+  nameWithType: TimeAttribute.TimeAttribute
+- uid: net.phraustbyte.dal.dbisam.TimeAttribute.Time
+  name: Time
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.html#net_phraustbyte_dal_dbisam_TimeAttribute_Time
+  commentId: P:net.phraustbyte.dal.dbisam.TimeAttribute.Time
+  fullName: net.phraustbyte.dal.dbisam.TimeAttribute.Time
+  nameWithType: TimeAttribute.Time
+- uid: net.phraustbyte.dal.dbisam.TimeAttribute.Time*
+  name: Time
+  href: api/dal/dbisam/net.phraustbyte.dal.dbisam.TimeAttribute.html#net_phraustbyte_dal_dbisam_TimeAttribute_Time_
+  commentId: Overload:net.phraustbyte.dal.dbisam.TimeAttribute.Time
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.dbisam.TimeAttribute.Time
+  nameWithType: TimeAttribute.Time
+- uid: net.phraustbyte.dal.IBaseDAL
+  name: IBaseDAL
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html
+  commentId: T:net.phraustbyte.dal.IBaseDAL
+  fullName: net.phraustbyte.dal.IBaseDAL
+  nameWithType: IBaseDAL
+- uid: net.phraustbyte.dal.IBaseDAL.ConnectionString
+  name: ConnectionString
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_ConnectionString
+  commentId: P:net.phraustbyte.dal.IBaseDAL.ConnectionString
+  fullName: net.phraustbyte.dal.IBaseDAL.ConnectionString
+  nameWithType: IBaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.IBaseDAL.ConnectionString*
+  name: ConnectionString
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_ConnectionString_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.ConnectionString
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.ConnectionString
+  nameWithType: IBaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.IBaseDAL.Create*
+  name: Create
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Create_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Create
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.Create
+  nameWithType: IBaseDAL.Create
+- uid: net.phraustbyte.dal.IBaseDAL.Create``1(``0)
+  name: Create<T>(T)
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Create__1___0_
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Create``1(``0)
+  name.vb: Create(Of T)(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.Create<T>(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Create(Of T)(T)
+  nameWithType: IBaseDAL.Create<T>(T)
+  nameWithType.vb: IBaseDAL.Create(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.Delete*
+  name: Delete
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Delete_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Delete
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.Delete
+  nameWithType: IBaseDAL.Delete
+- uid: net.phraustbyte.dal.IBaseDAL.Delete``1(``0)
+  name: Delete<T>(T)
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Delete__1___0_
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Delete``1(``0)
+  name.vb: Delete(Of T)(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.Delete<T>(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Delete(Of T)(T)
+  nameWithType: IBaseDAL.Delete<T>(T)
+  nameWithType.vb: IBaseDAL.Delete(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.GetParameters*
+  name: GetParameters
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_GetParameters_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.GetParameters
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.GetParameters
+  nameWithType: IBaseDAL.GetParameters
+- uid: net.phraustbyte.dal.IBaseDAL.GetParameters``1(``0)
+  name: GetParameters<T>(T)
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_GetParameters__1___0_
+  commentId: M:net.phraustbyte.dal.IBaseDAL.GetParameters``1(``0)
+  name.vb: GetParameters(Of T)(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.GetParameters<T>(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.GetParameters(Of T)(T)
+  nameWithType: IBaseDAL.GetParameters<T>(T)
+  nameWithType.vb: IBaseDAL.GetParameters(Of T)(T)
+- uid: net.phraustbyte.dal.IBaseDAL.Query
+  name: Query
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Query
+  commentId: P:net.phraustbyte.dal.IBaseDAL.Query
+  fullName: net.phraustbyte.dal.IBaseDAL.Query
+  nameWithType: IBaseDAL.Query
+- uid: net.phraustbyte.dal.IBaseDAL.Query*
+  name: Query
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Query_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Query
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.Query
+  nameWithType: IBaseDAL.Query
+- uid: net.phraustbyte.dal.IBaseDAL.Read*
+  name: Read
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Read_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Read
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.Read
+  nameWithType: IBaseDAL.Read
+- uid: net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)
+  name: Read<T>(Guid)
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Read__1_System_Guid_
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Read``1(System.Guid)
+  name.vb: Read(Of T)(Guid)
+  fullName: net.phraustbyte.dal.IBaseDAL.Read<T>(System.Guid)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Read(Of T)(System.Guid)
+  nameWithType: IBaseDAL.Read<T>(Guid)
+  nameWithType.vb: IBaseDAL.Read(Of T)(Guid)
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAll*
+  name: ReadAll
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_ReadAll_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.ReadAll
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAll
+  nameWithType: IBaseDAL.ReadAll
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAll``1
+  name: ReadAll<T>()
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_ReadAll__1
+  commentId: M:net.phraustbyte.dal.IBaseDAL.ReadAll``1
+  name.vb: ReadAll(Of T)()
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAll<T>()
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.ReadAll(Of T)()
+  nameWithType: IBaseDAL.ReadAll<T>()
+  nameWithType.vb: IBaseDAL.ReadAll(Of T)()
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter*
+  name: ReadAllByFilter
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_ReadAllByFilter_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.ReadAllByFilter
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter
+  nameWithType: IBaseDAL.ReadAllByFilter
+- uid: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_ReadAllByFilter__2___1_System_String_
+  commentId: M:net.phraustbyte.dal.IBaseDAL.ReadAllByFilter``2(``1,System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  nameWithType: IBaseDAL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType.vb: IBaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+- uid: net.phraustbyte.dal.IBaseDAL.Update*
+  name: Update
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Update_
+  commentId: Overload:net.phraustbyte.dal.IBaseDAL.Update
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.IBaseDAL.Update
+  nameWithType: IBaseDAL.Update
+- uid: net.phraustbyte.dal.IBaseDAL.Update``1(``0)
+  name: Update<T>(T)
+  href: api/dal/net.phraustbyte.dal.IBaseDAL.html#net_phraustbyte_dal_IBaseDAL_Update__1___0_
+  commentId: M:net.phraustbyte.dal.IBaseDAL.Update``1(``0)
+  name.vb: Update(Of T)(T)
+  fullName: net.phraustbyte.dal.IBaseDAL.Update<T>(T)
+  fullName.vb: net.phraustbyte.dal.IBaseDAL.Update(Of T)(T)
+  nameWithType: IBaseDAL.Update<T>(T)
+  nameWithType.vb: IBaseDAL.Update(Of T)(T)
+- uid: net.phraustbyte.dal.mssql
+  name: net.phraustbyte.dal.mssql
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.html
+  commentId: N:net.phraustbyte.dal.mssql
+  fullName: net.phraustbyte.dal.mssql
+  nameWithType: net.phraustbyte.dal.mssql
+- uid: net.phraustbyte.dal.mssql.BaseDAL
+  name: BaseDAL
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html
+  commentId: T:net.phraustbyte.dal.mssql.BaseDAL
+  fullName: net.phraustbyte.dal.mssql.BaseDAL
+  nameWithType: BaseDAL
+- uid: net.phraustbyte.dal.mssql.BaseDAL.#ctor(System.String)
+  name: BaseDAL(String)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL__ctor_System_String_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.#ctor(System.String)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.BaseDAL(System.String)
+  nameWithType: BaseDAL.BaseDAL(String)
+- uid: net.phraustbyte.dal.mssql.BaseDAL.#ctor*
+  name: BaseDAL
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL__ctor_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.BaseDAL
+  nameWithType: BaseDAL.BaseDAL
+- uid: net.phraustbyte.dal.mssql.BaseDAL.ConnectionString
+  name: ConnectionString
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_ConnectionString
+  commentId: P:net.phraustbyte.dal.mssql.BaseDAL.ConnectionString
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.ConnectionString
+  nameWithType: BaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.mssql.BaseDAL.ConnectionString*
+  name: ConnectionString
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_ConnectionString_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.ConnectionString
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.ConnectionString
+  nameWithType: BaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Create*
+  name: Create
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Create_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.Create
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Create
+  nameWithType: BaseDAL.Create
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Create``1(``0)
+  name: Create<T>(T)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Create__1___0_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.Create``1(``0)
+  name.vb: Create(Of T)(T)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Create<T>(T)
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.Create(Of T)(T)
+  nameWithType: BaseDAL.Create<T>(T)
+  nameWithType.vb: BaseDAL.Create(Of T)(T)
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Delete*
+  name: Delete
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Delete_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.Delete
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Delete
+  nameWithType: BaseDAL.Delete
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Delete``1(``0)
+  name: Delete<T>(T)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Delete__1___0_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.Delete``1(``0)
+  name.vb: Delete(Of T)(T)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Delete<T>(T)
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.Delete(Of T)(T)
+  nameWithType: BaseDAL.Delete<T>(T)
+  nameWithType.vb: BaseDAL.Delete(Of T)(T)
+- uid: net.phraustbyte.dal.mssql.BaseDAL.GetParameters*
+  name: GetParameters
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_GetParameters_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.GetParameters
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.GetParameters
+  nameWithType: BaseDAL.GetParameters
+- uid: net.phraustbyte.dal.mssql.BaseDAL.GetParameters``1(``0)
+  name: GetParameters<T>(T)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_GetParameters__1___0_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.GetParameters``1(``0)
+  name.vb: GetParameters(Of T)(T)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.GetParameters<T>(T)
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.GetParameters(Of T)(T)
+  nameWithType: BaseDAL.GetParameters<T>(T)
+  nameWithType.vb: BaseDAL.GetParameters(Of T)(T)
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Query
+  name: Query
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Query
+  commentId: P:net.phraustbyte.dal.mssql.BaseDAL.Query
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Query
+  nameWithType: BaseDAL.Query
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Query*
+  name: Query
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Query_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.Query
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Query
+  nameWithType: BaseDAL.Query
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Read*
+  name: Read
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Read_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.Read
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Read
+  nameWithType: BaseDAL.Read
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Read``1(System.Guid)
+  name: Read<T>(Guid)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Read__1_System_Guid_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.Read``1(System.Guid)
+  name.vb: Read(Of T)(Guid)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Read<T>(System.Guid)
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.Read(Of T)(System.Guid)
+  nameWithType: BaseDAL.Read<T>(Guid)
+  nameWithType.vb: BaseDAL.Read(Of T)(Guid)
+- uid: net.phraustbyte.dal.mssql.BaseDAL.ReadAll*
+  name: ReadAll
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_ReadAll_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.ReadAll
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.ReadAll
+  nameWithType: BaseDAL.ReadAll
+- uid: net.phraustbyte.dal.mssql.BaseDAL.ReadAll``1
+  name: ReadAll<T>()
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_ReadAll__1
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.ReadAll``1
+  name.vb: ReadAll(Of T)()
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.ReadAll<T>()
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.ReadAll(Of T)()
+  nameWithType: BaseDAL.ReadAll<T>()
+  nameWithType.vb: BaseDAL.ReadAll(Of T)()
+- uid: net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter*
+  name: ReadAllByFilter
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_ReadAllByFilter_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter
+  nameWithType: BaseDAL.ReadAllByFilter
+- uid: net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter``2(``1,System.String)
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_ReadAllByFilter__2___1_System_String_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter``2(``1,System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  nameWithType: BaseDAL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType.vb: BaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Update*
+  name: Update
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Update_
+  commentId: Overload:net.phraustbyte.dal.mssql.BaseDAL.Update
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Update
+  nameWithType: BaseDAL.Update
+- uid: net.phraustbyte.dal.mssql.BaseDAL.Update``1(``0)
+  name: Update<T>(T)
+  href: api/dal/mssql/net.phraustbyte.dal.mssql.BaseDAL.html#net_phraustbyte_dal_mssql_BaseDAL_Update__1___0_
+  commentId: M:net.phraustbyte.dal.mssql.BaseDAL.Update``1(``0)
+  name.vb: Update(Of T)(T)
+  fullName: net.phraustbyte.dal.mssql.BaseDAL.Update<T>(T)
+  fullName.vb: net.phraustbyte.dal.mssql.BaseDAL.Update(Of T)(T)
+  nameWithType: BaseDAL.Update<T>(T)
+  nameWithType.vb: BaseDAL.Update(Of T)(T)
+- uid: net.phraustbyte.dal.mysql
+  name: net.phraustbyte.dal.mysql
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.html
+  commentId: N:net.phraustbyte.dal.mysql
+  fullName: net.phraustbyte.dal.mysql
+  nameWithType: net.phraustbyte.dal.mysql
+- uid: net.phraustbyte.dal.mysql.BaseDAL
+  name: BaseDAL
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html
+  commentId: T:net.phraustbyte.dal.mysql.BaseDAL
+  fullName: net.phraustbyte.dal.mysql.BaseDAL
+  nameWithType: BaseDAL
+- uid: net.phraustbyte.dal.mysql.BaseDAL.#ctor(System.String)
+  name: BaseDAL(String)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL__ctor_System_String_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.#ctor(System.String)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.BaseDAL(System.String)
+  nameWithType: BaseDAL.BaseDAL(String)
+- uid: net.phraustbyte.dal.mysql.BaseDAL.#ctor*
+  name: BaseDAL
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL__ctor_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.BaseDAL
+  nameWithType: BaseDAL.BaseDAL
+- uid: net.phraustbyte.dal.mysql.BaseDAL.ConnectionString
+  name: ConnectionString
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_ConnectionString
+  commentId: P:net.phraustbyte.dal.mysql.BaseDAL.ConnectionString
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.ConnectionString
+  nameWithType: BaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.mysql.BaseDAL.ConnectionString*
+  name: ConnectionString
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_ConnectionString_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.ConnectionString
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.ConnectionString
+  nameWithType: BaseDAL.ConnectionString
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Create*
+  name: Create
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Create_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.Create
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Create
+  nameWithType: BaseDAL.Create
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Create``1(``0)
+  name: Create<T>(T)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Create__1___0_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.Create``1(``0)
+  name.vb: Create(Of T)(T)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Create<T>(T)
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.Create(Of T)(T)
+  nameWithType: BaseDAL.Create<T>(T)
+  nameWithType.vb: BaseDAL.Create(Of T)(T)
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Delete*
+  name: Delete
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Delete_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.Delete
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Delete
+  nameWithType: BaseDAL.Delete
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Delete``1(``0)
+  name: Delete<T>(T)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Delete__1___0_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.Delete``1(``0)
+  name.vb: Delete(Of T)(T)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Delete<T>(T)
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.Delete(Of T)(T)
+  nameWithType: BaseDAL.Delete<T>(T)
+  nameWithType.vb: BaseDAL.Delete(Of T)(T)
+- uid: net.phraustbyte.dal.mysql.BaseDAL.GetParameters*
+  name: GetParameters
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_GetParameters_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.GetParameters
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.GetParameters
+  nameWithType: BaseDAL.GetParameters
+- uid: net.phraustbyte.dal.mysql.BaseDAL.GetParameters``1(``0)
+  name: GetParameters<T>(T)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_GetParameters__1___0_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.GetParameters``1(``0)
+  name.vb: GetParameters(Of T)(T)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.GetParameters<T>(T)
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.GetParameters(Of T)(T)
+  nameWithType: BaseDAL.GetParameters<T>(T)
+  nameWithType.vb: BaseDAL.GetParameters(Of T)(T)
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Query
+  name: Query
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Query
+  commentId: P:net.phraustbyte.dal.mysql.BaseDAL.Query
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Query
+  nameWithType: BaseDAL.Query
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Query*
+  name: Query
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Query_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.Query
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Query
+  nameWithType: BaseDAL.Query
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Read*
+  name: Read
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Read_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.Read
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Read
+  nameWithType: BaseDAL.Read
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Read``1(System.Guid)
+  name: Read<T>(Guid)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Read__1_System_Guid_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.Read``1(System.Guid)
+  name.vb: Read(Of T)(Guid)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Read<T>(System.Guid)
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.Read(Of T)(System.Guid)
+  nameWithType: BaseDAL.Read<T>(Guid)
+  nameWithType.vb: BaseDAL.Read(Of T)(Guid)
+- uid: net.phraustbyte.dal.mysql.BaseDAL.ReadAll*
+  name: ReadAll
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_ReadAll_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.ReadAll
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.ReadAll
+  nameWithType: BaseDAL.ReadAll
+- uid: net.phraustbyte.dal.mysql.BaseDAL.ReadAll``1
+  name: ReadAll<T>()
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_ReadAll__1
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.ReadAll``1
+  name.vb: ReadAll(Of T)()
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.ReadAll<T>()
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.ReadAll(Of T)()
+  nameWithType: BaseDAL.ReadAll<T>()
+  nameWithType.vb: BaseDAL.ReadAll(Of T)()
+- uid: net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter*
+  name: ReadAllByFilter
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_ReadAllByFilter_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter
+  nameWithType: BaseDAL.ReadAllByFilter
+- uid: net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter``2(``1,System.String)
+  name: ReadAllByFilter<TOut, TParam>(TParam, String)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_ReadAllByFilter__2___1_System_String_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter``2(``1,System.String)
+  name.vb: ReadAllByFilter(Of TOut, TParam)(TParam, String)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter<TOut, TParam>(TParam, System.String)
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, System.String)
+  nameWithType: BaseDAL.ReadAllByFilter<TOut, TParam>(TParam, String)
+  nameWithType.vb: BaseDAL.ReadAllByFilter(Of TOut, TParam)(TParam, String)
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Update*
+  name: Update
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Update_
+  commentId: Overload:net.phraustbyte.dal.mysql.BaseDAL.Update
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Update
+  nameWithType: BaseDAL.Update
+- uid: net.phraustbyte.dal.mysql.BaseDAL.Update``1(``0)
+  name: Update<T>(T)
+  href: api/dal/mysql/net.phraustbyte.dal.mysql.BaseDAL.html#net_phraustbyte_dal_mysql_BaseDAL_Update__1___0_
+  commentId: M:net.phraustbyte.dal.mysql.BaseDAL.Update``1(``0)
+  name.vb: Update(Of T)(T)
+  fullName: net.phraustbyte.dal.mysql.BaseDAL.Update<T>(T)
+  fullName.vb: net.phraustbyte.dal.mysql.BaseDAL.Update(Of T)(T)
+  nameWithType: BaseDAL.Update<T>(T)
+  nameWithType.vb: BaseDAL.Update(Of T)(T)
+- uid: net.phraustbyte.dal.RecordNotFoundException
+  name: RecordNotFoundException
+  href: api/dal/net.phraustbyte.dal.RecordNotFoundException.html
+  commentId: T:net.phraustbyte.dal.RecordNotFoundException
+  fullName: net.phraustbyte.dal.RecordNotFoundException
+  nameWithType: RecordNotFoundException
+- uid: net.phraustbyte.dal.RecordNotFoundException.#ctor
+  name: RecordNotFoundException()
+  href: api/dal/net.phraustbyte.dal.RecordNotFoundException.html#net_phraustbyte_dal_RecordNotFoundException__ctor
+  commentId: M:net.phraustbyte.dal.RecordNotFoundException.#ctor
+  fullName: net.phraustbyte.dal.RecordNotFoundException.RecordNotFoundException()
+  nameWithType: RecordNotFoundException.RecordNotFoundException()
+- uid: net.phraustbyte.dal.RecordNotFoundException.#ctor(System.String)
+  name: RecordNotFoundException(String)
+  href: api/dal/net.phraustbyte.dal.RecordNotFoundException.html#net_phraustbyte_dal_RecordNotFoundException__ctor_System_String_
+  commentId: M:net.phraustbyte.dal.RecordNotFoundException.#ctor(System.String)
+  fullName: net.phraustbyte.dal.RecordNotFoundException.RecordNotFoundException(System.String)
+  nameWithType: RecordNotFoundException.RecordNotFoundException(String)
+- uid: net.phraustbyte.dal.RecordNotFoundException.#ctor(System.String,System.Exception)
+  name: RecordNotFoundException(String, Exception)
+  href: api/dal/net.phraustbyte.dal.RecordNotFoundException.html#net_phraustbyte_dal_RecordNotFoundException__ctor_System_String_System_Exception_
+  commentId: M:net.phraustbyte.dal.RecordNotFoundException.#ctor(System.String,System.Exception)
+  fullName: net.phraustbyte.dal.RecordNotFoundException.RecordNotFoundException(System.String, System.Exception)
+  nameWithType: RecordNotFoundException.RecordNotFoundException(String, Exception)
+- uid: net.phraustbyte.dal.RecordNotFoundException.#ctor*
+  name: RecordNotFoundException
+  href: api/dal/net.phraustbyte.dal.RecordNotFoundException.html#net_phraustbyte_dal_RecordNotFoundException__ctor_
+  commentId: Overload:net.phraustbyte.dal.RecordNotFoundException.#ctor
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.RecordNotFoundException.RecordNotFoundException
+  nameWithType: RecordNotFoundException.RecordNotFoundException
+- uid: net.phraustbyte.dal.SqlHelper
+  name: SqlHelper
+  href: api/dal/net.phraustbyte.dal.SqlHelper.html
+  commentId: T:net.phraustbyte.dal.SqlHelper
+  fullName: net.phraustbyte.dal.SqlHelper
+  nameWithType: SqlHelper
+- uid: net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  name: GetDbType(Type)
+  href: api/dal/net.phraustbyte.dal.SqlHelper.html#net_phraustbyte_dal_SqlHelper_GetDbType_System_Type_
+  commentId: M:net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  fullName: net.phraustbyte.dal.SqlHelper.GetDbType(System.Type)
+  nameWithType: SqlHelper.GetDbType(Type)
+- uid: net.phraustbyte.dal.SqlHelper.GetDbType*
+  name: GetDbType
+  href: api/dal/net.phraustbyte.dal.SqlHelper.html#net_phraustbyte_dal_SqlHelper_GetDbType_
+  commentId: Overload:net.phraustbyte.dal.SqlHelper.GetDbType
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.SqlHelper.GetDbType
+  nameWithType: SqlHelper.GetDbType
+- uid: net.phraustbyte.dal.SqlHelper.GetDbType``1
+  name: GetDbType<T>()
+  href: api/dal/net.phraustbyte.dal.SqlHelper.html#net_phraustbyte_dal_SqlHelper_GetDbType__1
+  commentId: M:net.phraustbyte.dal.SqlHelper.GetDbType``1
+  name.vb: GetDbType(Of T)()
+  fullName: net.phraustbyte.dal.SqlHelper.GetDbType<T>()
+  fullName.vb: net.phraustbyte.dal.SqlHelper.GetDbType(Of T)()
+  nameWithType: SqlHelper.GetDbType<T>()
+  nameWithType.vb: SqlHelper.GetDbType(Of T)()
+- uid: net.phraustbyte.dal.SqlHelper.TranslateResults*
+  name: TranslateResults
+  href: api/dal/net.phraustbyte.dal.SqlHelper.html#net_phraustbyte_dal_SqlHelper_TranslateResults_
+  commentId: Overload:net.phraustbyte.dal.SqlHelper.TranslateResults
+  isSpec: "True"
+  fullName: net.phraustbyte.dal.SqlHelper.TranslateResults
+  nameWithType: SqlHelper.TranslateResults
+- uid: net.phraustbyte.dal.SqlHelper.TranslateResults``1(System.Data.IDataReader)
+  name: TranslateResults<T>(IDataReader)
+  href: api/dal/net.phraustbyte.dal.SqlHelper.html#net_phraustbyte_dal_SqlHelper_TranslateResults__1_System_Data_IDataReader_
+  commentId: M:net.phraustbyte.dal.SqlHelper.TranslateResults``1(System.Data.IDataReader)
+  name.vb: TranslateResults(Of T)(IDataReader)
+  fullName: net.phraustbyte.dal.SqlHelper.TranslateResults<T>(System.Data.IDataReader)
+  fullName.vb: net.phraustbyte.dal.SqlHelper.TranslateResults(Of T)(System.Data.IDataReader)
+  nameWithType: SqlHelper.TranslateResults<T>(IDataReader)
+  nameWithType.vb: SqlHelper.TranslateResults(Of T)(IDataReader)
