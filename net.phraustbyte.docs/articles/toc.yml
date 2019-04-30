@@ -2,3 +2,7 @@
   href: intro.md
 - name: Stored Procedures
   href: StoredProcs.md
+- name: Business Logic Layer
+  href: BLL.md
+- name: Data Access Layer (MsSQL)
+  href: DALMsSQL.md
